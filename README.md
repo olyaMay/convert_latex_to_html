@@ -2,9 +2,10 @@
 Converting LaTEX articles from msm.omsu.ru to HTML.
 
 to start run main.py
-    main.py contains hardcoded name of the article
-    article must contains in /latex_files folder
-    
-article.html -- example how article can look
-style.css -- uses in article.html and output.html
-output.html -- result of working main.py
+
+   - main.py contains hardcoded name of the article
+    - article must contains in /latex_files folder
+
+- article.html -- example how article can look
+- style.css -- uses in article.html and output.html
+- output.html -- result of working main.py
