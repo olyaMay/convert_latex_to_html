@@ -1,0 +1,934 @@
+% !TEX encoding = UTF-8 Unicode
+\startarticle
+\shrtitle{Òåîðåòèêî-ãðóïïîâîå îïèñàíèå...}         % ×àñòü íàçâàíèÿ ñòàòüè äëÿ êîëîíòèòóëîâ.
+\shrauthor{Â.Â.~Âàðëàìîâ}{Â.Â.~Âàðëàìîâ}  % Àâòîð èëè ãðóïïà àâòîðîâ äëÿ îãëàâëåíèÿ è êîëîíòèòóëîâ.
+\udc{512.815.8}                               % Âñòàâüòå ÓÄÊ.
+\selectlanguage{russian}                    % Îñíîâíîé ÿçûê ñòàòüè
+\date{13.01.2019}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% äëÿ ðóññêîÿçû÷íîé ñòàòüè è ðåôåðèðîâàíèÿ â ÐÈÍÖ  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Òåîðåòèêî-ãðóïïîâîå îïèñàíèå ïåðèîäè÷åñêîé ñèñòåìû ýëåìåíòîâ: II.~Òàáëèöà Ñèáîðãà} 
+\author{Â.Â.~Âàðëàìîâ}{ä.ô.-ì.í.}{varlamov@subsiu.ru} 
+\affil{Ñèáèðñêèé ãîñóäàðñòâåííûé èíäóñòðèàëüíûé óíèâåðñèòåò, Íîâîêóçíåöê, Ðîññèÿ}
+\abstract{Ðàññìàòðèâàåòñÿ òåîðåòèêî-ãðóïïîâîå îïèñàíèå òàáëèöû Ñèáîðãà (âîñüìèïåðèîäè÷åñêîå ðàñøèðåíèå òàáëèöû Ìåíäåëååâà) 
+â ðàìêàõ ìîäåëè Ðóìåðà--Ôåòà. Ââîäèòñÿ ìàññîâàÿ ôîðìóëà, ïîçâîëÿþùàÿ ïðîâåñòè ïîýëåìåíòíîå ðàñùåïëåíèå ìàññ äëÿ îñíîâíîãî ïðåäñòàâëåíèÿ ãðóïïû Ðóìåðà--Ôåòà. 
+Âû÷èñëÿþòñÿ ìàññû ýëåìåíòîâ òàáëèöû Ñèáîðãà, íà÷èíàÿ ñ àòîìíîãî íîìåðà $Z=121$ ïî $Z=220$. Óñòàíàâëèâàåòñÿ ïðîäîëæåíèå ãîìîëîãèè Ñèáîðãà 
+ìåæäó ëàíòàíîèäàìè è àêòèíîèäàìè äî ãðóïïû ñóïåðàêòèíîèäîâ.} 
+\keywords{òàáëèöà Ñèáîðãà, ãðóïïà Ðóìåðà--Ôåòà, åäèíàÿ êâàíòîâàÿ ñèñòåìà, ìàññîâûå ôîðìóëû, ãîìîëîãè÷åñêèå ðÿäû}
+
+\titleEng{Group Theoretical Description of Periodic System of~Elements: II.~Seaborg Table}     
+\authorEng{V.V.~Varlamov}{Dr.Sc. (Phys.-Math.)}{varlamov@sibsiu.ru} % Àâòîð íà àíãëèéñêîì.
+\affilEng{Siberian State Industrial University, Novokuznetsk, Russia}  
+\abstractEng{Group theoretical description of Seaborg table (an eight-periodic extension of the Mendeleev table) is considered in the 
+framework of the Rumer-Fet model. The mass formula, which allows one to provide a termwise mass splitting of the basic representation 
+of the Rumer-Fet group, is introduced. Masses of elements of the Seaborg table, beginning from atomic number $Z=121$ and finishing by 
+$Z=220$, are calculated. A continuation of the Seaborg homology between lanthanides and actinides is establihed up to superactinide group.} 
+\keywordsEng{Seaborg table, Rumer-Fet group, unitary quantum system, mass formulas, homological series}
+
+\maketitle % Ôîðìèðîâàíèå îãëàâëåíèÿ.
+
+%%%%%%%%%%%%%%%%%%%%%% Ò Å Ê Ñ Ò %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Ââåäåíèå}
+Êàê èçâåñòíî, ïåðèîäè÷åñêàÿ òàáëèöà Ìåíäåëååâà âêëþ÷àåò â ñåáÿ 120 ýëåìåíòîâ, èç êîòîðûõ â íàñòîÿùåå âðåìÿ îòêðûòî 118 (ïîñëåäíèé îòêðûòûé ýëåìåíò \textbf{Og} ñ àòîìíûì íîìåðîì $Z=118$ --- Îãàíåñîí (ýêà-ðàäîí)). Çàâåðøàþò çàïîëíåíèå òàáëèöû Ìåíäåëååâà äâà åùž íå îòêðûòûõ ãèïîòåòè÷åñêèõ ýëåìåíòà \textbf{Uue} --- Óíóíåííèé (ýêà-ôðàíöèé) ñ $Z=119$ è \textbf{Ubn} --- Óíáèíèëèé (ýêà-ðàäèé) ñ $Z=120$. Ñîãëàñíî ìîäåëè Áîðà, îáà ýëåìåíòà ïðèíàäëåæàò $s$-îáîëî÷êå. Òàáëèöà Ìåíäåëååâà ñîäåðæèò ñåìü ïåðèîäîâ (ñòðîê), âêëþ÷àþùèõ â ñåáÿ $s$-, $p$-, $d$- è $f$-ñåìåéñòâà (îáîëî÷êè). Ñëåäóþùèé (âîñüìîé) ïåðèîä ïðåäïîëàãàåò íà÷àëî ïîñòðîåíèÿ $g$-îáîëî÷êè. Â 1969~ã. Ãëåíí Ñèáîðã \cite{Sea69} ïðåäëîæèë âîñüìèïåðèîäè÷åñêóþ òàáëèöó, ñîäåðæàùóþ $g$-îáîëî÷êó. Ïåðâûì ýëåìåíòîì $g$-îáîëî÷êè ÿâëÿåòñÿ \textbf{Ubu} (Óíáèóíèé) ñ àòîìíûì íîìåðîì $Z=121$ (ñ ýòîãî ýëåìåíòà òàêæå íà÷èíàåòñÿ ãðóïïà ñóïåðàêòèíîèäîâ). Ïîëíîå ÷èñëî ýëåìåíòîâ òàáëèöû Ñèáîðãà ðàâíî 220.
+
+Íèêòî íå çíàåò, ñêîëüêî ìîæåò áûòü ýëåìåíòîâ â ïåðèîäè÷åñêîé ñèñòåìå. Ñòðóêòóðíàÿ ìîäåëü Ðåçåðôîðäà--Áîðà, ÿâëÿþùàÿñÿ ïîëóêëàññè÷åñêèì ïàëëèàòèâîì\footnote{Êàê èçâåñòíî, ìîäåëü Áîðà ÿâëÿåòñÿ ðàçâèòèåì ïëàíåòàðíîé ìîäåëè Ðåçåðôîðäà, ñîãëàñíî êîòîðîé ýëåêòðîíû (ïî àíàëîãèè ñ íåáåñíîé ìåõàíèêîé) äâèæóòñÿ âîêðóã ÿäðà àòîìà ïî êëàññè÷åñêèì òðàåêòîðèÿì (ýëåêòðîííûå îðáèòû). Îäíàêî äàëüíåéøåå ðàçâèòèå êâàíòîâîé ìåõàíèêè ïðèâåëî ê îòêàçó îò ïîíÿòèÿ ýëåêòðîííîé îðáèòû. Ýëåêòðîíó êàê êâàíòîâîìó îáúåêòó íå ïðèñóùå ïîíÿòèå êëàññè÷åñêîé òðàåêòîðèè. Ñ ýòîãî ìîìåíòà ìîäåëü Ðåçåðôîðäà--Áîðà ïðèîáðåëà ÿðêî âûðàæåííûé ïàëëèàòèâíûé õàðàêòåð, ïðåäñòàâëÿÿ àòîì êàê êëàññè÷åñêóþ ñîñòàâíóþ ñèñòåìó, ÷àñòè êîòîðîé íå îïèñûâàþòñÿ çàêîíàìè êëàññè÷åñêîé ôèçèêè. Ãåéçåíáåðã ïèøåò: <<$\ldots$ ïðåäñòàâëåíèå îá ýëåêòðîííîé îðáèòå, ñâÿçàííîå ñ èäååé äèñêðåòíîãî ñòàöèîíàðíîãî ñîñòîÿíèÿ, áûëî ïî õîäó äåëà ïðàêòè÷åñêè îòáðîøåíî. Ïîíÿòèå äèñêðåòíûõ ñòàöèîíàðíûõ ñîñòîÿíèé, îäíàêî, îñòàëîñü æèòü. Ïîíÿòèå ýòî áûëî íåîáõîäèìî. Îíî èìåëî ñâîþ îñíîâó â äàííûõ íàáëþäåíèé. Íàîáîðîò, ýëåêòðîííóþ îðáèòó íå óäàëîñü ñîãëàñîâàòü ñ íàáëþäåíèÿìè, ïîýòîìó îò íåž îòêàçàëèñü, è îò íåž îñòàëèñü òîëüêî ìàòðèöû äëÿ êîîðäèíàò>> \cite[c.~97]{Heisen}. Áîð óòâåðæäàë, ÷òî îïèñàíèå ðåçóëüòàòîâ êâàíòîâîìåõàíè÷åñêèõ èçìåðåíèé âîçìîæíî òîëüêî íà ÿçûêå êëàññè÷åñêîé ôèçèêè. Ñ ýòèì òðóäíî íå ñîãëàñèòüñÿ, îäíàêî, ïðèâíåñåíèå â êâàíòîâîìåõàíè÷åñêèå ìîäåëè ïîíÿòèé è ïðåäñòàâëåíèé êëàññè÷åñêîé ôèçèêè ÿâëÿåòñÿ ñïîðíûì (ñì. \cite{Kar,deRonde}). <<Ìû âåäžì ñåáÿ òàê, ñëîâíî ýëåêòðè÷åñêè çàðÿæåííàÿ ÷àñòèöà --- ðîâíî íàñòîëüêî æå âåùü, êàê ýëåêòðè÷åñêè çàðÿæåííàÿ êàïåëüêà ìàñëà èëè êðóãëàÿ êîñòî÷êà áóçèíû, ïðèìåíÿâøèåñÿ â ñòàðûõ èçìåðèòåëüíûõ ïðèáîðàõ. Ìû áåç âñÿêîé îãëÿäêè ïðèìåíÿåì ïîíÿòèÿ êëàññè÷åñêîé ôèçèêè òàê, ñëîâíî âîîáùå íå ñëûõàëè îá îãðàíè÷åííîñòè åž ïîíÿòèé è î ïðèíöèïå íåîïðåäåëžííîñòè. Íå ìîæåò ëè ýòî ïðèâåñòè ê îøèáêàì?>> \cite[c.~250-251]{Heisen2}.}, ïðèâîäèò ê ñëåäóþùåìó îãðàíè÷åíèþ (òàê íàçûâàåìîå <<êðóøåíèå ìîäåëè Áîðà>>) íà ÷èñëî ôèçè÷åñêè âîçìîæíûõ ýëåìåíòîâ. Òàê, äëÿ ýëåìåíòîâ ñ àòîìíûì íîìåðîì âûøå 137 <<ñêîðîñòü>> ýëåêòðîíà íà $1s$-îðáèòàëè îïðåäåëÿåòñÿ âûðàæåíèåì
+\[
+v=Z\alpha c\approx\frac{Zc}{137{,}036},
+\]
+ãäå $\alpha$ --- ïîñòîÿííàÿ òîíêîé ñòðóêòóðû, $c$ --- ñêîðîñòü ñâåòà. Ñîãëàñíî ýòîìó ïðèáëèæåíèþ, â àòîìàõ ñ $Z>137$ $1s$-ýëåêòðîíû <<äâèæóòñÿ>> áûñòðåå ñêîðîñòè ñâåòà. Ñ äðóãîé ñòîðîíû, êàê ïîêàçàë Ôåéíìàí, ðåëÿòèâèñòñêîå óðàâíåíèå Äèðàêà òàêæå ïðèâîäèò ê ïðîáëåìàì äëÿ òÿæžëûõ àòîìîâ ñ $Z>137$, ïîñêîëüêó îñíîâíîå ñîñòîÿíèå ýíåðãèè äëÿ ýëåêòðîíà íà $1s$-ïîäîáîëî÷êå äàžòñÿ âûðàæåíèåì $E=m_0c^2\sqrt{1-Z^2\alpha^2}$, ãäå $m_0$ --- ìàññà ïîêîÿ ýëåêòðîíà. Â ñëó÷àå $Z>137$ çíà÷åíèå ýíåðãèè ñòàíîâèòñÿ êîìïëåêñíûì ÷èñëîì è, ñëåäîâàòåëüíî, âîëíîâàÿ ôóíêöèÿ îñíîâíîãî ñîñòîÿíèÿ ÿâëÿåòñÿ îñöèëëèðóþùåé, ò.~å. íå ñóùåñòâóåò ïðîìåæóòêà ìåæäó ïîëîæèòåëüíûì è îòðèöàòåëüíûì ýíåðãåòè÷åñêèì ñïåêòðîì, ÷òî ïðèâîäèò ê ïàðàäîêñó Êëåéíà. Ïî ýòîé ïðè÷èíå 137-îé ýëåìåíò \textbf{Uts} (Óíòðèñåïòèé) áûë îáúÿâëåí <<êîíöîì>> ïåðèîäè÷åñêîé ñèñòåìû ýëåìåíòîâ, à òàêæå â ÷åñòü Ôåéíìàíà ýòîò ýëåìåíò ïîëó÷èë íåîôèöèàëüíîå íàçâàíèå Ôåéíìàíèé (ñèìâîë \textbf{Fy}). Êàê èçâåñòíî, Ôåéíìàí ïðèøžë ê ýòîìó ðåçóëüòàòó, èñõîäÿ èç ïðåäïîëîæåíèÿ, ÷òî àòîìíîå ÿäðî ÿâëÿåòñÿ òî÷å÷íîïîäîáíûì\footnote{Òðóäíîñòÿì è ïðîòèâîðå÷èÿì, ê êîòîðûì ïðèâîäèò òî÷å÷íîïîäîáíîå ïðåäñòàâëåíèå (à òàêæå è äðóãèå êëàññè÷åñêèå àíàëîãèè) â êâàíòîâîé òåîðèè, ïîñâÿùåíà ñòàòüÿ \cite{Baez}. Ì.À. Ìàðêîâ îòìå÷àë, ÷òî <<$\ldots$ ïîíÿòèÿ îáëàäàþò, òàê ñêàçàòü, èçâåñòíîé àãðåññèâíîñòüþ: îíè ÷àñòî ïðåòåíäóþò íà îáëàñòè, ãäå, ïî ñóùåñòâó, ïðèìåíèìîñòü èõ ëèøåíà ñìûñëà, ò.~å. ÷àñòî íàøå ñîçíàíèå ïî ïðèâû÷êå, áåç äîñòàòî÷íîãî îñíîâàíèÿ, ðàñøèðÿåò îáëàñòü ïðèìåíèìîñòè òîãî èëè èíîãî ïîíÿòèÿ è ëèøü ïîñëå, èíîãäà äîëãîå âðåìÿ ñïóñòÿ, èìåííî çäåñü îáíàðóæèâàþòñÿ èñòî÷íèêè ìíîãèõ íåäîðàçóìåíèé>> \cite[c.~17]{Mark}. È â äðóãîì ìåñòå: <<Ìû ÷àñòî "âõîäèì"\ â ìèêðîìèð ñ ìàêðîñêîïè÷åñêîé íåâåæëèâîñòüþ, "â ïàëüòî è êàëîøàõ"\,>> \cite[c.~34]{Mark}. Íå îãðàíè÷èâàÿñü <<ïàëüòî>> è <<êàëîøàìè>>, ñîçíàíèå ïûòàåòñÿ ïðîòàùèòü â ìèêðîìèð <<ñòîëû>> è <<ñòóëüÿ>> (òî÷êè, ñôåðû, ñòðóíû, êâàðêè, $\ldots$).}. Äàëåå, ðåøåíèå Ãðåéíåðà--Ðåéíõàðäòà \cite{GR09}, ïðåäñòàâëÿþùåå àòîìíîå ÿäðî çàðÿæåííûì øàðîì ðàäèóñà $R=1{,}2A^{1/3}fm$, ãäå $A$ --- àòîìíàÿ ìàññà, îòîäâèíóëî ãðàíèöó Ôåéíìàíà äî çíà÷åíèÿ $Z=173$. Ñ÷èòàåòñÿ, ÷òî äëÿ $Z\approx 173$ $1s$-ïîäîáîëî÷êà ïîä äåéñòâèåì ýëåêòðè÷åñêîãî ïîëÿ ÿäðà <<ïîãðóæàåòñÿ>> â îòðèöàòåëüíûé êîíòèíóóì (ìîðå Äèðàêà), ÷òî ïðèâîäèò ê ñïîíòàííîìó ðîæäåíèþ ýëåêòðîí-ïîçèòðîííûõ ïàð è, êàê ñëåäñòâèå, ê îòñóòñòâèþ íåéòðàëüíûõ àòîìîâ âûøå ýëåìåíòà \textbf{Ust} (Óíñåïòòðèé) ñ $Z=173$. Àòîìû ñ $Z>Z_{cr}\approx 173$ íàçûâàþòñÿ \textit{ñóïåðêðèòè÷åñêèìè} àòîìàìè. Ïðåäïîëàãàåòñÿ òàêæå, ÷òî ýëåìåíòû ñ $Z>Z_{cr}$ ìîãóò ñóùåñòâîâàòü òîëüêî â êà÷åñòâå èîíîâ.
+
+Â íàñòîÿùåé ñòàòüå ðàññìàòðèâàåòñÿ òåîðåòèêî-ãðóïïîâîå îïèñàíèå òàáëèöû Ñèáîðãà â ðàìêàõ ìîäåëè Ðóìåðà--Ôåòà. Â îòëè÷èå îò ìîäåëè Ðåçåðôîðäà-Áîðà, ïðåäñòàâëÿþùåé êàæäûé àòîì êàê ñîñòàâíîé àãðåãàò èç ïðîòîíîâ, íåéòðîíîâ è ýëåêòðîíîâ, ìîäåëü Ðóìåðà--Ôåòà îòâëåêàåòñÿ îò âíóòðåííåé ñòðóêòóðû êàæäîãî åäèíè÷íîãî àòîìà\footnote{Ïðåäñòàâëåíèå îá àòîìå êàê î <<áåññòðóêòóðíîì>> ñîñòîÿíèè âîâñå íå îçíà÷àåò, ÷òî çà ýòèì ïîíÿòèåì íå ñòîèò íèêàêîé ñòðóêòóðû âîîáùå. Ýòî ëèøü îçíà÷àåò, ÷òî ýòà ñòðóêòóðà èíîãî ïîðÿäêà, íå ïðèâíåñžííàÿ èçâíå, èç <<ðåïåðòóàðà êëàññè÷åñêîé ôèçèêè>>, à ñòðóêòóðà, åñòåñòâåííî âûòåêàþùàÿ èç ìàòåìàòè÷åñêîãî àïïàðàòà êâàíòîâîé ìåõàíèêè (âåêòîðû ñîñòîÿíèÿ, ãðóïïà ñèììåòðèè, ãèëüáåðòîâî ïðîñòðàíñòâî, òåíçîðíûå ïðîèçâåäåíèÿ ãèëüáåðòîâûõ ($\K$-ãèëüáåðòîâûõ) ïðîñòðàíñòâ è ò.~ä.).}, ïðåäñòàâëÿÿ âñþ ñîâîêóïíîñòü ýëåìåíòîâ ïåðèîäè÷åñêîé ñèñòåìû êàê åäèíóþ êâàíòîâóþ ñèñòåìó. Äàííûé ïîäõîä, öåëèêîì îïèðàþùèéñÿ íà êâàíòîâóþ ìåõàíèêó è òåîðèþ ãðóïï, ïîçâîëÿåò îáîéòèñü áåç ïðèâëå÷åíèÿ êëàññè÷åñêèõ àíàëîãèé ïðè îïèñàíèè ïåðèîäè÷åñêîé ñèñòåìû ýëåìåíòîâ. Ïðåæäå âñåãî, àòîìû ðàññìàòðèâàþòñÿ êàê ñîñòîÿíèÿ (äèñêðåòíûå ñòàöèîíàðíûå ñîñòîÿíèÿ) \textit{ñïåêòðà ìàòåðèè}\footnote{Òåðìèí, ââåäžííûé Ãåéçåíáåðãîì â \cite{Heisen3} ïðèìåíèòåëüíî ê ôèçèêå ýëåìåíòàðíûõ ÷àñòèö.}, êàæäûé àòîì çàäàžòñÿ âåêòîðîì ñîñòîÿíèÿ ãèëüáåðòîâà ïðîñòðàíñòâà, â êîòîðîì äåéñòâóåò ãðóïïà ñèììåòðèè, ïåðåâîäÿùàÿ îäíè âåêòîðû ñîñòîÿíèÿ â äðóãèå (ò.~å. ãðóïïà, çàäàþùàÿ êâàíòîâûå ïåðåõîäû ìåæäó ýëåìåíòàìè ïåðèîäè÷åñêîé ñèñòåìû). Ñïåêòð ñîñòîÿíèé (ñïåêòð ìàòåðèè) ãåíåðèðóåòñÿ îïåðàòîðíîé $C^\ast$-àëãåáðîé, ñîñòîÿùåé èç îïåðàòîðà ýíåðãèè $H$ è ïðèñîåäèížííûõ ê íåìó ãåíåðàòîðîâ êîíôîðìíîé ãðóïïû ïîñðåäñòâîì êîíñòðóêöèè Ãåëüôàíäà--Íàéìàðêà--Ñèãàëà (áîëåå ïîäðîáíî ñì. \cite{Var18}). Â ï.\,2 òàáëèöà Ñèáîðãà ôîðìóëèðóåòñÿ â ðàìêàõ îñíîâíîãî ïðåäñòàâëåíèÿ ãðóïïû Ðóìåðà--Ôåòà äëÿ äâóõ ðàçëè÷íûõ öåïî÷åê ãðóïï, çàäàþùèõ ðàçáèåíèå îñíîâíîãî ìóëüòèïëåòà íà ìåíüøèå ìóëüòèïëåòû. Çäåñü æå âû÷èñëÿþòñÿ ñðåäíèå ìàññû ìóëüòèïëåòîâ, âõîäÿùèõ â òàáëèöó Ñèáîðãà (ïîìèìî òåõ ìóëüòèïëåòîâ, êîòîðûå ïðèíàäëåæàò òàáëèöå Ìåíäåëååâà, çà èñêëþ÷åíèåì ýëåìåíòîâ \textbf{Uue} è \textbf{Ubn}). Â ï.\,3 ââîäèòñÿ ìàññîâàÿ ôîðìóëà, ïîçâîëÿþùàÿ ïðîâåñòè ïîýëåìåíòíîå ðàñùåïëåíèå ìàññ äëÿ îñíîâíîãî ïðåäñòàâëåíèÿ ãðóïïû Ðóìåðà--Ôåòà. Âû÷èñëÿþòñÿ ìàññû ýëåìåíòîâ, íà÷èíàÿ ñ àòîìíîãî íîìåðà $Z=121$ ïî $Z=220$. Â ï.\,4 ðàññìàòðèâàþòñÿ êâàíòîâûå ïåðåõîäû ìåæäó âåêòîðàìè ñîñòîÿíèÿ ôèçè÷åñêîãî ãèëüáåðòîâà ïðîñòðàíñòâà, îáðàçîâàííîãî ñîâîêóïíîñòüþ ýëåìåíòîâ ïåðèîäè÷åñêîé ñèñòåìû.
+
+\section{Òàáëèöà Ñèáîðãà}
+Êàê óæå îòìå÷àëîñü âûøå, òàáëèöà Ñèáîðãà ÿâëÿåòñÿ âîñüìèïåðèîäè÷åñêèì ðàñøèðåíèåì òàáëèöû Ìåíäåëååâà, íà÷èíàÿ ñî 121-ãî ýëåìåíòà ïî 220-ûé. Òàáëèöà Ñèáîðãà ñîäåðæèò îáà <<êðèòè÷åñêèõ>> ýëåìåíòà ìîäåëè Áîðà: \textbf{Uts} (Óíòðèñåïòèé, $Z=137$) è \textbf{Ust} (Óíñåïòòðèé, $Z=173$). Ñîãëàñíî ìîäåëè Áîðà, ñî 121-ãî ýëåìåíòà íà÷èíàåòñÿ çàïîëíåíèå $g$-îáîëî÷êè (ôîðìèðîâàíèå $g$-ñåìåéñòâà). Â ìîäåëè Ðóìåðà--Ôåòà \cite{Fet} $g$-îáîëî÷êà ñîîòâåòñòâóåò êâàíòîâûì ÷èñëàì $\nu=5$ è $\lambda=4$ ãðóïïû ñèììåòðèè $\SO(2,4)\otimes\SU(2)\otimes\SU(2)^\prime$ (ñì. òàêæå \cite{Var18}). Íà ðèñ.\,1 ïðèâåäåíà òàáëèöà Ñèáîðãà â ôîðìå îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû Ðóìåðà--Ôåòà äëÿ áàçèñà
+\begin{multline}
+|\nu,\lambda,\mu,s,s^\prime\rangle,\quad \nu=1,2,\ldots;\; \lambda=0,1,\ldots, \nu-1;\\
+\mu=-\lambda,-\lambda+1,\ldots,\lambda-1,\lambda;\;s=-1/2,1/2,\;s^\prime=-1/2,1/2.\label{Basis1}
+\end{multline}
+Â ñâîþ î÷åðåäü, áàçèñ (\ref{Basis1}) ñîîòâåòñòâóåò ñëåäóþùåé öåïî÷êå ãðóïï:
+\begin{multline}
+G\supset G_1\supset G_2\longmapsto\\
+\SO(2,4)\otimes\SU(2)\otimes\SU(2)\supset\SO(4)\otimes\SU(2)\supset\SO(3)\otimes\SU(2),\label{Chain1}
+\end{multline}
+ñîãëàñíî êîòîðîé îñóùåñòâëÿåòñÿ ðåäóêöèÿ îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû Ðóìåðà--Ôåòà ïî ïîäãðóïïàì öåïî÷êè, ò.~å. ðàçáèåíèå îñíîâíîãî ìóëüòèïëåòà íà ìåíüøèå ìóëüòèïëåòû. Ïóíêòèðíîé ðàìêîé íà ðèñ.\,1 âûäåëåíà òàáëèöà Ìåíäåëååâà. Ê 20 ìóëüòèïëåòàì òàáëèöû Ìåíäåëååâà â ðàìêàõ âîñüìèïåðèîäè÷åñêîãî ðàñøèðåíèÿ (êâàíòîâûå ÷èñëà $\nu=5$, $\lambda=4$) äîáàâëÿåòñÿ åùž 10 ìóëüòèïëåòîâ.
+
+Âû÷èñëèì ñðåäíèå ìàññû ýòèõ ìóëüòèïëåòîâ. Ñ ýòîé öåëüþ âîñïîëüçóåìñÿ ìàññîâîé ôîðìóëîé \cite{Fet}
+\begin{equation}\label{Mass1}
+m=m_0+a\left[s^\prime(2\nu-3)-5\nu+\frac{11}{2}+2(\nu^2-1)\right]-b\cdot\lambda(\lambda+1),
+\end{equation}
+ãäå $m_0$, $a$, $b$ --- êîýôôèöèåíòû, íå âûâîäèìûå èç òåîðèè. Ïðè $m_0=1$, $a=17$, $b=5{,}5$ èç ôîðìóëû (\ref{Mass1}) ïîëó÷àåì ñðåäíèå ìàññû ìóëüòèïëåòîâ (ñì. òàá.\,1).
+\begin{center}
+{\textbf{Òàá.\,1.} Ñðåäíèå ìàññû ìóëüòèïëåòîâ òàáëèöû Ñèáîðãà}
+\vspace{0.1cm}
+{\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{|c||l|c|}\hline
+ & Ìóëüòèïëåò & Ìàññà (òåîð.) \\ \hline\hline
+1. & $(\nu=5,s^\prime=-1/2,\lambda=4)$ & $316$ \\
+2. & $(\nu=5,s^\prime=-1/2,\lambda=3)$ & $360$ \\
+3. & $(\nu=5,s^\prime=-1/2,\lambda=2)$ & $393$ \\
+4. & $(\nu=5,s^\prime=-1/2,\lambda=1)$ & $415$ \\
+5. & $(\nu=5,s^\prime=-1/2,\lambda=0)$ & $426$ \\
+6. & $(\nu=5,s^\prime=1/2,\lambda=4)$ & $435$ \\
+7. & $(\nu=5,s^\prime=1/2,\lambda=3)$ & $479$ \\
+8. & $(\nu=5,s^\prime=1/2,\lambda=2)$ & $512$ \\
+9. & $(\nu=5,s^\prime=1/2,\lambda=1)$ & $534$ \\
+10. & $(\nu=5,s^\prime=1/2,\lambda=0)$& $545$ \\
+\hline
+\end{tabular}
+}
+\end{center}
+
+%\begin{figure}[ht]
+\unitlength=1mm
+\begin{center}
+\begin{picture}(120,220)(7,0)
+\put(-4,203){$\lambda=0$}
+\put(10,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\; s^\prime=1/2}^{\nu=1}$} \put(10,200){\framebox(7,7){}}\put(12,204){\footnotesize H}\put(12,201){\footnotesize He}
+\put(21,200){\framebox(7,7){}}\put(23,204){\footnotesize Li}\put(23,201){\footnotesize Be}
+\put(32,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\; s^\prime=1/2}^{\nu=2}$}
+\put(32,200){\framebox(7,7){}}\put(34,204){\footnotesize Na}\put(34,201){\footnotesize Mg}
+\put(43,200){\framebox(7,7){}}\put(45,204){\footnotesize K}\put(45,201){\footnotesize Ca}
+\put(54,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=3}$}
+\put(54,200){\framebox(7,7){}}\put(56,204){\footnotesize Rb}\put(56,201){\footnotesize Sr}
+\put(65,200){\framebox(7,7){}}\put(67,204){\footnotesize Cs}\put(67,201){\footnotesize Ba}
+\put(76,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=4}$}
+\put(76,200){\framebox(7,7){}}\put(78,204){\footnotesize Fr}\put(78,201){\footnotesize Ra}
+\put(87,200){\framebox(7,7){}}
+\put(87.25,204){{\footnotesize Uue}}\put(87.25,201){{\footnotesize Ubn}}
+\put(98,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=5}$}
+\put(98,200){\framebox(7,7){}}\put(98.25,204){\footnotesize Uhe}\put(98.25,201){\footnotesize Usn}
+\put(109,200){\framebox(7,7){}}
+\put(109.25,204){{\footnotesize Bue}}\put(109.25,201){{\footnotesize Bbn}}
+\put(118,204){$\scriptscriptstyle s=-1/2$}
+\put(118,201){$\scriptscriptstyle s=1/2$}
+\put(125,203){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,203){$\scr\mu=0$}
+\put(-4,182){$\lambda=1$}
+\put(12,182){$\left\{\phantom{\framebox(1,12){}}\right.$}
+\put(32,187){\framebox(7,7){}}\put(34,191){\footnotesize B}\put(34,188){\footnotesize C}
+\put(43,187){\framebox(7,7){}}\put(45,191){\footnotesize Al}\put(45,188){\footnotesize Si}
+\put(54,187){\framebox(7,7){}}\put(56,191){\footnotesize Ga}\put(56,188){\footnotesize Ge}
+\put(65,187){\framebox(7,7){}}\put(67,191){\footnotesize In}\put(67,188){\footnotesize Sn}
+\put(76,187){\framebox(7,7){}}\put(78,191){\footnotesize Tl}\put(78,188){\footnotesize Pb}
+\put(87,187){\framebox(7,7){}}\put(89,191){{\footnotesize Nh}}\put(89,188){{\footnotesize Fl}}
+\put(98,187){\framebox(7,7){}}\put(98.25,191){\footnotesize Uht}\put(98.25,188){\footnotesize Uhq}
+\put(109,187){\framebox(7,7){}}\put(109.25,191){{\footnotesize But}}\put(109.25,188){{\footnotesize Buq}}
+\put(118,191){$\scriptscriptstyle s=-1/2$}
+\put(118,188){$\scriptscriptstyle s=1/2$}
+\put(125,190){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,190){$\scr\mu=-1$}
+\put(32,180){\framebox(7,7){}}\put(34,184){\footnotesize N}\put(34,181){\footnotesize O}
+\put(43,180){\framebox(7,7){}}\put(45,184){\footnotesize P}\put(45,181){\footnotesize S}
+\put(54,180){\framebox(7,7){}}\put(56,184){\footnotesize As}\put(56,181){\footnotesize Se}
+\put(65,180){\framebox(7,7){}}\put(67,184){\footnotesize Sb}\put(67,181){\footnotesize Te}
+\put(76,180){\framebox(7,7){}}\put(78,184){\footnotesize Bi}\put(78,181){\footnotesize Po}
+\put(87,180){\framebox(7,7){}}\put(89,184){{\footnotesize Mc}}\put(89,181){{\footnotesize Lv}}
+\put(98,180){\framebox(7,7){}}\put(98.25,184){\footnotesize Uhp}\put(98.25,181){\footnotesize Uhn}
+\put(109,180){\framebox(7,7){}}\put(109.25,184){{\footnotesize Bup}}\put(109.25,181){{\footnotesize Buh}}
+\put(118,184){$\scriptscriptstyle s=-1/2$}
+\put(118,181){$\scriptscriptstyle s=1/2$}
+\put(125,183){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,183){$\scr\mu=0$}
+\put(32,173){\framebox(7,7){}}\put(34,177){\footnotesize F}\put(34,174){\footnotesize Ne}
+\put(43,173){\framebox(7,7){}}\put(45,177){\footnotesize Cl}\put(45,174){\footnotesize Ar}
+\put(54,173){\framebox(7,7){}}\put(56,177){\footnotesize Br}\put(56,174){\footnotesize Kr}
+\put(65,173){\framebox(7,7){}}\put(67,177){\footnotesize I}\put(67,174){\footnotesize Xe}
+\put(76,173){\framebox(7,7){}}\put(78,177){\footnotesize At}\put(78,174){\footnotesize Rn}
+\put(87,173){\framebox(7,7){}}\put(89,177){{\footnotesize Ts}}\put(89,174){{\footnotesize Og}}
+\put(98,173){\framebox(7,7){}}\put(98.25,177){\footnotesize Uhs}\put(98.25,174){\footnotesize Uho}
+\put(109,173){\framebox(7,7){}}\put(109.25,177){{\footnotesize Bus}}\put(109.25,174){{\footnotesize Buo}}
+\put(118,177){$\scriptscriptstyle s=-1/2$}
+\put(118,174){$\scriptscriptstyle s=1/2$}
+\put(125,176){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,176){$\scr\mu=1$}
+\put(-4,151){$\lambda=2$}
+\put(12,151){$\left\{\phantom{\framebox(1,18){}}\right.$}
+\put(54,163){\framebox(7,7){}}\put(56,167){\footnotesize Sc}\put(56,164){\footnotesize Ti}
+\put(65,163){\framebox(7,7){}}\put(67,167){\footnotesize Y}\put(67,164){\footnotesize Zr}
+\put(76,163){\framebox(7,7){}}\put(78,167){\footnotesize Lu}\put(78,164){\footnotesize Hf}
+\put(87,163){\framebox(7,7){}}\put(89,167){\footnotesize Lr}\put(89,164){\footnotesize Rf}
+\put(98,163){\framebox(7,7){}}\put(98.25,167){\footnotesize Upt}\put(98.25,164){\footnotesize Upq}
+\put(109,163){\framebox(7,7){}}\put(109.25,167){{\footnotesize Bnt}}\put(109.25,164){{\footnotesize Bnq}}
+\put(118,167){$\scriptscriptstyle s=-1/2$}
+\put(118,164){$\scriptscriptstyle s=1/2$}
+\put(125,166){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,166){$\scr\mu=-2$}
+\put(54,156){\framebox(7,7){}}\put(56,160){\footnotesize V}\put(56,157){\footnotesize Cr}
+\put(65,156){\framebox(7,7){}}\put(67,160){\footnotesize Nb}\put(67,157){\footnotesize Mo}
+\put(76,156){\framebox(7,7){}}\put(78,160){\footnotesize Ta}\put(78,157){\footnotesize W}
+\put(87,156){\framebox(7,7){}}\put(89,160){{\footnotesize Db}}\put(89,157){{\footnotesize Sg}}
+\put(98,156){\framebox(7,7){}}\put(98.25,160){\footnotesize Upp}\put(98.25,157){\footnotesize Uph}
+\put(109,156){\framebox(7,7){}}\put(109.25,160){{\footnotesize Bnp}}\put(109.25,157){{\footnotesize Bnh}}
+\put(118,160){$\scriptscriptstyle s=-1/2$}
+\put(118,157){$\scriptscriptstyle s=1/2$}
+\put(125,159){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,159){$\scr\mu=-1$}
+\put(54,149){\framebox(7,7){}}\put(56,153){\footnotesize Mn}\put(56,150){\footnotesize Fe}
+\put(65,149){\framebox(7,7){}}\put(67,153){\footnotesize Tc}\put(67,150){\footnotesize Ru}
+\put(76,149){\framebox(7,7){}}\put(78,153){\footnotesize Re}\put(78,150){\footnotesize Os}
+\put(87,149){\framebox(7,7){}}\put(89,153){{\footnotesize Bh}}\put(89,150){{\footnotesize Hs}}
+\put(98,149){\framebox(7,7){}}\put(98.25,153){\footnotesize Ups}\put(98.25,150){\footnotesize Upo}
+\put(109,149){\framebox(7,7){}}\put(109.25,153){{\footnotesize Bns}}\put(109.25,150){{\footnotesize Bno}}
+\put(118,153){$\scriptscriptstyle s=-1/2$}
+\put(118,150){$\scriptscriptstyle s=1/2$}
+\put(125,152){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,152){$\scr\mu=0$}
+\put(54,142){\framebox(7,7){}}\put(56,146){\footnotesize Co}\put(56,143){\footnotesize Ni}
+\put(65,142){\framebox(7,7){}}\put(67,146){\footnotesize Rh}\put(67,143){\footnotesize Pd}
+\put(76,142){\framebox(7,7){}}\put(78,146){\footnotesize Ir}\put(78,143){\footnotesize Pt}
+\put(87,142){\framebox(7,7){}}\put(89,146){{\footnotesize Mt}}\put(89,143){{\footnotesize Ds}}
+\put(98,142){\framebox(7,7){}}\put(98.25,146){\footnotesize Upe}\put(98.25,143){\footnotesize Uhn}
+\put(109,142){\framebox(7,7){}}\put(109.25,146){{\footnotesize Bne}}\put(109.25,143){{\footnotesize Bun}}
+\put(118,146){$\scriptscriptstyle s=-1/2$}
+\put(118,143){$\scriptscriptstyle s=1/2$}
+\put(125,145){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,145){$\scr\mu=1$}
+\put(54,135){\framebox(7,7){}}\put(56,139){\footnotesize Cu}\put(56,136){\footnotesize Zn}
+\put(65,135){\framebox(7,7){}}\put(67,139){\footnotesize Ag}\put(67,136){\footnotesize Cd}
+\put(76,135){\framebox(7,7){}}\put(78,139){\footnotesize Au}\put(78,136){\footnotesize Hg}
+\put(87,135){\framebox(7,7){}}\put(89,139){{\footnotesize Rg}}\put(89,136){{\footnotesize Cn}}
+\put(98,135){\framebox(7,7){}}\put(98.25,139){\footnotesize Uhu}\put(98.25,136){\footnotesize Uhb}
+\put(109,135){\framebox(7,7){}}\put(109.25,139){{\footnotesize Buu}}\put(109.25,136){{\footnotesize Bub}}
+\put(118,139){$\scriptscriptstyle s=-1/2$}
+\put(118,136){$\scriptscriptstyle s=1/2$}
+\put(125,138){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,138){$\scr\mu=2$}
+\put(-4,106){$\lambda=3$}
+\put(12,106){$\left\{\phantom{\framebox(1,25){}}\right.$}
+\put(76,125){\framebox(7,7){}}\put(78,129){\footnotesize La}\put(78,126){\footnotesize Ce}
+\put(87,125){\framebox(7,7){}}\put(89,129){\footnotesize Ac}\put(89,126){\footnotesize Th}
+\put(98,125){\framebox(7,7){}}\put(98.25,129){\footnotesize Ute}\put(98.25,126){\footnotesize Uqn}
+\put(109,125){\framebox(7,7){}}\put(109.25,129){{\footnotesize Uoe}}\put(109.25,126){{\footnotesize Uen}}
+\put(118,129){$\scriptscriptstyle s=-1/2$}
+\put(118,126){$\scriptscriptstyle s=1/2$}
+\put(125,128){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,128){$\scr\mu=-3$}
+\put(76,118){\framebox(7,7){}}\put(78,122){\footnotesize Pr}\put(78,119){\footnotesize Nd}
+\put(87,118){\framebox(7,7){}}\put(89,122){\footnotesize Pa}\put(89,119){\footnotesize U}
+\put(98,118){\framebox(7,7){}}\put(98.25,122){\footnotesize Uqu}\put(98.25,119){\footnotesize Uqb}
+\put(109,118){\framebox(7,7){}}\put(109.25,122){{\footnotesize Ueu}}\put(109.25,119){{\footnotesize Ueb}}
+\put(118,122){$\scriptscriptstyle s=-1/2$}
+\put(118,119){$\scriptscriptstyle s=1/2$}
+\put(125,121){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,121){$\scr\mu=-2$}
+\put(76,111){\framebox(7,7){}}\put(78,115){\footnotesize Pm}\put(78,112){\footnotesize Sm}
+\put(87,111){\framebox(7,7){}}\put(89,115){\footnotesize Np}\put(89,112){\footnotesize Pu}
+\put(98,111){\framebox(7,7){}}\put(98.25,115){\footnotesize Uqt}\put(98.25,112){\footnotesize Uqq}
+\put(109,111){\framebox(7,7){}}\put(109.25,115){{\footnotesize Uet}}\put(109.25,112){{\footnotesize Ueq}}
+\put(118,115){$\scriptscriptstyle s=-1/2$}
+\put(118,112){$\scriptscriptstyle s=1/2$}
+\put(125,114){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,114){$\scr\mu=-1$}
+\put(76,104){\framebox(7,7){}}\put(78,108){\footnotesize Eu}\put(78,105){\footnotesize Gd}
+\put(87,104){\framebox(7,7){}}\put(89,108){\footnotesize Am}\put(89,105){\footnotesize Cm}
+\put(98,104){\framebox(7,7){}}\put(98.25,108){\footnotesize Uqp}\put(98.25,105){\footnotesize Uqh}
+\put(109,104){\framebox(7,7){}}\put(109.25,108){{\footnotesize Uep}}\put(109.25,105){{\footnotesize Ueh}}
+\put(118,108){$\scriptscriptstyle s=-1/2$}
+\put(118,105){$\scriptscriptstyle s=1/2$}
+\put(125,107){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,107){$\scr\mu=0$}
+\put(76,97){\framebox(7,7){}}\put(78,101){\footnotesize Tb}\put(78,98){\footnotesize Dy}
+\put(87,97){\framebox(7,7){}}\put(89,101){\footnotesize Bk}\put(89,98){\footnotesize Cf}
+\put(98,97){\framebox(7,7){}}\put(98.25,101){\footnotesize Uqs}\put(98.25,98){\footnotesize Uqo}
+\put(109,97){\framebox(7,7){}}\put(109.25,101){{\footnotesize Ues}}\put(109.25,98){{\footnotesize Ueo}}
+\put(118,101){$\scriptscriptstyle s=-1/2$}
+\put(118,98){$\scriptscriptstyle s=1/2$}
+\put(125,100){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,100){$\scr\mu=1$}
+\put(76,90){\framebox(7,7){}}\put(78,94){\footnotesize Ho}\put(78,91){\footnotesize Er}
+\put(87,90){\framebox(7,7){}}\put(89,94){\footnotesize Es}\put(89,91){\footnotesize Fm}
+\put(98,90){\framebox(7,7){}}\put(98.25,94){\footnotesize Uqe}\put(98.25,91){\footnotesize Upn}
+\put(109,90){\framebox(7,7){}}\put(109.25,94){{\footnotesize Uee}}\put(109.25,91){{\footnotesize Bnn}}
+\put(118,94){$\scriptscriptstyle s=-1/2$}
+\put(118,91){$\scriptscriptstyle s=1/2$}
+\put(125,93){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,93){$\scr\mu=2$}
+\put(76,83){\framebox(7,7){}}\put(78,87){\footnotesize Tm}\put(78,84){\footnotesize Yb}
+\put(87,83){\framebox(7,7){}}\put(89,87){\footnotesize Md}\put(89,84){\footnotesize No}
+\put(98,83){\framebox(7,7){}}\put(98.25,87){\footnotesize Upu}\put(98.25,84){\footnotesize Upb}
+\put(109,83){\framebox(7,7){}}\put(109.25,87){{\footnotesize Bnu}}\put(109.25,84){{\footnotesize Bnb}}
+\put(8,82){\dashbox{1}(88,135)[b]{\bf M}}
+\put(118,87){$\scriptscriptstyle s=-1/2$}
+\put(118,84){$\scriptscriptstyle s=1/2$}
+\put(125,86){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,86){$\scr\mu=3$}
+\put(-4,48){$\lambda=4$}
+\put(12,48){$\left\{\phantom{\framebox(1,33){}}\right.$}
+\put(98,73){\framebox(7,7){}}\put(98.25,77){\footnotesize Ubu}\put(98.25,74){\footnotesize Ubb}
+\put(109,73){\framebox(7,7){}}\put(109.25,77){{\footnotesize Usu}}\put(109.25,74){{\footnotesize Usb}}
+\put(118,77){$\scriptscriptstyle s=-1/2$}
+\put(118,74){$\scriptscriptstyle s=1/2$}
+\put(125,76){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,76){$\scr\mu=-4$}
+\put(98,66){\framebox(7,7){}}\put(98.25,70){\footnotesize Ubt}\put(98.25,67){\footnotesize Ubq}
+\put(109,66){\framebox(7,7){}}\put(109.25,70){{\footnotesize Ust}}\put(109.25,67){{\footnotesize Usq}}
+\put(118,70){$\scriptscriptstyle s=-1/2$}
+\put(118,67){$\scriptscriptstyle s=1/2$}
+\put(125,69){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,69){$\scr\mu=-3$}
+\put(98,59){\framebox(7,7){}}\put(98.25,63){\footnotesize Ubp}\put(98.25,60){\footnotesize Ubn}
+\put(109,59){\framebox(7,7){}}\put(109.25,63){{\footnotesize Usp}}\put(109.25,60){{\footnotesize Ush}}
+\put(118,63){$\scriptscriptstyle s=-1/2$}
+\put(118,60){$\scriptscriptstyle s=1/2$}
+\put(125,62){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,62){$\scr\mu=-2$}
+\put(98,52){\framebox(7,7){}}\put(98.25,56){\footnotesize Ubs}\put(98.25,53){\footnotesize Ubo}
+\put(109,52){\framebox(7,7){}}\put(109.25,56){{\footnotesize Uss}}\put(109.25,53){{\footnotesize Uso}}
+\put(118,56){$\scriptscriptstyle s=-1/2$}
+\put(118,53){$\scriptscriptstyle s=1/2$}
+\put(125,55){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,55){$\scr\mu=-1$}
+\put(98,45){\framebox(7,7){}}\put(98.25,49){\footnotesize Ube}\put(98.25,46){\footnotesize Utn}
+\put(109,45){\framebox(7,7){}}\put(109.25,49){{\footnotesize Use}}\put(109.25,46){{\footnotesize Uon}}
+\put(118,49){$\scriptscriptstyle s=-1/2$}
+\put(118,46){$\scriptscriptstyle s=1/2$}
+\put(125,48){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,48){$\scr\mu=0$}
+\put(98,38){\framebox(7,7){}}\put(98.25,42){\footnotesize Utu}\put(98.25,39){\footnotesize Utb}
+\put(109,38){\framebox(7,7){}}\put(109.25,42){{\footnotesize Uou}}\put(109.25,39){{\footnotesize Uob}}
+\put(118,42){$\scriptscriptstyle s=-1/2$}
+\put(118,39){$\scriptscriptstyle s=1/2$}
+\put(125,41){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,41){$\scr\mu=1$}
+\put(98,31){\framebox(7,7){}}\put(98.25,35){\footnotesize Utt}\put(98.25,32){\footnotesize Utq}
+\put(109,31){\framebox(7,7){}}\put(109.25,35){{\footnotesize Uot}}\put(109.25,32){{\footnotesize Uoq}}
+\put(118,35){$\scriptscriptstyle s=-1/2$}
+\put(118,32){$\scriptscriptstyle s=1/2$}
+\put(125,34){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,34){$\scr\mu=2$}
+\put(98,24){\framebox(7,7){}}\put(98.25,28){\footnotesize Utp}\put(98.25,25){\footnotesize Uth}
+\put(109,24){\framebox(7,7){}}\put(109.25,28){{\footnotesize Uop}}\put(109.25,25){{\footnotesize Uoh}}
+\put(118,28){$\scriptscriptstyle s=-1/2$}
+\put(118,25){$\scriptscriptstyle s=1/2$}
+\put(125,27){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,27){$\scr\mu=3$}
+\put(98,17){\framebox(7,7){}}\put(98.25,21){\footnotesize Uts}\put(98.25,18){\footnotesize Uto}
+\put(109,17){\framebox(7,7){}}\put(109.25,21){{\footnotesize Uos}}\put(109.25,18){{\footnotesize Uoo}}
+\put(118,21){$\scriptscriptstyle s=-1/2$}
+\put(118,18){$\scriptscriptstyle s=1/2$}
+\put(125,20){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(129,20){$\scr\mu=4$}
+\put(10,5){\begin{minipage}{25pc}{\small {\bf Ðèñ.\,1.} Òàáëèöà Ñèáîðãà â ôîðìå îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû Ðóìåðà--Ôåòà (áàçèñ $|\nu,\lambda,\mu,s,s^\prime\rangle$).}\end{minipage}}
+\end{picture}
+\end{center}
+%\end{figure}
+Ìàññîâàÿ ôîðìóëà (\ref{Mass1}) ñîîòâåòñòâóåò öåïî÷êå ãðóïï (\ref{Chain1}). Ôîðìóëà (\ref{Mass1}) àíàëîãè÷íà <<ïåðâîìó âîçìóùåíèþ>> â $\SU(3)$- è $\SU(6)$-òåîðèÿõ, êîòîðîå ïîçâîëÿåò âû÷èñëèòü ñðåäíþþ ìàññó ýëåìåíòîâ ìóëüòèïëåòà\footnote{Òàê, â $\SU(3)$-òåîðèè èìååò ìåñòî ìàññîâàÿ ôîðìóëà Ãåëë--Ìàííà--Îêóáî
+\[
+m=m_0+\alpha+\beta Y+\gamma\left[I(I+1)-\frac{1}{4}Y^2\right]
++\alpha^\prime-\beta^\prime
+Q+\gamma^\prime\left[U(U+1)-\frac{1}{4}Q^2\right],
+\]
+â êîòîðîé, ñîãëàñíî $\SU(3)/\SU(2)$-ðåäóêöèè, êâàíòîâûå ÷èñëà ($I$ --- èçîòîïè÷åñêèé ñïèí, $Y$ --- ãèïåðçàðÿä), ñòîÿùèå â ïåðâîé êâàäðàòíîé ñêîáêå, çàäàþò <<ïåðâîå âîçìóùåíèå>>, ÷òî ïðèâîäèò ê òàê íàçûâàåìîìó \textit{ãèïåðçàðÿäîâîìó} ðàñùåïëåíèþ ìàññ, ò.~å. ðàçáèåíèþ ìóëüòèïëåòà ãðóïïû $\SU(3)$ íà ìåíüøèå ìóëüòèïëåòû ïîäãðóïïû $\SU(2)$. <<Âòîðîå âîçìóùåíèå>> çàäàžòñÿ êâàíòîâûìè ÷èñëàìè, ñòîÿùèìè âî âòîðîé êâàäðàòíîé ñêîáêå ($Q$ --- çàðÿä, $U$ --- èçîòîïè÷åñêèé ñïèí, êîòîðûé â îòëè÷èå îò $I$ ñîîòâåòñòâóåò äðóãîìó âûáîðó áàçèñà â ïîäãðóïïå $\SU(2)$), ÷òî ïðèâîäèò, â ñâîþ î÷åðåäü, ê \textit{çàðÿäîâîìó} (ïîýëåìåíòíîìó) ðàñùåïëåíèþ ìàññ âíóòðè ìóëüòèïëåòîâ $\SU(2)$.
+}.
+
+×òîáû ïîëó÷èòü àíàëîã <<âòîðîãî âîçìóùåíèÿ>>, ïðèâîäÿùåãî ê ðàñùåïëåíèþ ìàññ âíóòðè ìóëüòèïëåòîâ ãðóïïû $G_2=\SO(3)\otimes\SU(2)$, òðåáóåòñÿ íàéòè äàëüíåéøåå óäëèíåíèå öåïî÷êè ãðóïï $G\supset G_1\supset G_2$ (\ref{Chain1}), ò.~å. çàäà÷à ñâîäèòñÿ ê íàõîæäåíèþ åùž îäíîé ïîäãðóïïû $G_3$. Òîãäà $G_2/G_3$-ðåäóêöèÿ äàñò ïîýëåìåíòíîå ðàñùåïëåíèå ìàññ. Êàê èçâåñòíî, ïðåäñòàâëåíèå $\{u_O\}$ ãðóïïû $\SU(2)$ ñîïîñòàâëÿåò êàæäîìó âðàùåíèþ $O$ èç $\SO(3)$ ìàòðèöó $u_O$ èç $\SU(2)$ è òåì ñàìûì ïàðó $(O,u_O)$, ò.~å. ýëåìåíò ãðóïïû $G_2$. Ïðè ïåðåìíîæåíèè $(O,u_O)$ äàþò ïàðû òîãî æå âèäà: $(O_1,u_{O_1})(O_2,u_{O_2})=(O_1O_2,u_{O_1}u_{O_2})=(O_1O_2,u_{O_1O_2})$, îáðàòíûå ïàðû èìåþò òîò æå âèä $(O,u_O)^{-1}=(O^{-1},u_{O^{-1}})$. Ñëåäîâàòåëüíî, òàêèå ïàðû îáðàçóþò ïîäãðóïïó â $G_2$, êîòîðàÿ è îáîçíà÷àåòñÿ $G_3$. Ïîäãðóïïà $G_3$ ëîêàëüíî èçîìîðôíà $\SO(3)$. Ñëåäóÿ Ôåòó, áóäåì îáîçíà÷àòü åž ÷åðåç $\SO(3)_c$. Äàëåå, îäíîïàðàìåòðè÷åñêèå ïîäãðóïïû ãðóïïû $\SO(3)$ èìåþò âèä $\left\{e^{-i\alpha A_k}\right\}$ ($k=1,2,3$); òàê êàê ïðåäñòàâëåíèå $\{u_O\}$ ïåðåâîäèò èõ â îäíîïàðàìåòðè÷åñêèå ïîäãðóïïû $\left\{e^{-i\alpha\boldsymbol{\tau}_k}\right\}$ ãðóïïû $\SU(2)$, òî ñîîòâåòñòâóþùèå îäíîïàðàìåòðè÷åñêèå ïîäãðóïïû â $\SO(3)_c$ èìåþò âèä
+\[
+\left(e^{-i\alpha A_k},e^{-i\alpha\boldsymbol{\tau}_k}\right)=\left(e^{-i\alpha A_k},1\right)
+\left(1,e^{-i\alpha\boldsymbol{\tau}_k}\right).
+\]
+Ïîñêîëüêó ìàòðèöàì $A_1$, $A_2$, $A_3$ ñîîòâåòñòâóþò â ãðóïïå $G$ âðàùåíèÿ\lb $\bsL_{23}=\bsJ_1+\bsK_1$, $\bsL_{31}=\bsJ_2+\bsK_2$, $\bsL_{12}=\bsJ_3+\bsK_3$ â îñíîâíîì ïðåäñòàâëåíèè ãðóïïû $G$ (ñì. \cite{Var18}), ïàðó $\left(e^{-i\alpha A_k},1\right)$ èçîáðàæàåò îïåðàòîð $e^{-i\alpha(\bsJ_k+\bsK_k)}$; ïàðó $\left(1,e^{-i\alpha\boldsymbol{\tau}_k}\right)$ èçîáðàæàåò îïåðàòîð $e^{-i\alpha\boldsymbol{\tau}_k}$. Òàêèì îáðàçîì, îäíîïàðàìåòðè÷åñêèì ïîäãðóïïàì $G_3=\SO(3)_c$ ñîîòâåòñòâóþò ïîäãðóïïû îïåðàòîðîâ $e^{-i\alpha(\bsJ_k+\bsK_k)}e^{-i\alpha\boldsymbol{\tau}_k}$ ($k=1,2,3$). Íåïðèâîäèìûå ïðåäñòàâëåíèÿ ãðóïïû $G_2=\SO(3)\otimes\SU(2)$ íóìåðóþòñÿ íàáîðàìè êâàíòîâûõ ÷èñåë $(\nu,s^\prime,\lambda)$ è èçîáðàæàþòñÿ ïðÿìîóãîëüíèêàìè íà ðèñ.\,1. Êàæäîå èç íèõ çàäàžòñÿ ôóíäàìåíòàëüíûì ïðåäñòàâëåíèåì $\SU(2)$\lb è $(2\lambda+1)$-ìåðíûì íåïðèâîäèìûì ïðåäñòàâëåíèåì ãðóïïû $\SO(3)$. Ïðè $G_2/G_3$-ðåäóêöèè èç òàêîãî ïðåäñòàâëåíèÿ ïîëó÷àþòñÿ íåïðèâîäèìûå ïðåäñòàâëåíèÿ ïîäãðóïïû $G_3=\SO(3)_c$, äëÿ êîòîðûõ ïîñëåäîâàòåëüíîñòü Êëåáøà--Ãîðäàíà $\left|j_1-j_2\right|$, $\ldots$, $j_1+j_2$ ñî çíà÷åíèÿìè $j_1=1/2$ è $j_2=\lambda$ ñâîäèòñÿ ê äâóì ÷ëåíàì $\lambda-1/2$, $\lambda+1/2$ ïðè $\lambda>0$ è îäíîìó ÷ëåíó $1/2$ ïðè $\lambda=0$. Ñëåäîâàòåëüíî, ïðè $\lambda>0$ ïðåäñòàâëåíèå $(\nu,s^\prime,\lambda)$ ãðóïïû $G_2$ ïðèâîäèòñÿ ê äâóì íåïðèâîäèìûì ïðåäñòàâëåíèÿì ïîäãðóïïû $G_3$ ðàçìåðíîñòåé $2(\lambda-1/2)+1=2\lambda$ è $2(\lambda+1/2)+1=2\lambda+2$, à ïðè $\lambda=0$ --- ê îäíîìó äâóìåðíîìó íåïðèâîäèìîìó ïðåäñòàâëåíèþ. Òàêèì îáðàçîì, ïðè $\lambda>0$ ìóëüòèïëåòû ïîäãðóïïû $G_2$ ðåäóöèðóþòñÿ ê äâóì ìóëüòèïëåòàì ïîäãðóïïû $G_3$. $G_2/G_3$-ðåäóêöèÿ ïðèâîäèò ê ñëåäóþùåé (óäëèížííîé) öåïî÷êå ãðóïï:
+\begin{multline}
+G\supset G_1\supset G_2\supset G_3\longmapsto\\
+\SO(2,4)\otimes\SU(2)\otimes\SU(2)\supset\SO(4)\otimes\SU(2)\supset\SO(3)\otimes\SU(2)\supset\SO(3)_c.\label{Chain2}
+\end{multline}
+Óäëèíåíèå öåïî÷êè ãðóïï òðåáóåò ââåäåíèÿ íîâîãî áàçèñà, âåêòîðû êîòîðîãî äîëæíû ïðèíàäëåæàòü íàèìåíüøèì ìóëüòèïëåòàì ãðóïïû ñèììåòðèè, ò.~å. ìóëüòèïëåòàì ïîäãðóïïû $G_3$. Âåêòîðû $|\nu,\lambda,\mu,s,s^\prime\rangle$ áàçèñà (\ref{Basis1}), ñîîòâåòñòâóþùåãî öåïî÷êå ãðóïï (\ref{Chain1}), óæå íå ñîñòàâëÿþò âûäåëåííûé áàçèñ, ïîñêîëüêó $\mu$, $s$ íå ÿâëÿþòñÿ áîëüøå êâàíòîâûìè ÷èñëàìè ãðóïïû ñèììåòðèè, ò.~å. óêàçàííûå âåêòîðû íå ïðèíàäëåæàò ïðîñòðàíñòâàì íåïðèâîäèìûõ ïðåäñòàâëåíèé ãðóïïû $G_3$. Íîâûé áàçèñ îïðåäåëÿåòñÿ ñëåäóþùèì îáðàçîì. Ïîñêîëüêó $\nu$, $s^\prime$, $\lambda$ ñâÿçàíû ñ ãðóïïàìè $G$, $G_1$, $G_2$, îíè îñòàþòñÿ êâàíòîâûìè ÷èñëàìè öåïî÷êè (\ref{Chain1}), à âìåñòî $\mu$, $s$ ââîäÿòñÿ íîâûå êâàíòîâûå ÷èñëà, ñâÿçàííûå ñ $G_3$. Îäíî èç íèõ --- ýòî $\iota_\lambda$, ñâÿçàííîå ñ îïåðàòîðîì Êàçèìèðà ïîäãðóïïû $G_3$, ðàâíîãî $\sum^3_{k=1}(\boldsymbol{\tau}_k+\bsJ_k+\bsK_k)^2$. Ïðè ýòîì äâóì ìóëüòèïëåòàì $G_3$, íà êîòîðûå ðàçáèâàþòñÿ ïðåäñòàâëåíèÿ ãðóïïû $G_2$, ñîîòâåòñòâóþò $\iota_\lambda=\lambda-1/2$ è $\iota_\lambda=\lambda+1/2$, îòêóäà $2\lambda=2\iota_\lambda+1$, $2\lambda+2=2\iota_\lambda+1$. Äðóãîå êâàíòîâîå ÷èñëî $\kappa$ åñòü ñîáñòâåííîå çíà÷åíèå îïåðàòîðà $q_3=\boldsymbol{\tau}_3+\bsJ_3+\bsK_3$, ïðèíàäëåæàùåãî àëãåáðå Ëè ãðóïïû $G_3=\SO(3)_c$. Òàêèì îáðàçîì, íîâûé áàçèñ, ñîîòâåòñòâóþùèé öåïî÷êå ãðóïï (\ref{Chain2}), èìååò âèä
+\begin{multline}
+|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle,\quad \nu=1,2,\ldots;\;s^\prime=-1/2,1/2;\;\lambda=0,1,\ldots, \nu-1;\\
+\iota_\lambda=\lambda-1/2,\lambda+1/2;\;\kappa=-\iota_\lambda, -\iota_\lambda+1,\ldots,\iota_\lambda-1,\iota_\lambda.\label{Basis2}
+\end{multline}
+Òàáëèöà Ñèáîðãà â áàçèñå (\ref{Basis2}) ïðåäñòàâëåíà íà ðèñ.\, 2.
+\section{Ìàññû ýëåìåíòîâ}
+Óäëèížííàÿ öåïî÷êà ãðóïï $G\supset G_1\supset G_2\supset G_3$ (\ref{Chain2}) ïîçâîëÿåò ïðîâåñòè ïîýëåìåíòíîå ðàñùåïëåíèå ìàññ îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû Ðóìåðà--Ôåòà. Ñ ýòîé öåëüþ ââåäžì ñëåäóþùóþ ìàññîâóþ ôîðìóëó:
+\begin{multline}
+m=m_0+a\left[s^\prime(2\nu-3)-5\nu+\frac{11}{2}+2(\nu^2-1)\right]-b\cdot\lambda(\lambda+1)+\\
++a^\prime\left[2\kappa-0{,}1666\kappa^3+0{,}0083\kappa^5-0{,}0001\kappa^7\right]+\left(b^\prime\iota_\lambda\right)^p-1,
+\label{Mass2}
+\end{multline}
+ãäå
+\[
+p=\left\{\begin{array}{rl}
+0, & \mbox{åñëè $\iota_\lambda=\lambda-1/2$};\\
+1, & \mbox{åñëè $\iota_\lambda=\lambda+1/2$}.
+\end{array}\right.
+\]
+
+%\begin{figure}[ht]
+\unitlength=1mm
+\begin{center}
+\begin{picture}(120,220)(7,0)
+\put(-4,203){$\lambda=0$}
+\put(10,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\; s^\prime=1/2}^{\nu=1}$} \put(10,200){\framebox(7,7){}}\put(12,204){\footnotesize H}\put(12,201){\footnotesize He}
+\put(21,200){\framebox(7,7){}}\put(23,204){\footnotesize Li}\put(23,201){\footnotesize Be}
+\put(32,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\; s^\prime=1/2}^{\nu=2}$}
+\put(32,200){\framebox(7,7){}}\put(34,204){\footnotesize Na}\put(34,201){\footnotesize Mg}
+\put(43,200){\framebox(7,7){}}\put(45,204){\footnotesize K}\put(45,201){\footnotesize Ca}
+\put(54,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=3}$}
+\put(54,200){\framebox(7,7){}}\put(56,204){\footnotesize Rb}\put(56,201){\footnotesize Sr}
+\put(65,200){\framebox(7,7){}}\put(67,204){\footnotesize Cs}\put(67,201){\footnotesize Ba}
+\put(76,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=4}$}
+\put(76,200){\framebox(7,7){}}\put(78,204){\footnotesize Fr}\put(78,201){\footnotesize Ra}
+\put(87,200){\framebox(7,7){}}
+\put(87.25,204){{\footnotesize Uue}}\put(87.25,201){{\footnotesize Ubn}}
+\put(98,209){$\overbrace{\scriptscriptstyle s^\prime=-1/2\;\; s^\prime=1/2}^{\nu=5}$}
+\put(98,200){\framebox(7,7){}}\put(98.25,204){\footnotesize Uhe}\put(98.25,201){\footnotesize Usn}
+\put(109,200){\framebox(7,7){}}
+\put(109.25,204){{\footnotesize Bue}}\put(109.25,201){{\footnotesize Bbn}}
+\put(118,204){$\scriptscriptstyle \kappa=-1/2$}
+\put(118,201){$\scriptscriptstyle \kappa=1/2$}
+\put(125,203){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(130,203){$\scr\iota_\lambda=1/2$}
+\put(-4,182){$\lambda=1$}
+\put(12,182){$\left\{\phantom{\framebox(1,12){}}\right.$}
+\put(32,187){\framebox(7,7){}}\put(34,191){\footnotesize B}\put(34,188){\footnotesize C}
+\put(43,187){\framebox(7,7){}}\put(45,191){\footnotesize Al}\put(45,188){\footnotesize Si}
+\put(54,187){\framebox(7,7){}}\put(56,191){\footnotesize Ga}\put(56,188){\footnotesize Ge}
+\put(65,187){\framebox(7,7){}}\put(67,191){\footnotesize In}\put(67,188){\footnotesize Sn}
+\put(76,187){\framebox(7,7){}}\put(78,191){\footnotesize Tl}\put(78,188){\footnotesize Pb}
+\put(87,187){\framebox(7,7){}}\put(89,191){{\footnotesize Nh}}\put(89,188){{\footnotesize Fl}}
+\put(98,187){\framebox(7,7){}}\put(98.25,191){\footnotesize Uht}\put(98.25,188){\footnotesize Uhq}
+\put(109,187){\framebox(7,7){}}\put(109.25,191){{\footnotesize But}}\put(109.25,188){{\footnotesize Buq}}
+\put(118,191){$\scriptscriptstyle \kappa=-1/2$}
+\put(118,188){$\scriptscriptstyle \kappa=1/2$}
+\put(125,190){$\left.\phantom{\framebox(1,4){}}\right\}$}
+\put(130,190){$\scr\iota_\lambda=1/2$}
+\put(32,180){\framebox(7,7){}}\put(34,184){\footnotesize N}\put(34,181){\footnotesize O}
+\put(43,180){\framebox(7,7){}}\put(45,184){\footnotesize P}\put(45,181){\footnotesize S}
+\put(54,180){\framebox(7,7){}}\put(56,184){\footnotesize As}\put(56,181){\footnotesize Se}
+\put(65,180){\framebox(7,7){}}\put(67,184){\footnotesize Sb}\put(67,181){\footnotesize Te}
+\put(76,180){\framebox(7,7){}}\put(78,184){\footnotesize Bi}\put(78,181){\footnotesize Po}
+\put(87,180){\framebox(7,7){}}\put(89,184){{\footnotesize Mc}}\put(89,181){{\footnotesize Lv}}
+\put(98,180){\framebox(7,7){}}\put(98.25,184){\footnotesize Uhp}\put(98.25,181){\footnotesize Uhn}
+\put(109,180){\framebox(7,7){}}\put(109.25,184){{\footnotesize Bup}}\put(109.25,181){{\footnotesize Buh}}
+\put(118,184){$\scriptscriptstyle \kappa=-3/2$}
+\put(118,181){$\scriptscriptstyle \kappa=-1/2$}
+%\put(125,183){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,183){$\scr\mu=0$}
+\put(32,173){\framebox(7,7){}}\put(34,177){\footnotesize F}\put(34,174){\footnotesize Ne}
+\put(43,173){\framebox(7,7){}}\put(45,177){\footnotesize Cl}\put(45,174){\footnotesize Ar}
+\put(54,173){\framebox(7,7){}}\put(56,177){\footnotesize Br}\put(56,174){\footnotesize Kr}
+\put(65,173){\framebox(7,7){}}\put(67,177){\footnotesize I}\put(67,174){\footnotesize Xe}
+\put(76,173){\framebox(7,7){}}\put(78,177){\footnotesize At}\put(78,174){\footnotesize Rn}
+\put(87,173){\framebox(7,7){}}\put(89,177){{\footnotesize Ts}}\put(89,174){{\footnotesize Og}}
+\put(98,173){\framebox(7,7){}}\put(98.25,177){\footnotesize Uhs}\put(98.25,174){\footnotesize Uho}
+\put(109,173){\framebox(7,7){}}\put(109.25,177){{\footnotesize Bus}}\put(109.25,174){{\footnotesize Buo}}
+\put(118,177){$\scriptscriptstyle \kappa=1/2$}
+\put(118,174){$\scriptscriptstyle \kappa=3/2$}
+\put(125,179){$\left.\phantom{\framebox(1,8){}}\right\}$}
+\put(130,179){$\scr\iota_\lambda=3/2$}
+\put(-4,151){$\lambda=2$}
+\put(12,151){$\left\{\phantom{\framebox(1,18){}}\right.$}
+\put(54,163){\framebox(7,7){}}\put(56,167){\footnotesize Sc}\put(56,164){\footnotesize Ti}
+\put(65,163){\framebox(7,7){}}\put(67,167){\footnotesize Y}\put(67,164){\footnotesize Zr}
+\put(76,163){\framebox(7,7){}}\put(78,167){\footnotesize Lu}\put(78,164){\footnotesize Hf}
+\put(87,163){\framebox(7,7){}}\put(89,167){\footnotesize Lr}\put(89,164){\footnotesize Rf}
+\put(98,163){\framebox(7,7){}}\put(98.25,167){\footnotesize Upt}\put(98.25,164){\footnotesize Upq}
+\put(109,163){\framebox(7,7){}}\put(109.25,167){{\footnotesize Bnt}}\put(109.25,164){{\footnotesize Bnq}}
+\put(118,167){$\scriptscriptstyle \kappa=-3/2$}
+\put(118,164){$\scriptscriptstyle \kappa=-1/2$}
+%\put(125,166){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,166){$\scr\mu=-2$}
+\put(54,156){\framebox(7,7){}}\put(56,160){\footnotesize V}\put(56,157){\footnotesize Cr}
+\put(65,156){\framebox(7,7){}}\put(67,160){\footnotesize Nb}\put(67,157){\footnotesize Mo}
+\put(76,156){\framebox(7,7){}}\put(78,160){\footnotesize Ta}\put(78,157){\footnotesize W}
+\put(87,156){\framebox(7,7){}}\put(89,160){{\footnotesize Db}}\put(89,157){{\footnotesize Sg}}
+\put(98,156){\framebox(7,7){}}\put(98.25,160){\footnotesize Upp}\put(98.25,157){\footnotesize Uph}
+\put(109,156){\framebox(7,7){}}\put(109.25,160){{\footnotesize Bnp}}\put(109.25,157){{\footnotesize Bnh}}
+\put(118,160){$\scriptscriptstyle \kappa=1/2$}
+\put(118,157){$\scriptscriptstyle \kappa=3/2$}
+\put(125,162){$\left.\phantom{\framebox(1,8){}}\right\}$}
+\put(130,162){$\scr\iota_\lambda=3/2$}
+\put(54,149){\framebox(7,7){}}\put(56,153){\footnotesize Mn}\put(56,150){\footnotesize Fe}
+\put(65,149){\framebox(7,7){}}\put(67,153){\footnotesize Tc}\put(67,150){\footnotesize Ru}
+\put(76,149){\framebox(7,7){}}\put(78,153){\footnotesize Re}\put(78,150){\footnotesize Os}
+\put(87,149){\framebox(7,7){}}\put(89,153){{\footnotesize Bh}}\put(89,150){{\footnotesize Hs}}
+\put(98,149){\framebox(7,7){}}\put(98.25,153){\footnotesize Ups}\put(98.25,150){\footnotesize Upo}
+\put(109,149){\framebox(7,7){}}\put(109.25,153){{\footnotesize Bns}}\put(109.25,150){{\footnotesize Bno}}
+\put(118,153){$\scriptscriptstyle \kappa=-5/2$}
+\put(118,150){$\scriptscriptstyle \kappa=-3/2$}
+%\put(125,152){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,152){$\scr\mu=0$}
+\put(54,142){\framebox(7,7){}}\put(56,146){\footnotesize Co}\put(56,143){\footnotesize Ni}
+\put(65,142){\framebox(7,7){}}\put(67,146){\footnotesize Rh}\put(67,143){\footnotesize Pd}
+\put(76,142){\framebox(7,7){}}\put(78,146){\footnotesize Ir}\put(78,143){\footnotesize Pt}
+\put(87,142){\framebox(7,7){}}\put(89,146){{\footnotesize Mt}}\put(89,143){{\footnotesize Ds}}
+\put(98,142){\framebox(7,7){}}\put(98.25,146){\footnotesize Upe}\put(98.25,143){\footnotesize Uhn}
+\put(109,142){\framebox(7,7){}}\put(109.25,146){{\footnotesize Bne}}\put(109.25,143){{\footnotesize Bun}}
+\put(118,146){$\scriptscriptstyle \kappa=-1/2$}
+\put(118,143){$\scriptscriptstyle \kappa=1/2$}
+\put(125,144){$\left.\phantom{\framebox(1,12){}}\right\}$}
+\put(130,144){$\scr\iota_\lambda=5/2$}
+\put(54,135){\framebox(7,7){}}\put(56,139){\footnotesize Cu}\put(56,136){\footnotesize Zn}
+\put(65,135){\framebox(7,7){}}\put(67,139){\footnotesize Ag}\put(67,136){\footnotesize Cd}
+\put(76,135){\framebox(7,7){}}\put(78,139){\footnotesize Au}\put(78,136){\footnotesize Hg}
+\put(87,135){\framebox(7,7){}}\put(89,139){{\footnotesize Rg}}\put(89,136){{\footnotesize Cn}}
+\put(98,135){\framebox(7,7){}}\put(98.25,139){\footnotesize Uhu}\put(98.25,136){\footnotesize Uhb}
+\put(109,135){\framebox(7,7){}}\put(109.25,139){{\footnotesize Buu}}\put(109.25,136){{\footnotesize Bub}}
+\put(118,139){$\scriptscriptstyle \kappa=3/2$}
+\put(118,136){$\scriptscriptstyle \kappa=5/2$}
+%\put(125,138){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,138){$\scr\mu=2$}
+\put(-4,106){$\lambda=3$}
+\put(12,106){$\left\{\phantom{\framebox(1,25){}}\right.$}
+\put(76,125){\framebox(7,7){}}\put(78,129){\footnotesize La}\put(78,126){\footnotesize Ce}
+\put(87,125){\framebox(7,7){}}\put(89,129){\footnotesize Ac}\put(89,126){\footnotesize Th}
+\put(98,125){\framebox(7,7){}}\put(98.25,129){\footnotesize Ute}\put(98.25,126){\footnotesize Uqn}
+\put(109,125){\framebox(7,7){}}\put(109.25,129){{\footnotesize Uoe}}\put(109.25,126){{\footnotesize Uen}}
+\put(118,129){$\scriptscriptstyle \kappa=-5/2$}
+\put(118,126){$\scriptscriptstyle \kappa=-3/2$}
+%\put(125,128){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,128){$\scr\mu=-3$}
+\put(76,118){\framebox(7,7){}}\put(78,122){\footnotesize Pr}\put(78,119){\footnotesize Nd}
+\put(87,118){\framebox(7,7){}}\put(89,122){\footnotesize Pa}\put(89,119){\footnotesize U}
+\put(98,118){\framebox(7,7){}}\put(98.25,122){\footnotesize Uqu}\put(98.25,119){\footnotesize Uqb}
+\put(109,118){\framebox(7,7){}}\put(109.25,122){{\footnotesize Ueu}}\put(109.25,119){{\footnotesize Ueb}}
+\put(118,122){$\scriptscriptstyle \kappa=-1/2$}
+\put(118,119){$\scriptscriptstyle \kappa=1/2$}
+%\put(125,121){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,121){$\scr\mu=-2$}
+\put(76,111){\framebox(7,7){}}\put(78,115){\footnotesize Pm}\put(78,112){\footnotesize Sm}
+\put(87,111){\framebox(7,7){}}\put(89,115){\footnotesize Np}\put(89,112){\footnotesize Pu}
+\put(98,111){\framebox(7,7){}}\put(98.25,115){\footnotesize Uqt}\put(98.25,112){\footnotesize Uqq}
+\put(109,111){\framebox(7,7){}}\put(109.25,115){{\footnotesize Uet}}\put(109.25,112){{\footnotesize Ueq}}
+\put(118,115){$\scriptscriptstyle \kappa=3/2$}
+\put(118,112){$\scriptscriptstyle \kappa=5/2$}
+\put(125,121){$\left.\phantom{\framebox(1,12){}}\right\}$}
+\put(130,121){$\scr\iota_\lambda=5/2$}
+\put(76,104){\framebox(7,7){}}\put(78,108){\footnotesize Eu}\put(78,105){\footnotesize Gd}
+\put(87,104){\framebox(7,7){}}\put(89,108){\footnotesize Am}\put(89,105){\footnotesize Cm}
+\put(98,104){\framebox(7,7){}}\put(98.25,108){\footnotesize Uqp}\put(98.25,105){\footnotesize Uqh}
+\put(109,104){\framebox(7,7){}}\put(109.25,108){{\footnotesize Uep}}\put(109.25,105){{\footnotesize Ueh}}
+\put(118,108){$\scriptscriptstyle \kappa=-7/2$}
+\put(118,105){$\scriptscriptstyle \kappa=-5/2$}
+%\put(125,107){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,107){$\scr\mu=0$}
+\put(76,97){\framebox(7,7){}}\put(78,101){\footnotesize Tb}\put(78,98){\footnotesize Dy}
+\put(87,97){\framebox(7,7){}}\put(89,101){\footnotesize Bk}\put(89,98){\footnotesize Cf}
+\put(98,97){\framebox(7,7){}}\put(98.25,101){\footnotesize Uqs}\put(98.25,98){\footnotesize Uqo}
+\put(109,97){\framebox(7,7){}}\put(109.25,101){{\footnotesize Ues}}\put(109.25,98){{\footnotesize Ueo}}
+\put(118,101){$\scriptscriptstyle \kappa=-3/2$}
+\put(118,98){$\scriptscriptstyle \kappa=-1/2$}
+%\put(125,100){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,100){$\scr\mu=1$}
+\put(76,90){\framebox(7,7){}}\put(78,94){\footnotesize Ho}\put(78,91){\footnotesize Er}
+\put(87,90){\framebox(7,7){}}\put(89,94){\footnotesize Es}\put(89,91){\footnotesize Fm}
+\put(98,90){\framebox(7,7){}}\put(98.25,94){\footnotesize Uqe}\put(98.25,91){\footnotesize Upn}
+\put(109,90){\framebox(7,7){}}\put(109.25,94){{\footnotesize Uee}}\put(109.25,91){{\footnotesize Bnn}}
+\put(118,94){$\scriptscriptstyle \kappa=1/2$}
+\put(118,91){$\scriptscriptstyle \kappa=3/2$}
+%\put(125,93){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,93){$\scr\mu=2$}
+\put(76,83){\framebox(7,7){}}\put(78,87){\footnotesize Tm}\put(78,84){\footnotesize Yb}
+\put(87,83){\framebox(7,7){}}\put(89,87){\footnotesize Md}\put(89,84){\footnotesize No}
+\put(98,83){\framebox(7,7){}}\put(98.25,87){\footnotesize Upu}\put(98.25,84){\footnotesize Upb}
+\put(109,83){\framebox(7,7){}}\put(109.25,87){{\footnotesize Bnu}}\put(109.25,84){{\footnotesize Bnb}}
+\put(8,82){\dashbox{1}(88,135)[b]{\bf M}}
+\put(118,87){$\scriptscriptstyle \kappa=5/2$}
+\put(118,84){$\scriptscriptstyle \kappa=7/2$}
+\put(125,96){$\left.\phantom{\framebox(1,15){}}\right\}$}
+\put(130,96){$\scr\iota_\lambda=7/2$}
+\put(-4,48){$\lambda=4$}
+\put(12,48){$\left\{\phantom{\framebox(1,33){}}\right.$}
+\put(98,73){\framebox(7,7){}}\put(98.25,77){\footnotesize Ubu}\put(98.25,74){\footnotesize Ubb}
+\put(109,73){\framebox(7,7){}}\put(109.25,77){{\footnotesize Usu}}\put(109.25,74){{\footnotesize Usb}}
+\put(118,77){$\scriptscriptstyle \kappa=-7/2$}
+\put(118,74){$\scriptscriptstyle \kappa=-5/2$}
+%\put(125,76){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,76){$\scr\mu=-4$}
+\put(98,66){\framebox(7,7){}}\put(98.25,70){\footnotesize Ubt}\put(98.25,67){\footnotesize Ubq}
+\put(109,66){\framebox(7,7){}}\put(109.25,70){{\footnotesize Ust}}\put(109.25,67){{\footnotesize Usq}}
+\put(118,70){$\scriptscriptstyle \kappa=-3/2$}
+\put(118,67){$\scriptscriptstyle \kappa=-1/2$}
+%\put(125,69){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,69){$\scr\mu=-3$}
+\put(98,59){\framebox(7,7){}}\put(98.25,63){\footnotesize Ubp}\put(98.25,60){\footnotesize Ubn}
+\put(109,59){\framebox(7,7){}}\put(109.25,63){{\footnotesize Usp}}\put(109.25,60){{\footnotesize Ush}}
+\put(118,63){$\scriptscriptstyle \kappa=1/2$}
+\put(118,60){$\scriptscriptstyle \kappa=3/2$}
+%\put(125,62){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,62){$\scr\mu=-2$}
+\put(98,52){\framebox(7,7){}}\put(98.25,56){\footnotesize Ubs}\put(98.25,53){\footnotesize Ubo}
+\put(109,52){\framebox(7,7){}}\put(109.25,56){{\footnotesize Uss}}\put(109.25,53){{\footnotesize Uso}}
+\put(118,56){$\scriptscriptstyle \kappa=5/2$}
+\put(118,53){$\scriptscriptstyle \kappa=7/2$}
+\put(125,65){$\left.\phantom{\framebox(1,15){}}\right\}$}
+\put(130,65){$\scr\iota_\lambda=7/2$}
+\put(98,45){\framebox(7,7){}}\put(98.25,49){\footnotesize Ube}\put(98.25,46){\footnotesize Utn}
+\put(109,45){\framebox(7,7){}}\put(109.25,49){{\footnotesize Use}}\put(109.25,46){{\footnotesize Uon}}
+\put(118,49){$\scriptscriptstyle \kappa=-9/2$}
+\put(118,46){$\scriptscriptstyle \kappa=-7/2$}
+%\put(125,48){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,48){$\scr\mu=0$}
+\put(98,38){\framebox(7,7){}}\put(98.25,42){\footnotesize Utu}\put(98.25,39){\footnotesize Utb}
+\put(109,38){\framebox(7,7){}}\put(109.25,42){{\footnotesize Uou}}\put(109.25,39){{\footnotesize Uob}}
+\put(118,42){$\scriptscriptstyle \kappa=-5/2$}
+\put(118,39){$\scriptscriptstyle \kappa=-3/2$}
+%\put(125,41){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,41){$\scr\mu=1$}
+\put(98,31){\framebox(7,7){}}\put(98.25,35){\footnotesize Utt}\put(98.25,32){\footnotesize Utq}
+\put(109,31){\framebox(7,7){}}\put(109.25,35){{\footnotesize Uot}}\put(109.25,32){{\footnotesize Uoq}}
+\put(118,35){$\scriptscriptstyle \kappa=-1/2$}
+\put(118,32){$\scriptscriptstyle \kappa=1/2$}
+%\put(125,34){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,34){$\scr\mu=2$}
+\put(98,24){\framebox(7,7){}}\put(98.25,28){\footnotesize Utp}\put(98.25,25){\footnotesize Uth}
+\put(109,24){\framebox(7,7){}}\put(109.25,28){{\footnotesize Uop}}\put(109.25,25){{\footnotesize Uoh}}
+\put(118,28){$\scriptscriptstyle \kappa=3/2$}
+\put(118,25){$\scriptscriptstyle \kappa=5/2$}
+%\put(125,27){$\left.\phantom{\framebox(1,4){}}\right\}$}
+%\put(129,27){$\scr\mu=3$}
+\put(98,17){\framebox(7,7){}}\put(98.25,21){\footnotesize Uts}\put(98.25,18){\footnotesize Uto}
+\put(109,17){\framebox(7,7){}}\put(109.25,21){{\footnotesize Uos}}\put(109.25,18){{\footnotesize Uoo}}
+\put(118,21){$\scriptscriptstyle \kappa=7/2$}
+\put(118,18){$\scriptscriptstyle \kappa=9/2$}
+\put(125,33){$\left.\phantom{\framebox(1,18){}}\right\}$}
+\put(130,33){$\scr\iota_\lambda=9/2$}
+\put(10,5){\begin{minipage}{25pc}{\small {\bf Ðèñ.\,2.} Òàáëèöà Ñèáîðãà â ôîðìå îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû Ðóìåðà--Ôåòà (áàçèñ $|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle$).}\end{minipage}}
+\end{picture}
+\end{center}
+%\end{figure}
+Ôîðìóëà (\ref{Mass2}) â êà÷åñòâå <<ïåðâîãî âîçìóùåíèÿ>> ñîäåðæèò ôîðìóëó Ôåòà (\ref{Mass1}), ñîîòâåòñòâóþùóþ öåïî÷êå ãðóïï (\ref{Chain1}), ñîãëàñíî êîòîðîé îñóùåñòâëÿåòñÿ ðàçáèåíèå îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ íà ìóëüòèïëåòû $(\nu,s^\prime,\lambda)$, à òàêæå âû÷èñëÿþòñÿ ñðåäíèå ìàññû ìóëüòèïëåòîâ $(\nu,s^\prime,\lambda)$. Àíàëîã <<âòîðîãî âîçìóùåíèÿ>> â ôîðìóëå (\ref{Mass2}) çàäàžòñÿ êâàíòîâûìè ÷èñëàìè $\iota_\lambda$, $\kappa$, ÷òî, ñîãëàñíî öåïî÷êå (\ref{Chain2}), ïðèâîäèò ê ðàçáèåíèþ ìóëüòèïëåòîâ $(\nu,s^\prime,\lambda)$ íà ïàðó ìóëüòèïëåòîâ ïîäãðóïïû $G_3$ ($G_2/G_3$-ðåäóêöèÿ), è òåì ñàìûì îñóùåñòâëÿåòñÿ ïîýëåìåíòíîå ðàñùåïëåíèå ìàññ. Ìàññû ýëåìåíòîâ òàáëèöû Ñèáîðãà, íà÷èíàÿ ñ àòîìíîãî íîìåðà $Z=121$ ïî $Z=220$~\footnote{Êàê óæå îòìå÷àëîñü âûøå, òàáëèöà Ñèáîðãà ÿâëÿåòñÿ ðàñøèðåíèåì òàáëèöû Ìåíäåëååâà, âûäåëåííîé íà ðèñ.\,2 ïóíêòèðíîé ðàìêîé. Â òàá.\,2 ïðèâåäåíû ìàññû ýëåìåíòîâ, íàõîäÿùèõñÿ çà ïðåäåëàìè ïóíêòèðíîé ðàìêè. Â ñâîþ î÷åðåäü, òàáëèöà Ìåíäåëååâà ñîäåðæèò äâà åùž íå îòêðûòûõ ýëåìåíòà \textbf{Uue} ($Z=119$) è \textbf{Ubn} ($Z=120$), ñîîòâåòñòâóþùèõ áàçèñíûì âåêòîðàì $|4,1/2,0,1/2,-1/2\rangle$ è $|4,1/2,0,1/2,1/2\rangle$. Ìàññû \textbf{Uue} è \textbf{Ubn}, âû÷èñëåííûå ñîãëàñíî (\ref{Mass2}), ðàâíû ñîîòâåòñòâåííî $304{,}8942$ è $309{,}1057$.}, âû÷èñëåíû ñîãëàñíî ìàññîâîé ôîðìóëå (\ref{Mass2}) ïðè çíà÷åíèÿõ $m_0=1$, $a=17$, $b=5{,}5$, $a^\prime=2{,}15$, $b^\prime=5{,}3$ (ñì. òàá.\,2). Ïåðâûé ñòîëáåö òàá.\,2 ñîäåðæèò àòîìíûé íîìåð ýëåìåíòà; âî âòîðîì ñòîëáöå íàõîäèòñÿ îáùåïðèíÿòîå (ñîãëàñíî îðãàíèçàöèè IUPAC\footnote{IUPAC --- International Union of Pure and Applied Chemistry.}) îáîçíà÷åíèå ýëåìåíòà; â òðåòüåì ñòîëáöå ïðèâåäåíû êâàíòîâûå ÷èñëà ýëåìåíòà, çàäàþùèå âåêòîð $|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle$ áàçèñà (\ref{Basis2})\footnote{Íàïîìíèì, ÷òî ñîãëàñíî òåîðåòèêî-ãðóïïîâîìó îïèñàíèþ, êàæäûé ýëåìåíò ïåðèîäè÷åñêîé ñèñòåìû ñîîòâåòñòâóåò âåêòîðó $|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle$ áàçèñà (\ref{Basis2}), îáðàçóÿ òåì ñàìûì åäèíóþ êâàíòîâóþ ñèñòåìó.}; ÷åòâžðòûé ñòîëáåö ñîäåðæèò ìàññó ýëåìåíòà, âû÷èñëåííóþ ñîãëàñíî ôîðìóëå (\ref{Mass2}).
+\begin{center}
+{\textbf{Òàá.\,2.} Ìàññû ýëåìåíòîâ òàáëèöû Ñèáîðãà.}
+\vspace{0.1cm}
+{\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{|c|c|l|c|}\hline
+$Z$ & Ýëåìåíò     & Êâàíòîâûå ÷èñëà & Ìàññà  \\ \hline\hline
+121 & \textbf{Ubu}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-7/2$ & 308,3181 \\
+122 & \textbf{Ubb}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-5/2$ & 309,2352\\
+123 & \textbf{Ubt}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-3/2$ & 310,6271\\
+124 & \textbf{Ubq}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-1/2$ & 313,8942\\
+125 & \textbf{Ubp}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=1/2$ & 318,1057\\
+126 & \textbf{Ubn}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=3/2$ & 321,3729\\
+127 & \textbf{Ubs}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=5/2$ & 322,7647\\
+128 & \textbf{Ubo}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=7/2,\kappa=7/2$ & 323,6818\\
+\hline
+129 & \textbf{Ube}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-9/2$ & 327,2491\\
+130 & \textbf{Utn}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-7/2$ & 331,1681\\
+131 & \textbf{Utu}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-5/2$ & 332,0852\\
+132 & \textbf{Utb}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-3/2$ & 333,4771\\
+133 & \textbf{Utt}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-1/2$ & 336,7421\\
+134 & \textbf{Utq}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=1/2$ & 340,9557\\
+135 & \textbf{Utp}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=3/2$ & 344,2229\\
+136 & \textbf{Uth}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=5/2$ & 345,6147\\
+137 & \textbf{Uts}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=7/2$ & 346,5318\\
+138 & \textbf{Uto}& $\nu=5,s^\prime=-1/2,\lambda=4,\iota_\lambda=9/2,\kappa=9/2$ & 350,4551\\
+\hline
+\end{tabular}
+}
+\end{center}
+\begin{center}
+%{\textbf{Òàá.\,2.} Ñðåäíèå ìàññû <<òÿæåëûõ>> ìóëüòèïëåòîâ.}
+%\vspace{0.1cm}
+{\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{|c|c|l|c|}\hline
+$Z$ & Ýëåìåíò     & Êâàíòîâûå ÷èñëà & Ìàññà  \\ \hline\hline
+139 & \textbf{Ute}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-5/2$ & 353,2352\\
+140 & \textbf{Uqn}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-3/2$ & 354,6271\\
+141 & \textbf{Uqu}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-1/2$ & 357,8942\\
+142 & \textbf{Uqb}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=1/2$ & 362,1057\\
+143 & \textbf{Uqt}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=3/2$ & 365,3729\\
+144 & \textbf{Uqq}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=5/2,\kappa=5/2$ & 366,7647\\
+\hline
+145 & \textbf{Uqp}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-7/2$ &  369,8681\\
+146 & \textbf{Uqh}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-5/2$ &  370,7852\\
+147 & \textbf{Uqs}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-3/2$ &  372,1771\\
+148 & \textbf{Uqo}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-1/2$ &  375,4442\\
+149 & \textbf{Uqe}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=1/2$ &  379,6557\\
+150 & \textbf{Upn}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=3/2$ &  382,9229\\
+151 & \textbf{Upu}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=5/2$ &  384,3147\\
+152 & \textbf{Uqp}& $\nu=5,s^\prime=-1/2,\lambda=3,\iota_\lambda=7/2,\kappa=7/2$ &  385,2318\\
+\hline
+153 & \textbf{Upt}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=3/2,\kappa=-3/2$ &  387,6271\\
+154 & \textbf{Upq}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=3/2,\kappa=-1/2$ &  390,8942\\
+155 & \textbf{Upp}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=3/2,\kappa=1/2$ &  395,1057\\
+156 & \textbf{Uph}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=3/2,\kappa=3/2$ &  398,3729\\
+\hline
+157 & \textbf{Ups}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-5/2$ &  398,4852\\
+158 & \textbf{Upo}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-3/2$ &  399,8771\\
+159 & \textbf{Upe}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-1/2$ &  403,1442\\
+160 & \textbf{Uhn}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=1/2$ &  407,3557\\
+161 & \textbf{Uhu}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=3/2$ &  410,6229\\
+162 & \textbf{Uhb}& $\nu=5,s^\prime=-1/2,\lambda=2,\iota_\lambda=5/2,\kappa=5/2$ &  412,0147\\
+\hline
+163 & \textbf{Uht}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=1/2,\kappa=-1/2$ &  412,8942\\
+164 & \textbf{Uhq}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=1/2,\kappa=1/2$ &  417,1057\\
+\hline
+165 & \textbf{Uhp}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=3/2,\kappa=-3/2$ &  416,5771\\
+166 & \textbf{Uhn}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=3/2,\kappa=-1/2$ &  419,8442\\
+167 & \textbf{Uhs}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=3/2,\kappa=1/2$ &  424,0557\\
+168 & \textbf{Uho}& $\nu=5,s^\prime=-1/2,\lambda=1,\iota_\lambda=3/2,\kappa=3/2$ &  427,3229\\
+\hline
+169 & \textbf{Uhe}& $\nu=5,s^\prime=-1/2,\lambda=0,\iota_\lambda=1/2,\kappa=-1/2$ &  425,5452\\
+170 & \textbf{Usn}& $\nu=5,s^\prime=-1/2,\lambda=0,\iota_\lambda=1/2,\kappa=1/2$ &  429,7557\\
+\hline
+171 & \textbf{Usu}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-7/2$ &  427,3181\\
+172 & \textbf{Usb}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-5/2$ &  428,2352\\
+173 & \textbf{Ust}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-3/2$ &  429,6271\\
+174 & \textbf{Usq}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=-1/2$ &  432,8942\\
+175 & \textbf{Usp}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=1/2$ &  437,1057\\
+176 & \textbf{Ush}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=3/2$ &  440,3729\\
+177 & \textbf{Uss}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=5/2$ &  441,7647\\
+178 & \textbf{Uso}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=7/2,\kappa=7/2$ &  442,6818\\
+\hline
+\end{tabular}
+}
+\end{center}
+\begin{center}
+%{\textbf{Òàá.\,2.} Ñðåäíèå ìàññû <<òÿæåëûõ>> ìóëüòèïëåòîâ.}
+%\vspace{0.1cm}
+{\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{|c|c|l|c|}\hline
+$Z$ & Ýëåìåíò     & Êâàíòîâûå ÷èñëà & Ìàññà  \\ \hline\hline
+179 & \textbf{Use}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-9/2$ &  446,2449\\
+180 & \textbf{Uon}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-7/2$ &  450,1681\\
+181 & \textbf{Uou}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-5/2$ &  451,0852\\
+182 & \textbf{Uob}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-3/2$ &  452,4771\\
+183 & \textbf{Uot}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=-1/2$ &  455,7442\\
+184 & \textbf{Uoq}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=1/2$ &  459,9557\\
+185 & \textbf{Uop}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=3/2$ &  463,2229\\
+186 & \textbf{Uoh}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=5/2$ &  464,6147\\
+187 & \textbf{Uos}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=7/2$ &  465,5318\\
+188 & \textbf{Uoo}& $\nu=5,s^\prime=1/2,\lambda=4,\iota_\lambda=9/2,\kappa=9/2$ &  469,4551\\
+\hline
+189 & \textbf{Uoe}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-5/2$ &  472,2352\\
+190 & \textbf{Uen}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-3/2$ &  473,6271\\
+191 & \textbf{Ueu}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=-1/2$ &  476,8942\\
+192 & \textbf{Ueb}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=1/2$ &  481,1057\\
+193 & \textbf{Uet}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=3/2$ &  484,3729\\
+194 & \textbf{Ueq}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=5/2,\kappa=5/2$ &  485,7647\\
+\hline
+195 & \textbf{Uep}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-7/2$ &  488,8681\\
+196 & \textbf{Ueh}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-5/2$ &  489,7852\\
+197 & \textbf{Ues}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-3/2$ &  491,177\\
+198 & \textbf{Ueo}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=-1/2$ &  494,4442\\
+199 & \textbf{Uee}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=1/2$ &  498,6557\\
+200 & \textbf{Bnn}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=3/2$ &  501,9229\\
+201 & \textbf{Bnu}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=5/2$ &  503,3147\\
+202 & \textbf{Bnb}& $\nu=5,s^\prime=1/2,\lambda=3,\iota_\lambda=7/2,\kappa=7/2$ &  504,2318\\
+\hline
+203 & \textbf{Bnt}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=3/2,\kappa=-3/2$ &  506,6271\\
+204 & \textbf{Bnq}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=3/2,\kappa=-1/2$ &  509,8942\\
+205 & \textbf{Bnp}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=3/2,\kappa=1/2$ &  514,1057\\
+206 & \textbf{Bnh}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=3/2,\kappa=3/2$ &  517,3729\\
+\hline
+207 & \textbf{Bns}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-5/2$ &  517,4852\\
+208 & \textbf{Bno}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-3/2$ &  518,8771\\
+209 & \textbf{Bne}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=-1/2$ &  522,1442\\
+210 & \textbf{Bun}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=1/2$ &  526,3557\\
+211 & \textbf{Buu}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=3/2$ &  529,6229\\
+212 & \textbf{Bub}& $\nu=5,s^\prime=1/2,\lambda=2,\iota_\lambda=5/2,\kappa=5/2$ &  531,0147\\
+\hline
+213 & \textbf{But}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=1/2,\kappa=-1/2$ &  531,8942\\
+214 & \textbf{Buq}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=1/2,\kappa=1/2$ &  536,1057\\
+\hline
+215 & \textbf{Bup}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=3/2,\kappa=-3/2$ &  535,5771\\
+216 & \textbf{Buh}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=3/2,\kappa=-1/2$ &  538,8442\\
+217 & \textbf{Bus}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=3/2,\kappa=1/2$ &  543,0557\\
+218 & \textbf{Buo}& $\nu=5,s^\prime=1/2,\lambda=1,\iota_\lambda=3/2,\kappa=3/2$ &  546,3229\\
+\hline
+219 & \textbf{Bue}& $\nu=5,s^\prime=1/2,\lambda=0,\iota_\lambda=1/2,\kappa=-1/2$ &  544,5442\\
+220 & \textbf{Bbn}& $\nu=5,s^\prime=1/2,\lambda=0,\iota_\lambda=1/2,\kappa=1/2$ &  548,7557\\
+\hline
+\end{tabular}
+}
+\end{center}
+\section{Ãîìîëîãè÷åñêèå ðÿäû}
+Âñå ýëåìåíòû òàáëèöû Ñèáîðãà, íà÷èíàÿ ñ âîäîðîäà \textbf{H} ($Z=1$) è êîí÷àÿ ýëåìåíòîì \textbf{Bbn} (Áèáèíèëèé) ñ $Z=220$, îáðàçóþò åäèíóþ êâàíòîâóþ ñèñòåìó. Êàæäûé ýëåìåíò ïåðèîäè÷åñêîé ñèñòåìû ñîîòâåòñòâóåò áàçèñíîìó âåêòîðó $|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle$, ãäå $\nu$, $s^\prime$, $\lambda$, $\iota_\lambda$, $\kappa$ --- êâàíòîâûå ÷èñëà ãðóïïû ñèììåòðèè $G$ (ãðóïïû Ðóìåðà--Ôåòà). Òàêèì îáðàçîì, èìååì ñëåäóþùóþ ñîâîêóïíîñòü âåêòîðîâ ñîñòîÿíèÿ:
+\begin{eqnarray}
+|\textbf{H}\rangle\phantom{bn}\hspace{0.25mm}&=&\left|1,-\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle,\nonumber\\
+|\textbf{He}\rangle\phantom{n}&=&\left|1,-\frac{1}{2},0,\frac{1}{2},\frac{1}{2}\right\rangle,\nonumber\\
+|\textbf{Li}\rangle\phantom{bn}&=&\left|1,\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle,\label{System}\\
+&&\vdots\nonumber\\
+|\textbf{Bbn}\rangle&=&\left|5,\frac{1}{2},0,\frac{1}{2},\frac{1}{2}\right\rangle.\nonumber
+\end{eqnarray}
+Ñîãëàñíî çàêîíàì êâàíòîâîé ìåõàíèêè, â ñîâîêóïíîñòè (\ref{System}), îáðàçóþùåé ãèëüáåðòîâî ïðîñòðàíñòâî\footnote{Êàê áûëî ïîêàçàíî â \cite{Var18}, ãðóïïà Ðóìåðà--Ôåòà $G$ ÿâëÿåòñÿ äèíàìè÷åñêîé ñèììåòðèåé (ñîãëàñíî êëàññèôèêàöèè Ãåéçåíáåðãà). Ïóñòü ê îïåðàòîðó ýíåðãèè $H$ ïðèñîåäèíåíû ãåíåðàòîðû ãðóïïû $G$ (àêñèîìà \textbf{A.I} â \cite{Var18}), òîãäà êàæäîå ñîáñòâåííîå ïîäïðîñòðàíñòâî $\sH_E$ îïåðàòîðà ýíåðãèè èíâàðèàíòíî îòíîñèòåëüíî îïåðàòîðîâ îñíîâíîãî ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ ãðóïïû $G$. Ýòî ïîçâîëÿåò ïîëó÷èòü êîíêðåòíóþ ðåàëèçàöèþ îïåðàòîðíîé àëãåáðû $\pi(\fA)\rightarrow\pi(H)$, ãäå $\pi\equiv F^+_{ss^\prime}$. Îòñþäà ñëåäóåò, ÷òî êàæäîå âîçìîæíîå çíà÷åíèå ýíåðãèè ÿâëÿåòñÿ âåêòîðíûì ñîñòîÿíèåì âèäà (àêñèîìà \textbf{A.II}):
+\[
+\omega_\Phi(H)=\frac{\langle\Phi\mid\pi(H)\Phi\rangle}{\langle\Phi\mid\Phi\rangle}=
+\frac{\langle\Phi\mid F^+_{ss^\prime}(H)\Phi\rangle}{\langle\Phi\mid\Phi\rangle},
+\]
+ãäå $\left|\Phi\right\rangle$ --- öèêëè÷åñêèé âåêòîð ãèëüáåðòîâà ïðîñòðàíñòâà $\sH_\infty$ (êîíñòðóêöèÿ Ãåëüôàíäà--Íàéìàðêà--Ñèãàëà). Äàëåå, ìíîæåñòâî âñåõ ÷èñòûõ ñîñòîÿíèé $\omega_\Phi(H)$ ïðè âûïîëíåíèè óñëîâèÿ $\omega_\Phi(H)\geq 0$ îáðàçóåò \textit{ôèçè÷åñêîå ãèëüáåðòîâî ïðîñòðàíñòâî} $\bsH_{\rm phys}$ (àêñèîìà \textbf{A.III}) è, ñîîòâåòñòâåííî, \textit{ïðîñòðàíñòâî ëó÷åé} $\hat{H}=\bsH_{\rm phys}/S^1$. Âñå ñîñòîÿíèÿ êâàíòîâîé ñèñòåìû $\bsU$ îïèñûâàþòñÿ åäèíè÷íûìè ëó÷àìè è ïðè äàííîé ðåàëèçàöèè îïåðàòîðíîé àëãåáðû ñîîòâåòñòâóþò ýëåìåíòàì ïåðèîäè÷åñêîé ñèñòåìû.}, äîëæíû ñóùåñòâîâàòü ëèíåéíûå ñóïåðïîçèöèè âåêòîðîâ ñîñòîÿíèÿ, à òàêæå êâàíòîâûå ïåðåõîäû ìåæäó ðàçëè÷íûìè âåêòîðàìè ñîñòîÿíèÿ, ò.~å. ïåðåõîäû ìåæäó ýëåìåíòàìè ïåðèîäè÷åñêîé ñèñòåìû.
+
+Ðàññìîòðèì îïåðàòîðû, çàäàþùèå êâàíòîâûé ïåðåõîä ìåæäó âåêòîðàìè ñîñòîÿíèÿ ñèñòåìû (\ref{System}). Â êà÷åñòâå òàêîâûõ ñëåäóåò âçÿòü îïåðàòîðû
+\begin{equation}\label{Operator1}
+\boldsymbol{\Gamma}_+=\bsP_++\bsQ_+,\quad\boldsymbol{\Gamma}_-=\bsP_-+\bsQ_-.
+\end{equation}
+Îïåðàòîðû (\ref{Operator1}) ñîåäèíÿþò ìåæäó ñîáîé ïîäïðîñòðàíñòâà $\fF_n$ óíèòàðíîãî ïðåäñòàâëåíèÿ $F^+$ êîíôîðìíîé ãðóïïû $\SO(2,4)$ â ïðîñòðàíñòâå Ôîêà $\fF$. Äåéñòâèòåëüíî, äåéñòâèå ýòèõ îïåðàòîðîâ íà áàçèñíûå âåêòîðû $|j,\sigma,\tau\rangle$ ïðîñòðàíñòâà $\fF$ èìååò âèä
+\begin{multline}
+\boldsymbol{\Gamma}_+|j,\sigma,\tau\rangle=i\sqrt{(j+\sigma+1)(j-\tau+1)}\left|j+\frac{1}{2},\sigma+\frac{1}{2},
+\tau-\frac{1}{2}\right\rangle-\\
+-i\sqrt{(j-\sigma+1)(j+\tau+1)}\left|j+\frac{1}{2},\sigma-\frac{1}{2},\tau+\frac{1}{2}\right\rangle,\nonumber
+\end{multline}
+\begin{multline}
+\boldsymbol{\Gamma}_-|j,\sigma,\tau\rangle=-i\sqrt{(j+\sigma)(j-\tau)}\left|j-\frac{1}{2},\sigma-\frac{1}{2},
+\tau+\frac{1}{2}\right\rangle+\\
++i\sqrt{(j-\sigma)(j+\tau)}\left|j-\frac{1}{2},\sigma+\frac{1}{2},\tau-\frac{1}{2}\right\rangle.\nonumber
+\end{multline}
+Îòñþäà âèäíî, ÷òî îïåðàòîð $\boldsymbol{\Gamma}_+$ ïåðåâîäèò âåêòîðû ïîäïðîñòðàíñòâà $\fF_n$ â âåêòîðû ïîäïðîñòðàíñòâà $\fF_{n+1}$, ïîñêîëüêó äëÿ ïðåäñòàâëåíèÿ Ôîêà $\Phi_n=D_{\frac{n-1}{2},\frac{n-1}{2}}$ â ïîäïðîñòðàíñòâå $\fF_n$, ãäå $j=\frac{n-1}{2}$, óâåëè÷åíèå $j$ íà $1/2$ îçíà÷àåò óâåëè÷åíèå $n$ íà 1. Àíàëîãè÷íî îïåðàòîð $\boldsymbol{\Gamma}_-$ ïåðåâîäèò âåêòîðû ïîäïðîñòðàíñòâà $\fF_n$ â âåêòîðû ïîäïðîñòðàíñòâà $\fF_{n-1}$. Îïåðàòîðû $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ïåðåñòàíîâî÷íû ñ ïîäãðóïïîé $G_2=\SO(3)\otimes\SU(2)$, âõîäÿùåé â öåïî÷êó ãðóïï (\ref{Chain2}). Äåéñòâèòåëüíî, â ñèëó ïåðåñòàíîâî÷íûõ ñîîòíîøåíèé êîíôîðìíîé ãðóïïû $\SO(2,4)$ (ñì. \cite{Var18}) ñëåäóåò, ÷òî
+\[
+\left[\bsP_\pm+\bsQ_\pm,\bsJ_++\bsK_+\right]=\left[\bsP_\pm+\bsQ_\pm,\bsJ_-+\bsK_-\right]=
+\left[\bsP_\pm+\bsQ_\pm,\bsJ_3+\bsK_3\right]=0.
+\]
+Ñëåäîâàòåëüíî, îïåðàòîðû $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ñîõðàíÿþò êâàíòîâîå ÷èñëî $\mu$. Äàëåå, $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ïåðåñòàíîâî÷íû ñ îïåðàòîðîì Êàçèìèðà $(\bsJ_1+\bsK_1)^2+(\bsJ_2+\bsK_2)^2+(\bsJ_3+\bsK_3)^2$ ïîäãðóïïû $\SO(3)$ è òåì ñàìûì ñîõðàíÿþò êâàíòîâîå ÷èñëî $\lambda$. Ëåãêî âèäåòü, ÷òî $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ïåðåñòàíîâî÷íû ñ îïåðàòîðàìè $\boldsymbol{\tau}_k$ ($k=1,2,3$) ïîäãðóïïû $\SU(2)$ è, ñëåäîâàòåëüíî, ñîõðàíÿþò êâàíòîâîå ÷èñëî $s$. Òàê êàê $\boldsymbol{\Gamma}_+$ è $\boldsymbol{\Gamma}_-$ ïåðåñòàíîâî÷íû ñ $\bsJ_k+\bsK_k$ è $\boldsymbol{\tau}_k$ â îòäåëüíîñòè, îíè ïåðåñòàíîâî÷íû ñ ïîäãðóïïîé $G_2=\SO(3)\otimes\SU(2)$. Äàëåå, îïåðàòîðû $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ïåðåñòàíîâî÷íû ñ ïîäãðóïïîé $\SU(2)^\prime$, çàäàþùåé âòîðîå <<óäâîåíèå>>, è òàêèì îáðàçîì ñîõðàíÿþò êâàíòîâîå ÷èñëî $s^\prime$. Ïîñêîëüêó $\boldsymbol{\Gamma}_+$ ïåðåâîäèò $\fF_n$ â $\fF_{n+1}$, à $\boldsymbol{\Gamma}_-$ --- $\fF_n$ â $\fF_{n-1}$, òî â ïðîñòðàíñòâå $\fF^4=C(2)\otimes\fF^2=C(2)\otimes[C(2)\otimes\fF]$ ïðåäñòàâëåíèÿ $F^+_{ss^\prime}$ îïåðàòîð $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ïîâûøàåò, ñîîòâåòñòâåííî ïîíèæàåò êâàíòîâîå ÷èñëî $\nu$ íà 1. Òàêèì îáðàçîì, äëÿ áàçèñà (\ref{Basis1}) îïåðàòîð $\boldsymbol{\Gamma}_+$ ñîõðàíÿåò êâàíòîâûå ÷èñëà $s^\prime$, $\lambda$, $\mu$, $s$, óâåëè÷èâàÿ $\nu$ íà åäèíèöó, ñëåäîâàòåëüíî, $\boldsymbol{\Gamma}_+\left|\nu,s^\prime,\lambda,\mu,s\right\rangle=
+\eta|\nu+1,s^\prime,\lambda,\mu,s\rangle$, ãäå $\eta\neq 0$. Àíàëîãè÷íî $\boldsymbol{\Gamma}_-\left|\nu,s^\prime,\lambda,\mu,s\right\rangle=
+\eta^\prime|\nu-1,s^\prime,\lambda,\mu,s\rangle$, ãäå $\eta^\prime\neq 0$. Ïîñêîëüêó $\boldsymbol{\Gamma}_+$ (ñîîòâåòñòâåííî $\boldsymbol{\Gamma}_-$) çàäàåò èçîìîðôíîå îòîáðàæåíèå ïðîñòðàíñòâà ìóëüòèïëåòà $(\nu,s^\prime,\lambda)$ íà ïðîñòðàíñòâî $(\nu+1,s^\prime,\lambda)$ (ñîîòâ. $(\nu-1,s^\prime,\lambda)$), òî $\eta$ (ñîîòâ. $\eta^\prime$) íå çàâèñèò îò êâàíòîâûõ ÷èñåë $\mu$, $s$. Ñëåäîâàòåëüíî, äëÿ âåêòîðîâ $|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle$ áàçèñà (\ref{Basis2}) èìååì
+\begin{eqnarray}
+\boldsymbol{\Gamma}_+|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle&=&\eta
+|\nu+1,s^\prime,\lambda,\iota_\lambda,\kappa\rangle,\label{Hom1}\\
+\boldsymbol{\Gamma}_-|\nu,s^\prime,\lambda,\iota_\lambda,\kappa\rangle&=&\eta^\prime
+|\nu-1,s^\prime,\lambda,\iota_\lambda,\kappa\rangle.\label{Hom2}
+\end{eqnarray}
+Ðàâåíñòâî (\ref{Hom2}) ñïðàâåäëèâî ïðè $0\leq\lambda\leq\nu-2$. Íàãëÿäíûé ñìûñë îïåðàòîðîâ $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ñîñòîèò â òîì, ÷òî îíè ïåðåìåùàþò áàçèñíûå âåêòîðû, èçîáðàæàåìûå êëåòêàìè íà ðèñ.\,2, âïðàâî, ñîîòâåòñòâåííî âëåâî ïî ãîðèçîíòàëüíûì ñòîëáöàì òàáëèöû. Ïðè ýòîì $\boldsymbol{\Gamma}_+$ âñåãäà ïåðåâîäèò áàçèñíûé âåêòîð ñòîëáöà $(\nu,s^\prime)$ â áàçèñíûé âåêòîð òîé æå ÷žòíîñòè $(\nu+1,s^\prime)$ ñ óìíîæåíèåì íà íåêîòîðûé íåíóëåâîé ìíîæèòåëü $\eta$. Â ñâîþ î÷åðåäü îïåðàòîð $\boldsymbol{\Gamma}_-$ ïåðåâîäèò áàçèñíûé âåêòîð ñòîëáöà $(\nu,s^\prime)$ â áàçèñíûé âåêòîð òîé æå ÷žòíîñòè $(\nu-1,s^\prime)$ ñ óìíîæåíèåì íà íåíóëåâîé ìíîæèòåëü $\eta^\prime$, åñëè òîëüêî â ïîñëåäíåì ñóùåñòâóåò âåêòîð íà òîé æå ãîðèçîíòàëè (â ïðîòèâíîì ñëó÷àå ïîëó÷àåòñÿ íóëü).
+
+Äàëåå ïîêàæåì, ÷òî îïåðàòîðû $\boldsymbol{\tau}^\prime_+=\boldsymbol{\tau}^\prime_1+i\boldsymbol{\tau}^\prime_2$, $\boldsymbol{\tau}^\prime_-=\boldsymbol{\tau}^\prime_1-i\boldsymbol{\tau}^\prime_2$ ïîäãðóïïû $\SU(2)^\prime$ òàêæå çàäàþò êâàíòîâûå ïåðåõîäû ìåæäó âåêòîðàìè ñîñòîÿíèÿ (\ref{System}). Ïîñêîëüêó ýòè îïåðàòîðû ïåðåñòàíîâî÷íû ñ ïîäãðóïïîé $G_1=\SO(4)\otimes\SU(2)$, îíè ñîõðàíÿþò êâàíòîâûå ÷èñëà $\nu$, $\lambda$, $\iota_\lambda$, $\kappa$, ñâÿçàííûå ñ $G_1$, è ìåíÿþò òîëüêî êâàíòîâîå ÷èñëî $s^\prime$:
+\begin{eqnarray}
+\boldsymbol{\tau}^\prime_+\left|\nu,-\tfrac{1}{2},\lambda,\iota_\lambda,\kappa\right\rangle\hspace{0.75mm}&=&
+\left|\nu,\tfrac{1}{2},\lambda,\iota_\lambda,\kappa\right\rangle,\label{Hom3}\\
+\boldsymbol{\tau}^\prime_-\left|\nu,\tfrac{1}{2},\lambda,\iota_\lambda,\kappa\right\rangle\phantom{-}&=&
+\left|\nu,-\tfrac{1}{2},\lambda,\iota_\lambda,\kappa\right\rangle.\label{Hom4}
+\end{eqnarray}
+Íàãëÿäíûé ñìûñë îïåðàòîðîâ $\boldsymbol{\tau}^\prime_+$, $\boldsymbol{\tau}^\prime_-$ ñîñòîèò â òîì, ÷òî $\boldsymbol{\tau}^\prime_+$ ïåðåìåùàåò áàçèñíûå âåêòîðû êàæäîãî íå÷žòíîãî ñòîëáöà ðèñ.\,2 ïî ãîðèçîíòàëè â áàçèñíûå âåêòîðû ñîñåäíåãî ïðàâîãî ñòîëáöà; â ñâîþ î÷åðåäü $\boldsymbol{\tau}^\prime_-$ ïåðåìåùàåò áàçèñíûå âåêòîðû êàæäîãî ÷žòíîãî ñòîëáöà ïî ãîðèçîíòàëè â áàçèñíûå âåêòîðû ñîñåäíåãî ëåâîãî ñòîëáöà. Òàêèì îáðàçîì, îïåðàòîðû (\ref{Hom1})--(\ref{Hom4}) çàäàþò êâàíòîâûå ïåðåõîäû ìåæäó âåêòîðàìè ñîñòîÿíèÿ åäèíîé êâàíòîâîé ñèñòåìû (\ref{System}).
+
+Ëåãêî âèäåòü, ÷òî íà ðèñ.\,2 ïî ãîðèçîíòàëÿì ðàñïîëàãàþòñÿ â òî÷íîñòè \textit{ìåíäåëååâñêèå ãîìîëîãè÷åñêèå ðÿäû}, ò.~å. ñåìåéñòâà ýëåìåíòîâ ñ áëèçêèìè ñâîéñòâàìè. Ñëåäîâàòåëüíî, îïåðàòîðû (\ref{Hom1})--(\ref{Hom4}) çàäàþò êâàíòîâûå ïåðåõîäû ìåæäó ýëåìåíòàìè ãîìîëîãè÷åñêîãî ðÿäà. Íàïðèìåð,
+\begin{multline}
+\boldsymbol{\Gamma}_+|\textbf{H}\rangle=\boldsymbol{\Gamma}_+\left|1,-\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle=
+\eta_1|\textbf{Na}\rangle=\eta_1\left|2,-\frac{1}{2},0,\frac{1}{2},-\tfrac{1}{2}\right\rangle\longmapsto\\
+\eta_1\boldsymbol{\Gamma}_+|\textbf{Na}\rangle=\eta_1\eta_2|\textbf{Rb}\rangle=\eta_1\eta_2
+\left|3,-\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle\longmapsto\\
+\eta_1\eta_2\boldsymbol{\Gamma}_+|\textbf{Rb}\rangle=\eta_1\eta_2\eta_3|\textbf{Fr}\rangle=\eta_1\eta_2\eta_3
+\left|4,-\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle\longmapsto\\
+\eta_1\eta_2\eta_3\boldsymbol{\Gamma}_+|\textbf{Fr}\rangle=\eta_1\eta_2\eta_3\eta_4|\textbf{Uhe}\rangle=\eta_1\eta_2\eta_3\eta_4
+\left|5,-\frac{1}{2},0,\frac{1}{2},-\frac{1}{2}\right\rangle.\nonumber
+\end{multline}
+Äàëåå, îïåðàòîðû $\boldsymbol{\tau}^\prime_+$, $\boldsymbol{\tau}^\prime_-$ óñòàíàâëèâàþò ãîìîëîãèþ ìåæäó ëàíòàíîèäàìè è àêòèíîèäàìè, âïåðâûå îáíàðóæåííóþ Ñèáîðãîì\footnote{Î÷åâèäíî, ÷òî ýòà ãîìîëîãèÿ ÿâëÿåòñÿ ÷àñòíûì ñëó÷àåì ãîìîëîãèè Ìåíäåëååâà.}:
+\[
+\boldsymbol{\tau}^\prime_+|\textbf{La}\rangle=\boldsymbol{\tau}^\prime_+
+\left|4,-\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle=|\textbf{Ac}\rangle=
+\left|4,\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle,
+\]
+\[
+\boldsymbol{\tau}^\prime_+|\textbf{Ce}\rangle=\boldsymbol{\tau}^\prime_+
+\left|4,-\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle=|\textbf{Th}\rangle=
+\left|4,\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle,
+\]
+\[
+\vdots
+\]
+\[
+\boldsymbol{\tau}^\prime_+|\textbf{Yb}\rangle=\boldsymbol{\tau}^\prime_+
+\left|4,-\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle=|\textbf{No}\rangle=
+\left|4,\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle.
+\]
+Ñ ïîìîùüþ îïåðàòîðîâ $\boldsymbol{\Gamma}_+$, $\boldsymbol{\Gamma}_-$ ìîæíî ïðîäîëæèòü ãîìîëîãèþ Ñèáîðãà äî ãðóïïû ñóïåðàêòèíîèäîâ:
+\[
+\boldsymbol{\Gamma}_+|\textbf{La}\rangle=\boldsymbol{\Gamma}_+\left|4,-\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle=
+\eta|\textbf{Ute}\rangle=\eta\left|5,-\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle,
+\]
+\[
+\boldsymbol{\Gamma}_+|\textbf{Ce}\rangle=\boldsymbol{\Gamma}_+\left|4,-\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle=
+\eta|\textbf{Uqn}\rangle=\eta\left|5,-\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle,
+\]
+\[
+\vdots
+\]
+\[
+\boldsymbol{\Gamma}_+|\textbf{Yb}\rangle=\boldsymbol{\Gamma}_+\left|4,-\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle=
+\eta|\textbf{Upb}\rangle=\eta\left|5,-\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle.
+\]
+Ñîîòâåòñòâåííî,
+\[
+\boldsymbol{\Gamma}_+|\textbf{Ac}\rangle=\boldsymbol{\Gamma}_+\left|4,\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle=
+\eta|\textbf{Uoe}\rangle=\eta\left|5,\frac{1}{2},3,\frac{5}{2},-\frac{5}{2}\right\rangle,
+\]
+\[
+\boldsymbol{\Gamma}_+|\textbf{Th}\rangle=\boldsymbol{\Gamma}_+\left|4,\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle=
+\eta|\textbf{Uen}\rangle=\eta\left|5,\frac{1}{2},3,\frac{5}{2},-\frac{3}{2}\right\rangle,
+\]
+\[
+\vdots
+\]
+\[
+\boldsymbol{\Gamma}_+|\textbf{No}\rangle=\boldsymbol{\Gamma}_+\left|4,\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle=
+\eta|\textbf{Bnb}\rangle=\eta\left|5,\frac{1}{2},3,\frac{7}{2},\frac{7}{2}\right\rangle.
+\]
+
+Â çàêëþ÷åíèè ñëåäóåò êîñíóòüñÿ \textit{ïðèíöèïà ñóïåðïîçèöèè} ïðèìåíèòåëüíî ê ñèñòåìå (\ref{System}). Ïî âñåé âèäèìîñòè, ñèòóàöèÿ çäåñü àíàëîãè÷íà \textit{ïðèíöèïó ñóïåðîòáîðà} Âèãíåðà \cite{WWW52} â ôèçèêå ÷àñòèö, ñîãëàñíî êîòîðîìó íå âñÿêàÿ ñóïåðïîçèöèÿ ôèçè÷åñêè âîçìîæíûõ ñîñòîÿíèé ïðèâîäèò îïÿòü ê ôèçè÷åñêè âîçìîæíîìó ñîñòîÿíèþ. Ïðèíöèï Âèãíåðà íàêëàäûâàåò îãðàíè÷åíèÿ (\textit{ïðàâèëà ñóïåðîòáîðà}) íà ñóùåñòâîâàíèå ñóïåðïîçèöèé ñîñòîÿíèé. Ñîãëàñíî ïðàâèëàì ñóïåðîòáîðà, ñóïåðïîçèöèè ôèçè÷åñêè âîçìîæíûõ ñîñòîÿíèé ñóùåñòâóþò òîëüêî â ðàìêàõ êîãåðåíòíûõ ïîäïðîñòðàíñòâ ôèçè÷åñêîãî ãèëüáåðòîâà ïðîñòðàíñòâà. Òàêèì îáðàçîì, âîçíèêàåò çàäà÷à îïðåäåëåíèÿ êîãåðåíòíûõ ïîäïðîñòðàíñòâ äëÿ ñèñòåìû ñîñòîÿíèé (\ref{System}).
+
+\begin{thebibliography}{99}
+\bibitem{Sea69} Ñèáîðã Ã. Ðàñøèðåíèå ïðåäåëîâ ïåðèîäè÷åñêîé ñèñòåìû // Ñòî ëåò ïåðèîäè÷åñêîãî çàêîíà õèìè÷åñêèõ ýëåìåíòîâ. Ì.~: Íàóêà, 1971. Ñ.~21--39.
+%
+\bibitem{Heisen} Ãåéçåíáåðã Â. Øàãè çà ãîðèçîíò. Ì.~: Ïðîãðåññ, 1987.
+%
+\bibitem{Kar} Karakostas V., Hadzidaki P. Realism vs. Constructivism in Contemporary Physics: The Impact of the Debate on the Understanding of Quantum Theory and its Instructional Process // Science \& Education. 2005. V.~14. P.~607--629.
+%
+\bibitem{deRonde} de Ronde C. Representational Realism, Closed Theories and the Quantum to Classical Limit // arXiv:1602.05405 [quant-ph] (2016).
+%
+\bibitem{Heisen2} Ãåéçåíáåðã Â. Ôèçèêà è ôèëîñîôèÿ. ×àñòü è öåëîå. Ì.~: Íàóêà, 1990.
+%
+\bibitem{Baez} Baez J.C. Struggles with the Continuum // arXiv:1609.01421 [math-ph] (2016).
+%
+\bibitem{Mark} Ìàðêîâ Ì.À. Î òðžõ èíòåðïðåòàöèÿõ êâàíòîâîé ìåõàíèêè. Ì.~: Íàóêà, 1991.
+%
+\bibitem{GR09} Greiner W., Reinhardt J. Quantum Electrodynamics. Berlin~: Springer, 2009.
+%
+\bibitem{Heisen3} Ãåéçåíáåðã Â. Ââåäåíèå â åäèíóþ ïîëåâóþ òåîðèþ ýëåìåíòàðíûõ ÷àñòèö. Ì.~: Ìèð, 1968.
+%
+\bibitem{Var18}  Âàðëàìîâ Â.Â. Òåîðåòèêî-ãðóïïîâîå îïèñàíèå ïåðèîäè÷åñêîé ñèñòåìû ýëåìåíòîâ //
+Ìàòåìàòè÷åñêèå ñòðóêòóðû è ìîäåëèðîâàíèå. 2018. ¹~2(46). C.~5--23.
+%
+\bibitem{Fet} Ôåò À.È. Ãðóïïà ñèììåòðèè õèìè÷åñêèõ ýëåìåíòîâ. Íîâîñèáèðñê~: Íàóêà, 2010.
+%
+\bibitem{WWW52} Wick G.G., Wigner E.P., Wightman A.S. Intrinsic Parity of Elementary Particles // Phys. Rev. 1952. V.~88. P.~101.
+
+\end{thebibliography}
+\maketitleEng  %  Êîìàíäà çàâåðøåíèÿ ñòàòüè
+{\protect\footnotesize \selectlanguage{english}\begin{thebibliography}{99}
+
+\bibitem{Sea69} Siborg G. Rasshirenie predelov periodicheskoi sistemy. Sto let periodicheskogo zakona khimicheskikh elementov, Moscow, Nauka Publ., 1971, pp.~21--39.
+(in Russian)
+ 
+\bibitem{Heisen} Geizenberg V. Shagi za gorizont. Moscow, Progress Publ., 1987.
+%
+ (in Russian)
+ 
+\bibitem{Kar} Karakostas V. and Hadzidaki P. Realism vs. Constructivism in Contemporary Physics: The Impact of the Debate on the Understanding of Quantum Theory and its Instructional Process. Science \& Education, 2005, vol.~14, pp.~607--629.
+%
+
+\bibitem{deRonde} de Ronde C. Representational Realism, Closed Theories and the Quantum to Classical Limit. arXiv:1602.05405 [quant-ph] (2016).
+%
+
+\bibitem{Heisen2} Geizenberg V. Fizika i filosofiya. Chast' i tseloe. Moscow, Nauka Publ., 1990.
+%
+ (in Russian)
+ 
+\bibitem{Baez} Baez J.C. Struggles with the Continuum, arXiv:1609.01421 [math-ph] (2016).
+%
+
+\bibitem{Mark} Markov M.A. O trekh interpretatsiyakh kvantovoi mekhaniki. Moscow, Nauka Publ., 1991.
+%
+ (in Russian)
+ 
+\bibitem{GR09} Greiner W. and Reinhardt J. Quantum Electrodynamics. Berlin, Springer, 2009.
+%
+
+\bibitem{Heisen3} Geizenberg V. Vvedenie v edinuyu polevuyu teoriyu elementarnykh chastits. M.: Mir, 1968.
+%
+ (in Russian)
+ 
+\bibitem{Var18}  Varlamov V.V. Teoretiko-gruppovoe opisanie periodicheskoi sistemy elementov.
+Matematicheskie struktury i modelirovanie, 2018, no.~2(46), pp.~5--23.
+%
+ (in Russian)
+ 
+\bibitem{Fet} Fet A.I. Gruppa simmetrii khimicheskikh elementov. Novosibirsk, Nauka Publ., 2010.
+%
+ (in Russian)
+ 
+\bibitem{WWW52} Wick G.G., Wigner E.P. and Wightman A.S. Intrinsic Parity of Elementary Particles. Phys. Rev., 1952, vol.~88, pp.~101.
+
+\end{thebibliography}
+}
+
+\endarticle
+

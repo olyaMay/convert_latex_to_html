@@ -1,0 +1,1222 @@
+\startarticle
+\shrtitle{Идентификация общих краевых условий...}  % Часть названия статьи для колонтитулов.
+\shrauthor{Р.Ю.~Галимов, А.М.~Ахтямов}{Р.Ю.~Галимов, А.М.~Ахтямов}  % Автор или группа авторов для оглавления и колонтитулов.
+\udc{517.984.54}                               % Вставьте УДК.
+\selectlanguage{russian}                    % Основной язык статьи 
+\date{26.12.2018}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% для русскоязычной статьи и реферирования в РИНЦ  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Идентификация общих краевых условий оператора диффузии} % Название статьи.
+\author[1]{Р.Ю.~Галимов}{старший преподаватель}{galimovry@mail.ru}
+\author[1,2]{А.М.~Ахтямов}{д.ф.-м.н., профессор, главный научный сотрудник}{akhtyamovam@mail.ru} % Автор на русском.
+\affil[1]{Башкирский государственный университет, Уфа, Россия}
+\affil[2]{Институт механики им. Р.Р. Мавлютова УФИЦ РАН, Уфа, Россия}
+\abstract{Исследуются задачи идентификации как общих, так и распадающихся краевых условий оператора диффузии по его собственным значениям. Для общих краевых условий показано, что если хотя бы одна из функций-коэффициентов в дифференциальном уравнении является несимметрической, то задача идентификации краевых условий по всем собственным значениям имеет два решения, а если оба коэффициента являются симметрическими функциями, то задача идентификации краевых условий по всем собственным значениям имеет  бесконечно много решений. Доказано также, что если хотя бы один из коэффициентов в дифференциальном уравнении является несимметрической функцией, то два решения могут быть получены и по четырем собственным значениям, если ранг некоторой матрицы равен четырем. Для распадающихся краевых условий показано, что если хотя бы один из коэффициентов в дифференциальном уравнении является несимметрической функцией, то задача идентификации краевых условий по всем собственным значениям имеет единственное решение, а если оба коэффициента являются симметрическими функциями, то задача идентификации краевых условий имеет два решения. Показано также, что при определенных условиях единственное решение может быть получено по трем собственным значениям, а два решения --- по двум собственным значениям.  Рассмотрены соответствующие примеры.} % это аннотация статьи на русском языке. Постарайтесь сделать развернутую аннотацию.
+\keywords{оператор диффузии, идентификация краевых условий, обратная спектральная задача, собственные значения}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% для статьи на английском и рефрерирования %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\titleEng{Identification general boundary conditions of the diffusion operator}     % Название статьи.
+\authorEng[1]{R.Yu.~Galimov}{Assistant Professor}{galimovry@mail.ru} % Автор на английском.
+\authorEng[1,2]{A.M.~Akhtyamov}{Dr.Sc. (Phys.-Math.), Professor}{akhtyamovam@mail.ru}
+\affilEng[1]{Bashkir State University, Ufa, Russia}  % Организация 
+\affilEng[2]{Mavlyutov Institute of Mechanics, Ufa, Russia}
+\abstractEng{The problems of identification of both general and separated boundary conditions of the diffusion operator by its eigenvalues are investigated. For general boundary conditions it is shown that if at least one of the coefficients in the differential equation is asymmetric function, then the problem of identifying boundary conditions by all eigenvalues has two solutions, and if both of the coefficients are symmetric functions, then the problem of identifying the boundary conditions over all there are infinitely many solutions to the eigenvalues. It is also proved that if at least one of the coefficients in the differential equation is an asymmetric function, then two solutions can be obtained by four eigenvalues, if the rank of some matrix is four.  For separated boundary conditions it is shown that if at least one of the coefficients in the differential equation is an asymmetric function, then the problem of identifying boundary conditions by all eigenvalues has a unique solution, and if both of the coefficients are symmetric functions, then the problem of identifying boundary conditions has two solutions. It is also shown that under certain conditions a unique solution can be obtained from three eigenvalues, and two solutions by two eigenvalues. Appropriate examples are considered.} % это аннотация статьи на ангнлийском языке
+\keywordsEng{Diffusion operator, identification of boundary conditions, inverse eigenvalue problem, eigenvalue problems}
+
+\maketitle % Формирование оглавления.
+
+%%%%%%%%%%%%%%%%%%%%%% Т Е К С Т %%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Введение} % Звездочка для того, чтобы раздел не нумеровался
+Обозначим через $L$ следующую задачу для оператора диффузии:
+\begin{equation}
+ ly =  y'' + \big(  \lambda^2- 2\, \lambda\, p(x)-q(x)\big)\, y =0,
+ \label{dif-2016-1}
+\end{equation}
+\begin{equation}
+U_i(y) = a_{i1}\, y(0) + a_{i2}\, y'(0) + a_{i3}\, y(\pi) +
+a_{i4}\, y'(\pi) = 0,\qquad i=1,2, \label{dif-2016-2}
+\end{equation}
+где вещественные функции $p(x)\in W^1_2(0,\pi)$, 
+$q (x)\in L_2(0,\pi)$; $a_{ij},$ $i=1,\, 2$,\lb $i=1,\,
+2,\, 3,\,4$~--- комплексные постоянные.
+
+
+Обратная задача для $L$  с распадающимися краевыми условиями ($a_{13}=a_{14}\?=a_{21}=a_{22}=0$) достаточно хорошо изучена (см., например, \cite{Marchenko77}--\cite{Nabiev09}). 
+Обратная для $L$  с нераспадающимися краевыми условиями изучалась в работах  \cite{Sadovnichii72}--\cite{Gaseynov07}. В этих работах восстанавливались коэффициенты $p(x)$ и  $q(x)$ из дифференциального уравнения (\ref{dif-2016-1}), а также краевые условия (\ref{dif-2016-2}). При этом для восстановления использовались несколько спектров, спектральные данные (спектр и нормировочные числа), функция Вейля и т.~п. То есть данные восстановления содержали в себе большую информацию, чем только сам спектр задачи $L$.   
+	Задача, решаемая в настоящей статье, отличается от этих работ тем, что здесь восстанавливаются лишь краевые условия, а дифференциальное уравнение считаем известным.
+\section*{Идентификация общих краевых условий}
+Обозначим матрицу, составленную из коэффициентов $ a_{lk}$ краевых
+условий (\ref{dif-2016-2})  через $A$, а её миноры,
+составленные из $i$-го и $j$-го столбцов, через $M_{ij}$:
+\begin {equation} A=\left\|
+\begin{array}{cccc}
+a_{11} & a_{12} & a_{13} & a_{14}
+\\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+\end{array}\right\|,  \quad 
+M_{ij}=\left|
+\begin{array}{cc}
+a_{1i} & a_{1j} \\
+a_{2i} & a_{2j} \\
+\end{array}\right|
+,\qquad i,j=1,2,3,4.
+\label{dif-2016-A}\end{equation}
+ На протяжении всей статьи будем считать, что ранг
+матрицы $A$ равен двум: rank $A$=2.
+ 
+В дальнейшем  задачу типа $L$, но с другими
+коэффициентами в уравнении и с другими параметрами
+ в граничных формах обозначать $\widetilde L$.
+Будем считать, что если некоторый символ обозначает объект
+из задачи $L, $ то символ с волной~$\widetilde {\phantom{x}}$
+наверху обозначает аналогичный объект задачи $\widetilde L. $
+
+
+
+Краевые условия задач  $L$ и $\widetilde L$ назовём ($kl$ {\it и} $mn$)-{\it смежными}, если для миноров $M_{kl}$ и $M_{mn}$ выполняются равенства $M_{kl}=C\,\widetilde M_{mn}$, $M_{mn}=C\,\widetilde M_{kl}$, а для всех остальных миноров выполнены равенства $M_{ij}=C\,\widetilde M_{ij}$.
+
+
+Так, краевые условия задач  $L$ и $\widetilde L$ являются ($12$ {\it }и $34$)-{\it смежными}, если   миноры $M_{ij}$ и $\widetilde M_{ij}$  матриц коэффициентов краевых условий $A=(a_
+{ij})_{2\times 4}$ и $\widetilde A=(\widetilde a_ {ij})_{2\times 4}$ связаны соотношениями:
+$$
+\begin{array}{c}
+M_{12}=C\,\widetilde M_{34}, \quad M_{32}=C\,\widetilde M_{32},\quad M_{42}=C\,\widetilde M_{42}, 
+\\ 
+M_{13}=C\,\widetilde M_{13}, \quad 
+M_{14}=C\,\widetilde M_{14}, \quad  
+M_{34}=C\,\widetilde M_{12}.
+\end{array}
+$$
+
+ 
+\begin{Theorem} 
+
+ %% \label{ }
+Пусть $L$ и $\widetilde L$ имеют
+дискретный спектр,  спектры задач $L$ и
+$\widetilde L$  совпадают с учётом их алгебраических
+кратностей, ${\rm rank}\, A=2$. 
+Тогда: 
+
+1. Если $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$, то либо матрицы коэффициентов краевых условий $A=(a_
+{ij})_{2\times 4}$ и $\widetilde A=(\widetilde a_ {ij})_{2\times 4}$ совпадают
+с точностью до линейных преобразований строк, либо являются  ($12$ и $34$)-смежными.\lb То есть задача идентификации краевых условий по всем собственным значениям имеет два решения.   
+
+2. Если $p(x)=p(\pi-x)$ и $q(x)=q(\pi-x)$, то миноры $M_{ij}$ и $\widetilde M_{ij}$ матриц коэффициентов краевых условий $A=(a_
+{ij})_{2\times 4}$ и $\widetilde A=(\widetilde a_ {ij})_{2\times 4}$ связаны следующими соотношениями:
+\begin{equation}\label{dif-2-1-2015-M14-sym}
+\begin{array}{c}
+M_{12}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\pm \sqrt{(\widetilde M_{12}+\widetilde M_{34})^2-C_1 }\right),
+\\
+\\
+M_{34}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\mp \sqrt{(\widetilde M_{12}+\widetilde M_{34})^2-C_1 }\right),
+\\
+\\
+ M_{42}=C\,\widetilde M_{42}, \quad M_{13}=C\,\widetilde M_{13},
+\\
+\\
+M_{14}=\frac{1}{2}\,C\, \left( (\widetilde M_{14}+\widetilde M_{32})\pm \sqrt{(\widetilde M_{14}+\widetilde M_{32})^2+4\,\widetilde M_{13}\, \widetilde M_{24}-C_1}\right),
+\\
+\\
+M_{23}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\mp \sqrt{(\widetilde M_{14}+\widetilde M_{23})^2+4\,\widetilde M_{13}\, \widetilde M_{24}-C_1}\right),
+\end{array}
+\end{equation}
+где $C$ и $C_2$~--- некоторые произвольные константы, а $C_1=4\, C_2/C^2$.\lb То есть 
+задача идентификации краевых условий по всем собственным значениям имеет бесконечное число решений.
+\end{Theorem}
+
+\begin{proof}
+Собственные значения задачи $L$ являются корнями следующей целой
+функции (\cite[c.~33--36]{Marchenko77}, \cite[c.~29]{Naimark69})
+\begin{equation}\label{dif-2016-Delta}
+\begin{array}{c}
+\Delta(\lambda ) = M_{12}+M_{34}+M_{32}\, y_1(\pi,\, \lambda) +
+M_{42}\,y_1'(\pi,\, \lambda ) +\\+ M_{13}\, y_2(\pi,\, \lambda )+
+M_{14}\, y_2'(\pi,\, \lambda ),
+\end{array}
+\end{equation}
+где  $y_1 (x, \, \lambda) $ и $y_2 (x, \, \lambda) $~--- линейно
+независимые решения уравнения (\ref{dif-2016-1}), удовлетворяющие
+условиям:
+$$
+y_1(0,\, \lambda )=1,\quad y_1'(0,\, \lambda )=0,\quad y_2(0,\,
+\lambda )=0,\quad y_2'(0,\, \lambda )=1.
+$$
+
+Если $\Delta (\lambda ) \not\equiv 0$ (спектр краевой задачи
+дискретен), то из теоремы Адамара получаем, что  функция $\Delta
+(\lambda )$ (которая является целой порядка 1/2 ) восстанавливается
+по своим нулям с точностью до множителя $C\neq 0$. Следовательно,
+функции $\Delta (\lambda )$ и $\widetilde\Delta (\lambda )$
+связаны следующим тождеством:
+\begin{equation}
+\Delta (\lambda )\equiv C\, \widetilde\Delta (\lambda ),
+\label{2013-ass-5_Delta_equiv}
+\end{equation}
+где $C$~--- некоторая константа, отличная от нуля.
+
+
+Справедливы следующие асимптотические формулы:
+\begin{align}
+y_1(x,\, \lambda )&= 
+ \cos \pi\, (\lambda - a) - a_1\,\frac{\cos \pi \, (\lambda - a)}{ \lambda}
++ \pi\,c_1\,\frac{\sin\pi\, (\lambda -a)}{\lambda}+\frac{1}{\lambda}\, \int_{-\pi}^{\pi} \psi_1 (t)\, e^{i\,\lambda\, t}\, dt, \notag
+\\
+y_2(x,\, \lambda ) &= \frac{\sin \pi\, (\lambda - a)}{\lambda} 
++ a_0\, \frac{\sin \pi\, (\lambda - a)}{\lambda^2}
+- \pi\, c_1\, \frac{\cos \pi\, (\lambda - a)}{\lambda^2}+\frac{1}{\lambda^2}\, \int_{-\pi}^{\pi} \psi_2 (t)\, e^{i\,\lambda\, t}\, dt , \notag
+\\
+y_1'(x,\, \lambda ) &=- \lambda\, \sin \pi\, (\lambda - a) 
++ a_0\, \sin \pi\, (\lambda - a)
++ \pi\, c_1\, \cos \pi\, (\lambda - a)+ \int_{-\pi}^{\pi} \psi_3 (t)\, e^{i\,\lambda\, t}\, dt  , \notag
+\\
+y_2'(x,\, \lambda ) &=  \cos \pi\, (\lambda - a) + a_1\,\frac{\cos \pi \, (\lambda - a)}{ \lambda}
++ \pi\,c_1\,\frac{\sin\pi\, (\lambda -a)}{\lambda}+\frac{1}{\lambda}\, \int_{-\pi}^{\pi} \psi_4 (t)\, e^{i\,\lambda\, t}\, dt, \notag\\
+\label{dif-2-1-du-2014-5}
+\end{align}
+где  $a=  \frac{1}{\pi}\, \int_0^\pi p(t) \, dt$, $a_0=\frac{1}{2}\,\big( p(0)+p(\pi) \big),\quad a_1=\frac{1}{2}\,\big( p(0)-p(\pi) \big)$, 
+ $c_1=\frac{1}{2\,\pi}\, \int_0^\pi \big( q(t)\?+ p^2(t) \big)\, dt$,  $\psi_i(t)\in L_2[0,\pi]$, \ $i=1,2,3,4$
+для достаточно большого $\lambda \in \mathbb{R}$ (\cite{GGuseinov86,Gaseynov07}).
+
+Из этих соотношений следует, что линейно независимы функции
+ $y_1(\pi,\, \lambda )$, $y_1'(\pi,\, \lambda )$, $y_2(\pi,\, \lambda )$, 1,
+входящие в разложение функции $\Delta (\lambda )$. Если добавить к этим функциям ещё и функцию
+$y_2'(\pi,\,
+\lambda )$, то соответствующая система функций является  линейно независимой тогда и только тогда, когда $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$ на некотором интервале из отрезка [0,$\pi$]. Это следует из того, что тождество $ y_1(\pi,\, \lambda )\equiv y_2'(\pi,\,
+\lambda )$ верно тогда и только тогда, когда $p(x)=p(\pi-x)$ и $q(x)=q(\pi-x)$ \cite[Лемма 3]{Nabiev09} (равенства функций понимаются в смысле равенств в пространствах функций, в которых они заданы). 
+
+Пусть $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$.  
+Тогда из (\ref{2013-ass-5_Delta_equiv}) и линейной независимости соответствующих функций следуют равенства
+\begin{equation}\label{dif-2-1-2015-Mij-nesym}
+\begin{array}{c}
+M_{12}+M_{34}=C\,(\widetilde M_{12}+\widetilde M_{34}), \quad M_{32}=C\,\widetilde M_{32},\quad M_{42}=C\,\widetilde M_{42}, \\ M_{13}=C\,\widetilde M_{13}, \quad 
+M_{14}=C\,\widetilde M_{14}.
+\end{array}
+\end{equation}
+Для нахождения миноров $M_{12}$ и $M_{34}$ воспользуемся тем, что произвольные числа не могут быть минорами матрицы. Для того чтобы  числа $M_{12}$, $M_{13}$, $M_{14}$, $M_{23}$, $M_{24}$, $M_{34}$ были минорами матрицы, необходимо и достаточно, чтобы выполнялись так называемые соотношения Плюккера:
+\begin{equation}\label{dif-2-1-2015-Plukker}
+M_{12}\, M_{34} - M_{13}\, M_{24} + M_{14}\, M_{23} = 0.
+\end{equation}
+\begin{equation}\label{dif-2-1-2015-Plukker-w}
+\widetilde M_{12}\,\widetilde  M_{34} - \widetilde M_{13}\,\widetilde  M_{24} + \widetilde M_{14}\,\widetilde  M_{23} = 0.
+\end{equation}
+(Миноры $M_{23}$, $M_{24}$ из равенств (\ref{dif-2-1-2015-Plukker}) отличаются от миноров $M_{32}$, $M_{42}$ из равенств (\ref{dif-2-1-2015-Mij-nesym}) только знаком).
+Из (\ref{dif-2-1-2015-Mij-nesym}), (\ref{dif-2-1-2015-Plukker}),  (\ref{dif-2-1-2015-Plukker-w}) и обратной теоремы Виета получаем два набора равенств
+\begin{equation}\label{dif-2-1-2015-Mij-resh-1}
+\begin{array}{c}
+M_{12}=C\,\widetilde M_{12}, \quad M_{32}=C\,\widetilde M_{32},\quad M_{42}=C\,\widetilde M_{42}, \\ 
+M_{13}=C\,\widetilde M_{13}, \quad 
+M_{14}=C\,\widetilde M_{14}, \quad 
+M_{34}=C\,\widetilde M_{34}
+\end{array}
+\end{equation}
+и
+\begin{equation}\label{dif-2-1-2015-Mij-resh-2}
+\begin{array}{c}
+M_{12}=C\,\widetilde M_{34}, \quad M_{32}=C\,\widetilde M_{32},\quad M_{42}=C\,\widetilde M_{42}, 
+\\ 
+M_{13}=C\,\widetilde M_{13}, \quad 
+M_{14}=C\,\widetilde M_{14}, \quad 
+M_{34}=C\,\widetilde M_{12}.
+\end{array}
+\end{equation}
+
+Отсюда следует, что краевые условия задач $L$ и $\widetilde L$ либо совпадают (с точностью до линейных преобразований строк), либо являются (12 и 34)-смежными.
+
+
+
+
+Пусть теперь $p(x)=p(\pi-x)$ и $q(x)=q(\pi-x)$. Тогда $ y_1(\pi,\, \lambda )\equiv y_2'(\pi,\,
+\lambda )$ и из (\ref{2013-ass-5_Delta_equiv}) и линейной независимости соответствующих функций следуют равенства
+\begin{equation}\label{dif-2-1-2015-Mij-sym}
+\begin{array}{c}
+M_{12}+M_{34}=C\,(\widetilde M_{12}+\widetilde M_{34}), \quad M_{32}+ M_{14}=C\,(\widetilde M_{32}+\widetilde M_{14}),
+\\ M_{42}=C\,\widetilde M_{42}, \quad M_{13}=C\,\widetilde M_{13}.
+\end{array}
+\end{equation}
+ Обозначим произведение $M_{12}\, M_{34}$ через $C_2$. Отсюда, из (\ref{dif-2-1-2015-Mij-sym})  и обратной теоремы Виета следует, что миноры  $M_{12}$ и $M_{34}$ являются корнями квадратного уравнения
+$$x^2-C\, (\widetilde M_{12}+\widetilde M_{34})\, x + C_2=0.$$
+Следовательно,
+\begin{equation}\label{dif-2-1-2015-M12-sym}
+\begin{array}{c}
+M_{12}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\pm \sqrt{(\widetilde M_{12}+\widetilde M_{34})^2-C_1 }\right).
+\\
+\\
+M_{34}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\mp \sqrt{(\widetilde M_{12}+\widetilde M_{34})^2-C_1 }\right),
+\end{array}
+\end{equation}
+где $C_1=4\, C_2/C^2$.
+
+
+Для нахождения миноров $M_{14}$ и $M_{23}$ воспользуемся тем, что произвольные числа не могут быть минорами матрицы. Для того чтобы  числа $M_{12}$, $M_{13}$, $M_{14}$, $M_{23}$, $M_{24}$, $M_{34}$ были минорами матрицы, необходимо и достаточно, чтобы выполнялись соотношения Плюккера (\ref{dif-2-1-2015-Plukker}) и (\ref{dif-2-1-2015-Plukker-w}).   
+ Тогда из  (\ref{dif-2-1-2015-Plukker}) и (\ref{dif-2-1-2015-Mij-sym})   следует, что 
+\begin{equation}\label{dif-2-1-2015-sym-Pl-1}
+ -M_{14}\, M_{32}=M_{14}\, M_{23}=M_{13}\, M_{24}-C_2=C^2\, \widetilde M_{13}\, \widetilde M_{24}-C_2.
+\end{equation}
+
+Отсюда, из (\ref{dif-2-1-2015-Mij-sym})  и обратной теоремы Виета следует, что миноры  $M_{14}$ и $M_{32}$ являются корнями квадратного уравнения
+$$y^2-C\, (\widetilde M_{14}+\widetilde M_{32}) \, y-\widetilde M_{14}\, \widetilde M_{32}+C_1=0.$$
+Следовательно,
+\begin{equation}\label{dif-2-1-2015-M14-sym}
+\begin{array}{c}
+M_{14}=\frac{1}{2}\,C\, \left( (\widetilde M_{14}+\widetilde M_{32})\pm \sqrt{(\widetilde M_{14}+\widetilde M_{32})^2+4\,\widetilde M_{13}\, \widetilde M_{24}-C_1}\right),
+\\
+\\
+M_{23}=\frac{1}{2}\,C\, \left( (\widetilde M_{12}+\widetilde M_{34})\mp \sqrt{(\widetilde M_{14}+\widetilde M_{23})^2+4\,\widetilde M_{13}\, \widetilde M_{24}-C_1}\right)
+\end{array}
+\end{equation}
+и теорема доказана.
+\end{proof}
+  
+
+Обозначим через $F$ матрицу следующего вида:
+\begin{equation}\label{dif-2-1-2015-Delta-F-1}
+F=\left\|
+\begin{array}{ccccc}
+1 & y_1(\pi,\, \lambda_1) & y_1'(\pi,\, \lambda_1)  & y_2(\pi,\, \lambda_1) & y_2'(\pi,\, \lambda_1)
+\\
+1 & y_1(\pi,\, \lambda_2) & y_1'(\pi,\, \lambda_2)  & y_2(\pi,\, \lambda_2) & y_2'(\pi,\, \lambda_2)
+\\
+1 & y_1(\pi,\, \lambda_3) & y_1'(\pi,\, \lambda_3)  & y_2(\pi,\, \lambda_3) & y_2'(\pi,\, \lambda_3)
+\\
+1 & y_1(\pi,\, \lambda_4) & y_1'(\pi,\, \lambda_4)  & y_2(\pi,\, \lambda_4) & y_2'(\pi,\, \lambda_4)
+\end{array}
+\right\|,
+\end{equation}
+через $F_{j}$ обозначим минор матрицы $F$, полученный вычёркиванием $j$-го столбца матрицы $F$.
+
+
+
+ 
+\begin{Theorem} 
+Если  $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$, 
+ ${\rm rank}\, A=2$, четыре собственных значения $\lambda_j$ $(j=1,2,3,4)$ задачи $L$ 
+удовлетворяют условию:
+\begin{equation}\label{dif-2-eig-cond}
+{\rm rank}\, F=4,
+\end{equation}
+то задача идентификации краевых условий по этим четырём собственным значениям имеет два решения. 
+
+Причём миноры матрицы $A$ этих двух видов краевых условий связаны следующими равенствами: 
+\begin{equation}\label{dif-2-1-2015-M-all}
+\begin{array}{c}
+M_{12}=\frac{t}{2}\,\left( F_{1} \pm \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right),
+\\
+M_{34}=\frac{t}{2}\,\left( F_{1} \mp \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right),
+\\
+M_{32}=-t\, F_{2},
+\quad
+M_{42}=t\, F_{3},
+\\ 
+M_{13}=-t\, F_{4},
+\quad
+M_{14}=t\, F_{5}.
+\end{array}
+\end{equation}
+
+А соответствующая смежная пара матриц ${A}$ с помощью миноров (\ref{dif-2-1-2015-M-all}) в явном виде выписывается следующим образом:
+
+1) если $M_{12}\neq 0$, то
+ $
+{A}=
+\left\|
+\begin{array}{cccc}
+1 & 0 & -\frac{M_{23}}{M_{12}} & -\frac{M_{24}}{M_{12}}
+\\
+0 & M_{12} & M_{13} & M_{14}
+\end{array}
+\right\|;
+$
+
+ 2) если $M_{13}\neq 0$, то
+ $
+{A}=
+\left\|
+\begin{array}{cccc}
+1 &\frac{M_{23}}{M_{13}} & 0 & -\frac{M_{34}}{M_{13}}
+\\
+0 & M_{12} & M_{13} & M_{14}
+\end{array}
+\right\|;
+$
+ 
+3) если $M_{14}\neq 0$, то
+ $
+{A}=
+\left\|
+\begin{array}{cccc}
+1 & \frac{M_{24}}{M_{14}} & \frac{M_{34}}{M_{14}} & 0
+\\
+0 & M_{12} & M_{13} & M_{14}
+\end{array}
+\right\|;
+$
+
+4) если $M_{23}\neq 0$, то 
+$
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{13}}{M_{23}} & 1 & 0 & -\frac{M_{34}}{M_{23}}
+\\
+-M_{12} & 0 & M_{23} & M_{24}
+\end{array}
+\right\|;
+$
+
+
+5) если $M_{24}\neq 0$, то
+ $
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{14}}{M_{24}} & 1 & \frac{M_{34}}{M_{24}}& 0
+\\
+-M_{12} & 0 & M_{23} & M_{24}
+\end{array}
+\right\|;
+$
+
+6) если $M_{34}\neq 0$, то
+ $
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{14}}{M_{34}} & \frac{M_{24}}{M_{34}} & 1 & 0
+\\
+ -M_{13} & -M_{23} & 0 & M_{34}
+\end{array}
+\right\|.
+$
+
+В частном случае, при $F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)=0$, задача идентификации краевых условий по четырём собственным значениям $\lambda_j$ $(j=1,2,3,4)$ имеет единственное решение (смежные решения совпадают).
+ \end{Theorem}
+
+\begin{proof}
+Четыре собственных значения $\lambda_j$ $(j=1,2,3,4)$ задачи $L$ являются корнями функции (\ref{dif-2016-Delta}).
+Следовательно, они удовлетворяют следующей системе уравнений относительно неизвестных
+$x_1=M_{12}+M_{34}$, $x_2=M_{32}$,\lb $x_3=M_{42}$, $x_4= M_{13}$, $x_5=M_{14}$: 
+\begin{equation}\label{dif-2-1-2015-Delta j}
+\begin{array}{c}
+\Delta(\lambda_j) = M_{12}+M_{34}+M_{32}\, y_1(\pi,\, \lambda_j) +
+M_{42}\,y_1'(\pi,\, \lambda_j) +\\+ M_{13}\, y_2(\pi,\, \lambda_j)+
+M_{14}\, y_2'(\pi,\, \lambda_j)=0.
+\end{array}
+\end{equation}
+Матрица этой системы совпадает с матрицей $F$ (\ref{dif-2-1-2015-Delta-F-1}).
+Согласно условию теоремы, ранг матрицы $F$ равен четырём. Поэтому система уравнений (\ref{dif-2-1-2015-Delta-F-1})  имеет единственное с точностью до ненулевого множителя решение:
+\begin{equation}\label{dif-2-1-2015-M}
+\begin{array}{c}
+M_{12}+M_{34}=t\, F_{1},
+\quad
+M_{32}=-t\, F_{2},
+\quad 
+M_{42}=t\, F_{3},
+\\ 
+M_{13}=-t\, F_{4},
+\quad
+M_{14}=t\, F_{5},
+\end{array}
+\end{equation}
+где через $F_{j}$ обозначен минор матрицы $F$, полученный вычёркиванием $j$-го столбца матрицы $F$.
+
+Из соотношений Плюккера (\ref{dif-2-1-2015-Plukker}) и (\ref{dif-2-1-2015-M}) получаем 
+\begin{equation}\label{dif-2-1-2015-Plukker M12M34}
+M_{12}\, M_{34} = t^2\, (F_3\, F_4-F_2\,F_5).
+\end{equation}
+Из равенств (\ref{dif-2-1-2015-M}), (\ref{dif-2-1-2015-Plukker M12M34}) и обратной теоремы Виета следует, что 
+$M_{12}$ и $M_{34}$ являются корнями квадратного уравнения
+$$
+z^2-t\, F_{1}\, z+t^2\, (F_3\, F_4-F_2\,F_5)=0.
+$$
+Откуда 
+\begin{equation}\label{dif-2-1-2015-M12-M34}
+\begin{array}{c}
+M_{12}=\frac{t}{2}\,\left( F_{1} \pm \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right),
+\\
+M_{34}=\frac{t}{2}\,\left( F_{1} \mp \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right).
+\end{array}
+\end{equation}
+
+Из  (\ref{dif-2-1-2015-M}) и (\ref{dif-2-1-2015-M12-M34}) вытекают равенства (\ref{dif-2-1-2015-M-all}), из которых с помощью методов идентификации матрицы \cite[c.~34,35]{Akhtyamov-mon-A-M-2009} по её минорам находятся пары смежных матриц, выписанные в заключении теоремы. 
+Покажем это для случая 1) $M_{12}\neq 0$. Пусть вектор ${\bf x}=(x_1,x_2,x_3,x_4)$~--- произвольный вектор линейной оболочки, построенной на векторах   ${\bf a}_1=(a_{11},a_{12},a_{13},a_{14})$ и ${\bf a}_2=(a_{21},a_{22},a_{23},a_{24})$ (или другими словами, пусть ${\bf x}$~--- вектор-строка матрицы $A$). Тогда координаты вектора   ${\bf x}$ удовлетворяют условию
+$$
+{\rm rank}\, \left\|
+\begin{array}{cccc}
+a_{11}&a_{12}&a_{13}&a_{14}
+\\
+a_{21}&a_{22}&a_{23}&a_{24}
+\\
+x_1&x_2&x_3&x_4
+\end{array}
+\right\| = 2.
+$$
+Поскольку $M_{12}\neq 0$, то последнее условие эквивалентно выполнению следующих двух равенств
+\begin{equation}\label{dif-2-okaiml}
+\left|
+\begin{array}{ccc}
+a_{11}&a_{12}&a_{13}
+\\
+a_{21}&a_{22}&a_{23}
+\\
+x_1&x_2&x_3
+\end{array}
+\right| =0,\quad
+\left|
+\begin{array}{ccc}
+a_{11}&a_{12}&a_{14}
+\\
+a_{21}&a_{22}&a_{24}
+\\
+x_1&x_2&x_4
+\end{array}
+\right| =0.
+\end{equation}
+(Все окаймляющие $M_{12}$ миноры должны быть равны нулю.)
+
+Разлагая определители (\ref{dif-2-okaiml}) по третьей строке, получаем
+\begin{equation}\label{dif-2-okaiml-1}
+x_1\cdot M_{23}-x_2\cdot M_{13}+x_3\cdot M_{12}=0,\quad
+x_1\cdot M_{24}-x_2\cdot M_{14}+x_4\cdot M_{12}=0.
+\end{equation}
+Базисные векторы искомой линейной оболочки можно найти, положив
+для первого вектора $x_1=1$ и $x_2=0$, а для второго~--- $x_1=0$ и $x_2=M_{12}\neq 0$.
+Если $x_1=1$ и $x_2=0$, то из равенств (\ref{dif-2-okaiml}) находим $x_3=-\frac{M_{23}}{M_{12}}$, $x_4=-\frac{M_{24}}{M_{12}}$. Если $x_1=0$ и $x_2=M_{12}\neq 0$, то из равенств (\ref{dif-2-okaiml}) находим $x_3=M_{13}$, $x_4=M_{14}$.
+ Следовательно, если $M_{12}\neq 0$, то матрица $A$ с точностью до линейной эквивалентности совпадает с матрицей
+$$
+{A}=
+\left\|
+\begin{array}{cccc}
+1 & 0 & -\frac{M_{23}}{M_{12}} & -\frac{M_{24}}{M_{12}}
+\\
+0 & M_{12} & M_{13} & M_{14}
+\end{array}
+\right\|.
+$$
+Для случаев 2)--6) матрица $A$ выписывается аналогично. Теорема доказана.
+\end{proof}
+  
+
+
+
+\section*{Пример 1} Пусть собственные значения задачи (\ref{dif-2016-1}), (\ref{dif-2016-2}) с $p(x)=x$ и $q(x)=x^2$, 
+$\lambda_1=2{,}8868$, $\lambda_2=4{,}4143$, $\lambda_3=4{,}7499$, $\lambda_4=21{,}93794$.
+Разложив линейно независимые решения $y_1(\pi,\, \lambda)$ и $y_2(\pi,\, \lambda)$ в ряд Тейлора по $x$ и $\lambda$, подставив 
+частичную сумму ряда из первых 50 членов ряда в (\ref{dif-2-1-2015-Delta-F-1}), вычислив соответствующие миноры $F_j$ с точностью до пяти значащих цифр (в действительности вычисления проводились с точностью до 50 значащих цифр), получим:
+$F_1=-1{,}3253\cdot 10^{14}$, 
+ $F_2=0$,
+$F_3=0$,
+$F_4=0$,  
+$F_5=1{,}3253\cdot 10^{14}$.
+ (Заметим, что остатком ряда Тейлора в этом случае можно пренебречь, т.~к. ряд Тейлора получается знакочередующимся и его остаток $R_{50}$  может быть оценён модулем последнего слагаемого частичной суммы, который является малым числом.) 
+
+ Отсюда и из  (\ref{dif-2-1-2015-M-all}) получаем два решения
+$$
+\begin{array}{l}
+M_{12}=\frac{t}{2}\,\left( F_{1} + \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right)=0,
+\\
+M_{34}=\frac{t}{2}\,\left( F_{1} - \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right)= -1{,}3253\cdot 10^{14}\, t,
+\\
+M_{32}=-t\, F_{2}=0,
+\quad
+M_{42}=t\, F_{3}=0,
+\quad
+M_{13}=-t\, F_{4}=0,
+\quad
+M_{14}=t\, F_{5}=1{,}3253\cdot 10^{14}\, t,
+\end{array}
+$$
+и
+$$
+\begin{array}{l}
+M_{12}=\frac{t}{2}\,\left( F_{1} - \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right)= -1{,}3253\cdot 10^{14}\, t,
+\\ 
+M_{34}=\frac{t}{2}\,\left( F_{1} + \sqrt{F_{1}^2-4\,  (F_3\, F_4-F_2\,F_5)}\right)=0,
+\\
+M_{32}=-t\, F_{2}=0,
+\quad
+M_{42}=t\, F_{3}=0,
+\quad
+M_{13}=-t\, F_{4}=0,
+\quad
+M_{14}=t\, F_{5}=1{,}3253\cdot 10^{14}\, t.
+\end{array}
+$$
+
+Положив $t=-\frac{1}{1{,}3253\cdot 10^{14}}$, получим более простые представления для миноров:
+$$
+M_{12}=-M_{14}=1;\quad 
+M_{32}=M_{42}=M_{13}=M_{34}=0$$
+и
+$$
+M_{34}=-M_{14}=1;\quad 
+M_{32}=M_{42}=M_{13}=M_{12}=0.$$
+
+
+Так как  $M_{12}=1\neq 0$, то первое решение для 
+матрицы $A$ с точностью до линейной эквивалентности совпадает с матрицей
+$$
+{A}=
+\left\|
+\begin{array}{cccc}
+1 & 0 & -\frac{M_{23}}{M_{12}} & -\frac{M_{24}}{M_{12}}
+\\
+0 & M_{12} & M_{13} & M_{14}
+\end{array}
+\right\|
+=\left\|
+\begin{array}{cccc}
+1 & 0 & 0 & 0
+\\
+0 & 1 & 0 & -1
+\end{array}
+\right\|, 
+$$
+а второе решение для 
+матрицы $A$ с точностью до линейной эквивалентности совпадает с матрицей
+$$
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{14}}{M_{34}} & \frac{M_{24}}{M_{34}} & 1 & 0
+\\
+ -M_{13} & -M_{23} & 0 & M_{34}
+\end{array}
+\right\|=
+\left\|
+\begin{array}{cccc}
+-1 & 0 & 1 & 0
+\\
+ 0 & 0 & 0 & 1
+\end{array}
+\right\| .
+$$
+
+
+Таким образом, задача идентификации краевых условий в данном случае имеет два решения:
+$$
+y(0)=0, \quad y'(0)=y'(\pi) \mbox{ \ и \ } y(0)-y(\pi)=0, \quad y'(\pi)=0.
+$$
+
+
+
+Обозначим через $G$ матрицу следующего вида:
+\begin{equation}\label{dif-2-1-2015-Delta-G-1}
+G=\left\|
+\begin{array}{cccc}
+1 & y_1(\pi,\, \lambda_1) & y_1'(\pi,\, \lambda_1)  & y_2(\pi,\, \lambda_1) 
+\\
+1 & y_1(\pi,\, \lambda_2) & y_1'(\pi,\, \lambda_2)  & y_2(\pi,\, \lambda_2) 
+\\
+1 & y_1(\pi,\, \lambda_3) & y_1'(\pi,\, \lambda_3)  & y_2(\pi,\, \lambda_3) 
+\end{array}
+\right\|;
+\end{equation}
+через $G_{j}$ обозначим минор матрицы $G$, полученный вычёркиванием $j$-го столбца матрицы $G$.
+
+ 
+\begin{Theorem}
+Если  $q(x)= q(\pi-x)$, 
+ ${\rm rank}\, A=2$, три собственных значения $\lambda_j$ $(j=1,2,3)$ задачи $L$ 
+удовлетворяют условию:
+\begin{equation}\label{dif-2-eig-cond-3-G}
+{\rm rank} \|1, y_1(\pi,\, \lambda_j), y_1'(\pi,\, \lambda_j), y_2(\pi,\, \lambda_j) \|_{j=1,2,3}=3,
+\end{equation}
+то задача идентификации краевых условий по этим трём собственным значениям имеет бесконечное число решений.
+
+Причём миноры матрицы $A$ представляются следующим образом: 
+\begin{equation}\label{dif-2-1-2015-M-inf-all}
+\begin{array}{c}
+M_{12}=\frac{1}{2}\,\left( t\, G_1\pm S_1\right),
+\quad
+M_{34}=\frac{1}{2}\,\left( t\, G_1\mp S_1\right),
+\quad
+M_{42}=t\, G_3,
+\\
+\\
+M_{13}=t\, G_4,\quad
+M_{14}=\frac{1}{2}\, \left( -t\, G_2\pm S_2\right),
+\quad
+M_{32}=\frac{1}{2}\, \left( -t\, G_2\mp S_2\right),
+\end{array}
+\end{equation}
+где  $S_1=\sqrt{(t\, G_1)^2-t_1 }$, $S_2=\sqrt{t^2\, G_2^2+4\,t^2 \, G_3\, G_4-t_1}$, а $t$ и $t_1$~--- произвольные числа.
+Соответствующие матрицы ${A}$ с помощью этих миноров  в явном виде выписывается по формулам 1)--6) из формулировки теоремы 2.
+ \end{Theorem}
+
+\begin{proof}
+Пять собственных значений $\lambda_j$ $(j=1,2,3,4)$ задачи $L$ являются корнями функции (\ref{dif-2016-Delta}).
+Следовательно, они удовлетворяют следующей системе уравнений: 
+\begin{equation}\label{dif-2-1-2015-G-Delta}
+\begin{array}{c}
+ M_{12}+M_{34}+(M_{32}+M_{14})\, y_1(\pi,\, \lambda_j) +
+M_{42}\,y_1'(\pi,\, \lambda_j) + M_{13}\, y_2(\pi,\, \lambda_j)=0.
+\end{array}
+\end{equation}
+Эта система имеет бесконечное число решений:
+\begin{equation}\label{dif-2-1-2015-G-M}
+\begin{array}{c}
+M_{12}+M_{34}=t\, G_1, 
+\quad 
+M_{32}+M_{14}=-t\, G_2,
+\quad 
+M_{42}=t\, G_3,
+\quad 
+M_{13}=-t\, G_4.
+\end{array}
+\end{equation}
+ Обозначим произведение $M_{12}\, M_{34}$ через $t_2$. Отсюда, из (\ref{dif-2-1-2015-G-M})  и обратной теоремы Виета следует, что миноры  $M_{12}$ и $M_{34}$ являются корнями квадратного уравнения
+$$x^2-t\,G_1\, x + t_2=0.$$
+Следовательно,
+\begin{equation}\label{dif-2-1-2015-M12-sym-G}
+\begin{array}{c}
+M_{12}=\frac{1}{2}\,\left( t\, G_1\pm \sqrt{(t\, G_1)^2-t_1 }\right),
+\\
+\\
+M_{34}=\frac{1}{2}\,\left( t\, G_1\mp \sqrt{(t\, G_1)^2-t_1 }\right),
+\end{array}
+\end{equation}
+где $t_1=4\, t_2$. 
+Тогда из соотношений Плюккера (\ref{dif-2-1-2015-Plukker}) получаем
+$$
+M_{14}\, M_{32} = -t^2\, G_3\, G_4+\frac{1}{4}\, t_1.
+$$
+
+
+Отсюда, из (\ref{dif-2-1-2015-G-M})  и обратной теоремы Виета следует, что миноры  $M_{14}$ и $M_{32}$ являются корнями квадратного уравнения
+$$y^2+t\, G_2 \, y-t^2\, G_3\, G_4+\frac{1}{4}\, t_1=0.$$
+Следовательно,
+\begin{equation}\label{dif-2-1-2015-M14-sym-G}
+\begin{array}{c}
+M_{14}=\frac{1}{2}\, \left( -t\, G_2\pm \sqrt{t^2\, G_2^2+4\,t^2 \, G_3\, G_4-t_1}\right),
+\\
+\\
+M_{32}=\frac{1}{2}\, \left( -t\, G_2\mp \sqrt{t^2\, G_2^2+4\,t^2 \, G_3\, G_4-t_1}\right)
+\end{array}
+\end{equation}
+и теорема доказана.
+\end{proof}
+  
+
+
+\section*{Идентификация распадающихся краевых условий}
+Рассмотрим теперь частный случай задачи $L$ --- задачу $L_0$ для уравнения (\ref{dif-2016-1})  со следующими распадающимися краевыми условиями:
+\begin{equation}
+U_1(y) = a_{11}\, y(0) + a_{12}\, y'(0) = 0, \label{dif-2-1-2015-2-0}
+\end{equation}
+\begin{equation}
+U_2(y) = a_{23}\, y(\pi) +
+a_{24}\, y'(\pi) = 0. \label{dif-2-1-2015-2-pi}
+\end{equation}
+
+Для задачи (\ref{dif-2016-1}), (\ref{dif-2-1-2015-2-0}), (\ref{dif-2-1-2015-2-pi})  ($L_0$) миноры $M_{12}$ и $M_{34}$ обращаются в нуль:
+\begin{equation}\label{M32=0}
+M_{12}=0,\quad M_{34}=0.
+\end{equation}
+Отсюда и из (\ref{dif-2016-Delta}) получаем:
+\begin{equation}\label{dif-2016-Delta M32=0}
+\begin{array}{c}
+\Delta(\lambda ) =M_{32}\, y_1(\pi,\, \lambda) +
+M_{42}\,y_1'(\pi,\, \lambda ) + M_{13}\, y_2(\pi,\, \lambda )+
+M_{14}\, y_2'(\pi,\, \lambda ).
+\end{array}
+\end{equation}
+
+Пусть $q(x)\neq q(\pi-x)$, $\widetilde q(x)\neq \widetilde q(\pi-x)$. Тогда,
+также как при доказательстве равенств (\ref{dif-2-1-2015-Mij-nesym})  (см. теорему 1), получаем равенства:
+\begin{equation}\label{dif-2-1-2015-Mij-nesym_M32}
+M_{32}=C\,\widetilde M_{32},\quad M_{42}=C\,\widetilde M_{42}, \quad M_{13}=C\,\widetilde M_{13}, \quad 
+M_{14}=C\,\widetilde M_{14}.
+\end{equation}
+Отсюда следует, что краевые условия задач $L$ и $\widetilde L$ совпадают (с точностью до линейных преобразований строк).
+
+
+
+Пусть теперь $q(x)= q(\pi-x)$, $\widetilde q(x)= \widetilde q(\pi-x)$. Тогда,
+также как при доказательстве равенств  (\ref{dif-2-1-2015-Mij-sym})  (см. теорему 1), получаем равенства:
+\begin{equation}\label{dif-2-1-2015-Mij-nesym_M32}
+M_{32}+ M_{14}=C\,(\widetilde M_{32}+\widetilde M_{14}),\quad 
+M_{42}=C\,\widetilde M_{42}, \quad M_{13}=C\,\widetilde M_{13}.
+\end{equation}
+Откуда также, как и при доказательстве теоремы,  получаем два набора равенств
+\begin{equation}\label{dif-2-1-2015-Mij-resh-1_M32}
+\begin{array}{c}
+M_{13}=C\,\widetilde M_{13}, \quad M_{14}=C\,\widetilde M_{14}, \quad 
+M_{32}=C\,\widetilde M_{32}, \quad 
+M_{42}=C\,\widetilde M_{42}.
+\end{array}
+\end{equation}
+и
+\begin{equation}\label{dif-2-1-2015-Mij-resh-2_M32}
+\begin{array}{c}
+M_{13}=C\,\widetilde M_{13}, \quad M_{14}=C\,\widetilde M_{32}, 
+\quad  
+M_{32}=C\,\widetilde M_{14}, \quad 
+M_{42}=C\,\widetilde M_{42}.
+\end{array}
+\end{equation}
+Отсюда следует, что краевые условия задач $L$ и $\widetilde L$ либо совпадают (с точностью до линейных преобразований строк), либо являются (14 и 32)-смежными.
+
+
+Таким образом, верна следующая
+
+ 
+\begin{Theorem}
+Пусть спектры задач $L$ и
+$\widetilde L$ с распадающимися краевыми условиями (\ref{dif-2-1-2015-2-0}) и (\ref{dif-2-1-2015-2-pi})  совпадают с учётом их алгебраических
+кратностей, ${\rm rank}\, A=2$. 
+
+Тогда: 
+
+1. Если  $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$, то  матрицы коэффициентов краевых условий $A=(a_
+{ij})_{2\times 4}$ и $\widetilde A=(\widetilde a_ {ij})_{2\times 4}$ совпадают
+с точностью до линейных преобразований строк. То есть в случае несимметрического потенциала задача идентификации распадающихся краевых условий по всем собственным значениям имеет единственное решение.
+
+2. Если  $p(x)= p(\pi-x)$ и  $q(x)=q(\pi-x)$, то либо матрицы коэффициентов краевых условий $A=(a_
+{ij})_{2\times 4}$ и $\widetilde A=(\widetilde a_ {ij})_{2\times 4}$ совпадают
+с точностью до линейных преобразований строк, либо являются  ($14$ и $32$)-смежными. То есть в случае симметрического потенциала задача идентификации распадающихся краевых условий по всем собственным значениям имеет два решения.
+ \end{Theorem}
+
+
+
+
+Обозначим через $Q$ матрицу следующего вида:
+\begin{equation}\label{dif-2-1-2015-Delta-Q-1}
+Q=\left\|
+\begin{array}{cccc}
+ y_1(\pi,\, \lambda_1) & y_1'(\pi,\, \lambda_1)  & y_2(\pi,\, \lambda_1) & y_2'(\pi,\, \lambda_1)
+\\
+ y_1(\pi,\, \lambda_2) & y_1'(\pi,\, \lambda_2)  & y_2(\pi,\, \lambda_2) & y_2'(\pi,\, \lambda_2)
+\\
+ y_1(\pi,\, \lambda_3) & y_1'(\pi,\, \lambda_3)  & y_2(\pi,\, \lambda_3) & y_2'(\pi,\, \lambda_3)
+\end{array}
+\right\|,
+\end{equation}
+через $Q_{j}$ обозначим минор матрицы $Q$, полученный вычёркиванием $j$-го столбца матрицы $Q$.
+
+
+
+
+
+ 
+\begin{Theorem}
+Если   $p(x)\neq p(\pi-x)$ или (и)  $q(x)\neq q(\pi-x)$, 
+ ${\rm rank}\, A=2$, три собственных значения $\lambda_j$ $(j=1,2,3)$ задачи $L$ 
+удовлетворяют условию:
+\begin{equation}\label{dif-2-eig-cond Q}
+{\rm rank}\, Q=3,
+\end{equation}
+то задача идентификации краевых условий по этим трём собственным значениям имеет единственное решение, 
+которое представляется формулами 2)--5) из теоремы 2 в зависимости от того, какой из миноров отличен от нуля. 
+Причём миноры в представлениях 2)--5) для матрицы $A$ даются следующими равенствами:
+\begin{equation}\label{dif-2-1-2015-Q-all}
+\begin{array}{c}
+M_{12}=0,
+\quad 
+M_{34}=0, 
+\quad 
+M_{32}=t\, Q_{1},
+\\
+M_{42}=-t\, Q_{2},
+\quad 
+M_{13}=t\, Q_{3},
+\quad
+M_{14}=-t\, Q_{4}.
+\end{array}
+\end{equation}
+ \end{Theorem}
+
+\begin{proof}
+Три собственных значения $\lambda_j$ $(j=1,2,3)$ задачи $L$ являются корнями характеристического определителя. Следовательно, они удовлетворяют следующей системе уравнений относительно неизвестных
+ $M_{32}$, $M_{42}$, $M_{13}$, $M_{14}$: 
+\begin{equation}\label{dif-2-1-2015-Delta_Q}
+\begin{array}{c}
+\Delta(\lambda_j) =M_{32}\, y_1(\pi,\, \lambda_j) +
+M_{42}\,y_1'(\pi,\, \lambda_j) +\\+ M_{13}\, y_2(\pi,\, \lambda_j)+
+M_{14}\, y_2'(\pi,\, \lambda_j)=0.
+\end{array}
+\end{equation}
+Матрица этой системы совпадает с матрицей $Q$.
+Согласно условию теоремы, ранг матрицы $Q$ равен трём. Поэтому система уравнений (\ref{dif-2-1-2015-Delta-F-1})  имеет единственное с точностью до ненулевого множителя $t$ решение (\ref{dif-2-1-2015-Q-all}). Теорема доказана.
+\end{proof}
+  
+
+
+
+\section*{Пример 2} Пусть собственные значения задачи (\ref{dif-2016-1}), (\ref{dif-2016-2}) с $p(x)=x$ и $q(x)=x^2$, 
+$\lambda_1=2{,}0425$, $\lambda_2=3{,}8163$, $\lambda_3=6{,}8611$.
+Разложив линейно независимые решения $y_1(\pi,\, \lambda)$ и $y_2(\pi,\, \lambda)$ в ряд Тейлора по $x$ и $\lambda$, подставив 
+частичную сумму ряда из первых 50 членов ряда в (\ref{dif-2-1-2015-Delta-F-1}) и вычислив соответствующие миноры $Q_j$ с точностью до пяти значащих цифр, получим:
+$Q_1=3{,}5147\cdot 10^8$, 
+$Q_2=-3{,}5147\cdot 10^8$,
+$Q_3=3{,}5147\cdot 10^8$,
+$Q_4=-3{,}5147\cdot 10^8$.
+ 
+ Отсюда и из  (\ref{dif-2-1-2015-Q-all}) получаем
+$$
+\begin{array}{c}
+M_{12}=0,
+\quad 
+M_{34}=0, 
+\quad 
+M_{23}=-M_{32}=-t\, Q_{1}=-3{,}5147\cdot 10^8\, t,
+\\
+M_{24}=-M_{42}=t\, Q_{2}=-3{,}5147\cdot 10^8\, t,
+\quad 
+M_{13}=t\, Q_{3}=3{,}5147\cdot 10^8\, t,
+\\
+M_{14}=-t\, Q_{4}=3{,}5147\cdot 10^8\, t.
+\end{array}
+$$
+
+Положив $t=-\frac{1}{3{,}5147\cdot 10^8}$, получим более простые представления для миноров:
+$$
+M_{42}=M_{23}=1,\quad
+M_{12}=M_{34}=0,\quad 
+M_{13}=M_{14}=-1.$$
+
+
+Так как  $M_{23}=1\neq 0$, то
+матрица $A$ с точностью до линейной эквивалентности совпадает с матрицей
+$$
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{13}}{M_{23}} & 1 & 0 & -\frac{M_{34}}{M_{23}}
+\\
+-M_{12} & 0 & M_{23} & M_{24}
+\end{array}
+\right\|=
+\left\|
+\begin{array}{cccc}
+-1 & 1 & 0 & 0
+\\
+0 & 0 &1 & 1
+\end{array}
+\right\|.
+$$
+Таким образом, задача идентификации краевых условий в данном случае имеет единственное решение. Это решение представляет собой следующие краевые условия
+$$
+y'(0)-y(0)=0, \quad y'(\pi)+y(\pi)=0.
+$$
+
+
+
+
+
+
+Обозначим через $R$ матрицу следующего вида:
+\begin{equation}\label{dif-2-1-2015-Delta-R-1}
+R=\left\|
+\begin{array}{ccc}
+ y_1(\pi,\, \lambda_1) & y_1'(\pi,\, \lambda_1)  & y_2(\pi,\, \lambda_1) 
+\\
+ y_1(\pi,\, \lambda_2) & y_1'(\pi,\, \lambda_2)  & y_2(\pi,\, \lambda_2) 
+\end{array}
+\right\|;
+\end{equation}
+через $R_{j}$ обозначим минор матрицы $R$, полученный вычёркиванием $j$-го столбца матрицы $R$.
+
+
+
+
+
+
+\begin{Theorem} Если  $p(x)= p(\pi-x)$ и  $q(x)=q(\pi-x)$, 
+ ${\rm rank}\, A=2$, два собственных значения $\lambda_j$ $(j=1,2)$ задачи $L$ 
+удовлетворяют условию:
+\begin{equation}\label{dif-2-eig-cond R}
+{\rm rank}\, R=2,
+\end{equation}
+то задача идентификации краевых условий по этим двум собственным значениям имеет два решения, 
+которые представляется формулами 2)--5) из теоремы 2 в зависимости от того, какой из миноров отличен от нуля. 
+Причём миноры в представлениях 2)--5) для матрицы $A$ даются следующими равенствами:
+\begin{equation}\label{dif-2-1-2015-QQ-all}
+\begin{array}{c}
+M_{12}=0,
+\quad 
+M_{34}=0, 
+\quad 
+M_{32}=\frac{t}{2}\,\left( R_{1} \pm \sqrt{R_{1}^2+4\,  R_2\,R_3}\right),
+\\
+M_{42}=- t\, R_{2},
+\quad 
+M_{13}=t\, R_{3},
+\quad
+M_{14}=\frac{t}{2}\,\left( R_{1} \mp \sqrt{R_{1}^2+4\,  R_2\,R_3}\right).
+\end{array}
+\end{equation}
+ \end{Theorem}
+
+
+%%%%%%%%%%%%%
+
+
+\begin{proof} 
+Два собственных значения $\lambda_j$ $(j=1,2)$ задачи $L$ являются корнями функции (\ref{dif-2016-Delta M32=0}).
+Следовательно, они удовлетворяют следующей системе уравнений относительно неизвестных
+$x_1=M_{12}+M_{34}$, $x_2=M_{32}$, $x_3=M_{42}$, $x_4= M_{13}$, $x_5=M_{14}$: 
+\begin{equation}\label{dif-2-1-2015-Delta_j_R}
+\begin{array}{c}
+(M_{32}+M_{14})\, y_1(\pi,\, \lambda_j) +
+M_{42}\,y_1'(\pi,\, \lambda_j) +M_{13}\, y_2(\pi,\, \lambda_j)=0.
+\end{array}
+\end{equation}
+Матрица этой системы совпадает с матрицей $R$ (\ref{dif-2-1-2015-Delta-R-1}).
+Согласно условию теоремы, ранг матрицы $R$ равен двум. Поэтому система уравнений (\ref{dif-2-1-2015-Delta_j_R})  имеет единственное с точностью до ненулевого множителя решение:
+\begin{equation}\label{dif-2-1-2015-M-R}
+\begin{array}{c}
+M_{32}+M_{14}=t\, R_{1},
+\quad
+M_{42}=-t\, R_{2},
+\quad
+M_{13}=t\, R_{3}.
+\end{array}
+\end{equation}
+
+
+Из соотношений Плюккера (\ref{dif-2-1-2015-Plukker}), (\ref{M32=0}) и (\ref{dif-2-1-2015-M-R}) получаем 
+\begin{equation}\label{dif-2-1-2015-Plukker-M12M34-R}
+M_{32}\, M_{14} = -t^2\, R_2\,R_3.
+\end{equation}
+Из равенств (\ref{dif-2-1-2015-M-R}), (\ref{dif-2-1-2015-Plukker-M12M34-R}) и обратной теоремы Виета следует, что 
+$M_{32}$ и $M_{14}$ являются корнями квадратного уравнения
+$$
+z^2-t\, R_{1}\, z-t^2\, R_2\,R_3=0.
+$$
+Откуда 
+\begin{equation}\label{dif-2-1-2015-M12-M34-R}
+\begin{array}{c}
+M_{32}=\frac{t}{2}\,\left( R_{1} \pm \sqrt{R_{1}^2+4\,  R_2\,R_3}\right),
+\quad 
+M_{14}=\frac{t}{2}\,\left( R_{1} \mp \sqrt{R_{1}^2+4\,  R_2\,R_3}\right).
+\end{array}
+\end{equation}
+
+
+Отсюда и из (\ref{dif-2-1-2015-M-R}) и вытекает утверждение теоремы.
+
+\end{proof}
+
+
+
+\section*{Пример 3} Пусть собственные значения задачи (\ref{dif-2016-1}), (\ref{dif-2016-2}) с $p(x)=1$ и $q(x)=1$, \lb 
+$\lambda_1=2{,}5516$, $\lambda_2=2{,}9870$. На самом деле собственные значения брались с точностью до 50 значащих цифр. 
+Разложив линейно независимые решения $y_1(\pi,\, \lambda)$ и $y_2(\pi,\, \lambda)$ в ряд Тейлора по $x$ и $\lambda$, подставим 
+частичную сумму ряда из первых 50 членов ряда в (\ref{dif-2-1-2015-Delta-R-1}) и вычислим соответствующие миноры $R_j$ с точностью до пятидесяти значащих цифр, получим:
+$R_1=-1{,}4852$, 
+ $R_2=0{,}74262$,
+$R_3=-0{,}74262$.
+ 
+ Отсюда и из  (\ref{dif-2-1-2015-QQ-all}) получаем единственное (кратное) представление ($\sqrt{R_{1}^2+4\,  R_2\,R_3}=0$ при точности вычислений  50 значащих цифр):
+\begin{equation}\label{dif-2-1-2015-Q1-all}
+\begin{array}{c}
+M_{12}=0,
+\quad 
+M_{34}=0, 
+\quad 
+M_{32}=\frac{t}{2}\,\left( R_{1} \pm \sqrt{R_{1}^2+4\,  R_2\,R_3}\right)=-0{,}74262\, t,
+\\
+M_{42}=t\, R_{2}=-0{,}74262\, t,
+\quad 
+M_{13}=t\, R_{3}=-0{,}74262\, t,
+\\
+M_{14}=-\frac{t}{2}\,\left( R_{1} \mp \sqrt{R_{1}^2+4\,  R_2\,R_3}\right)=-0{,}74262\, t.
+\end{array}\end{equation}
+% \end{Theorem}
+
+
+Положив $t=\frac{1}{0{,}74262}$, получим более простые представления для миноров:
+$$
+M_{12}=M_{34}=0,\quad
+M_{13}=-1, \quad M_{42}=-1, \quad M_{14}=-1,\quad M_{32}=-1.$$
+
+
+Так как  $M_{23}=1\neq 0$, то
+матрица $A$ с точностью до линейной эквивалентности совпадает с матрицей
+$$
+{A}=
+\left\|
+\begin{array}{cccc}
+\frac{M_{13}}{M_{23}} & 1 & 0 & -\frac{M_{34}}{M_{23}}
+\\
+-M_{12} & 0 & M_{23} & M_{24}
+\end{array}
+\right\|=
+\left\|
+\begin{array}{cccc}
+-1 & 1 & 0 & 0
+\\
+0 & 0 &1 & 1
+\end{array}
+\right\|.
+$$
+Таким образом, задача идентификации краевых условий в данном случае имеет единственное (кратное) решение. Это решение представляет собой следующие краевые условия:
+$$
+y'(0)-y(0)=0, \quad y'(\pi)+y(\pi)=0.
+$$
+
+
+
+
+
+%%%%%%%%%%%%%%     Литература    %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% ГОСТ Р 7.0.5-2008 %%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{Благодарности}
+Работа проводилась при финансовой поддержке РФФИ и Правительства Республики Башкортостан (проекты 18-51-06002-Aз\_a, 18-01-00250-a,   17-41-020230-р\_a, 17-41-020195-р\_а), Минобрнауки России в рамках государственного задания (проект № 0246-2018-0006), а также Фонда развития науки при Президенте Азербайджанской Республики (проект 1-го Азербайджанско-Российского международного конкурса грантов (EIF-BGM-4-RFTF-1/2017)
+
+
+\begin{thebibliography}{999}
+% электронный ресурс оформляется по общим правилам + URL и дата обращения
+\bibitem{Marchenko77}
+Марченко В.А. Операторы Штурма--Лиувилля и их приложения. Киев~: Наукова думка, 1977.
+
+\bibitem{Naimark69}
+Наймарк~М.А. Линейные дифференциальные операторы. М.~: Наука, 1969. 526~c.
+
+\bibitem{Korotyaev-2010}
+ Коротяев Е.Л., Челкак Д.С. Обратная задача Штурма--Лиувилля со смешанными краевыми условиями // Алгебра и анализ. 2009. Т.~21, №~5. С.~114--137.
+
+\bibitem{Skal-TrSt-2009}
+ Савчук А.М., Шкаликов А.А. Равномерная устойчивость обратной задачи Штурма-Лиувилля по спектральной функции в шкале соболевских пространств // Труды Математического института им. 
+ В.А.~Стеклова РАН. 2013. Т.~283. С.~188.
+ 
+\bibitem{Skal-FA-2010}
+Савчук А.М., Шкаликов А.А. Обратные задачи для оператора Штурма–Лиувилля с потенциалами из пространств Соболева. Равномерная устойчивость // Функциональный анализ и его приложения. 2010. Т.~44, №.~4. С.~34--53.
+
+\bibitem{GGuseinov86}
+Гусейнов Г.Ш. Обратные спектральные задачи для квадратичного пучка операторов Штурма--Лиувилля на конечном интервале // Спектральная теория операторов и ее приложения. Баку, 1986. Вып.~7. C.~51–-101. 
+
+\bibitem{Nabiev09} 
+Набиев И.М., Шукюров А.Ш. Решение обратной задачи для оператора диффузии
+в симметрическом случае // Изв. Сарат. ун-та. Сер. Математика. Механика. Информатика. 2009. Т.~9, вып.~4, ч.~1. С.~36--40.
+
+\bibitem{Sadovnichii72} 
+Садовничий В.А. Единственность решения обратной задачи в случае уравнения второго порядка с нераспадающимися условиями, регуляризованные суммы части собственных чисел. Факторизация характеристического определителя // ДАН СССР. 1972. Т.~206, №~2. C.~293--296.
+
+\bibitem{Yurko75}
+Юрко В.А. Обратная задача для дифференциальных операторов второго порядка с регулярными краевыми условиями // Матем. заметки. 1975. T.~18, №~4. C.~569--576.
+
+\bibitem{Plaksina86} 
+Плаксина О.А. Обратные задачи спектрального анализа для операторов Штурма--Лиувилля с
+нераспадающимися краевыми условиями. I // Матем. сборник. 1986. Т.~131, №~1. C.~3--26.
+
+\bibitem{Plaksina88} 
+Плаксина О.А. Обратные задачи спектрального анализа для операторов Штурма--Лиувилля с
+нераспадающимися краевыми условиями. II // Матем. сборник. 1988. T.~136, №~1. C.~140--159.
+
+\bibitem{Akhtyamov-mon2-09} 
+Садовничий В.А., Султанаев Я.Т., Ахтямов А.М. Обратная задача Штурма--Луивилля с нераспадающимися краевыми условиями. M.~: Изд-во МГУ. 2009.
+
+\bibitem{Akhtyamovssa-du-15} 
+Садовничий В.А., Султанаев Я.Т., Ахтямов А.М. Теоремы разрешимости несамосопряженной обратной задачи Штурма-Лиувилля с нераспадающимися краевыми условиями //  Дифференц. уравнения. 2015. T.~51, №~6. C.~706--713.
+
+\bibitem{Gaseynov07} 
+Гусейнов И.М., Набиев И.М. Обратная спектральная задача для пучков дифференциальных операторов  // Математический сборник. 2007. Т.~198, №~11. C.~47--66.
+
+\bibitem{Gnuni} 
+Гнуни В.Ц., Оганисян З.Б. Определение граничных условий круглой кольцевой пластинки по заданным частотам собственных колебаний // Известия НАН РА, серия «Механика». 
+1991. Т.~44, №~5. C.~9--16.
+
+\bibitem{Org} 
+Оганисян З.Б. Об одной задаче восстановления граничных условий на концах стержня при заданном спектре частот собственных поперечных колебаний // Вопросы оптимального управления, устойчивости и прочности механических систем (научные труды конференции). Ереван, 1997. С.~159--162. 
+
+\bibitem{Org91} 
+Оганисян З.Б. Об одной задаче восстановления граничных условий на краях пластинки при заданном спектре частот собственных поперечных колебаний //  Учёные записки ЕГУ. 
+ 1991.  №~1. С.~45--50.
+
+\bibitem{Akhtyamov-mon-A-M-2009} 
+Ахтямов А.М. Теория идентификации краевых условий и её приложения. M.~: Физматлит, 2009. 
+
+\bibitem{Akhtyamov-00-FPM}
+Ахтямов А.М. О единственности восстановления краевых условий спектральной задачи по её спектру // Фунд. и прикл. математика. 2000. Т.~6, №~4. C.~995--1006.
+
+\bibitem{Akhtyamov-03-DU}
+Ахтямов А.М. К единственности решения одной обратной спектральной задачи // Дифференц. уравнения. 2003. Т.~8. C.1011--1015.
+
+\bibitem{Akhtyamov-15-AJ} 
+Ахтямов А.М., Утяшев И.М. Идентификация краевых условий на обоих концах струны по собственным частотам колебаний // Акустический журнал. 2015. Т.~61, №~6. C.~647--655.
+
+
+\end{thebibliography}
+
+\maketitleEng  %  Команда завершения статьи
+{\protect\footnotesize \selectlanguage{english}\begin{thebibliography}{999}
+\bibitem{Marchenko77}
+Marchenko V.A. Operatory Shturma--Liuvillya i ikh prilozheniya. Kiev, Naukova Dumka Publ., 1977.
+ (in Russian)
+\bibitem{Naimark69}
+Naimark~M.A. Lineinye differentsial'nye operatory. Moscow, Nauka Publ., 1969, 526~p.
+ (in Russian)
+\bibitem{Korotyaev-2010}
+ Korotyaev E.L. and Chelkak D.S. Obratnaya zadacha Shturma--Liuvillya so smeshannymi kraevymi usloviyami. Algebra i analiz, 2009, vol.~21, no.~5, pp.~114--137.
+ (in Russian)
+\bibitem{Skal-TrSt-2009}
+ Savchuk A.M. and Shkalikov A.A. Ravnomernaya ustoichivost' obratnoi zadachi Shturma-Liuvillya po spektral'noi funktsii v shkale sobolevskikh prostranstv. Trudy Matematicheskogo instituta im. V.A. Steklova RAN, 2013, vol.~283, pp.~188.
+  (in Russian)
+\bibitem{Skal-FA-2010}
+Savchuk A.M. and Shkalikov A.A. Obratnye zadachi dlya operatora Shturma–Liuvillya s potentsialami iz prostranstv Soboleva. Ravnomernaya ustoichivost'. Funktsional'nyi analiz i ego prilozheniya, 2010, vol.~44, no.~4, pp.~34--53.
+ (in Russian)
+\bibitem{GGuseinov86}
+Guseinov G.Sh. Obratnye spektral'nye zadachi dlya kvadratichnogo puchka operatorov Shturma--Liuvillya na konechnom intervale. Spektral'naya teoriya operatorov i ee prilozheniya, Baku, 1986, iss.~7, pp.~51–-101. 
+ (in Russian)
+\bibitem{Nabiev09} 
+Nabiev I.M. and Shukyurov A.Sh. Reshenie obratnoi zadachi dlya operatora diffuzii
+v simmetricheskom sluchae. Izv. Sarat. un-ta, Ser. Matematika. Mekhanika. Informatika, 2009, vol.~9. iss.~4, ch.~1, pp.~36--40.
+ (in Russian)
+\bibitem{Sadovnichii72} 
+Sadovnichii V.A. Edinstvennost' resheniya obratnoi zadachi v sluchae uravneniya vtorogo poryadka s neraspadayushchimisya usloviyami, regulyarizovannye summy chasti sobstvennykh chisel. Faktorizatsiya kharakteristicheskogo opredelitelya. DAN SSSR, 1972, vol.~206, no.~2, pp.~293--296.
+ (in Russian)
+\bibitem{Yurko75}
+Yurko V.A. Obratnaya zadacha dlya differentsial'nykh operatorov vtorogo poryadka s regulyarnymi kraevymi usloviyami. Matem. zametki, 1975, vol.~18, no.~4, pp.~569--576.
+ (in Russian)
+\bibitem{Plaksina86} 
+Plaksina O.A. Obratnye zadachi spektral'nogo analiza dlya operatorov Shturma--Liuvillya s
+neraspadayushchimisya kraevymi usloviyami. I. Matem. sbornik, 1986, vol.~131, no.~1, pp.~3--26.
+ (in Russian)
+\bibitem{Plaksina88} 
+Plaksina O.A. Obratnye zadachi spektral'nogo analiza dlya operatorov Shturma--Liuvillya s
+neraspadayushchimisya kraevymi usloviyami. II. Matem. sbornik, 1988, vol.~136, no.~1, pp.~140--159.
+(in Russian)
+\bibitem{Akhtyamov-mon2-09} 
+Sadovnichii V.A., Sultanaev Ya.T. and Akhtyamov A.M. Obratnaya zadacha Shturma--Luivillya s neraspadayushchimisya kraevymi usloviyami. Moscow, MGU Publ., 2009.
+ (in Russian)
+\bibitem{Akhtyamovssa-du-15} 
+Sadovnichii V.A., Sultanaev Ya.T. and Akhtyamov A.M. Teoremy razreshimosti nesamosopryazhennoi obratnoi zadachi Shturma-Liuvillya s neraspadayushchimisya kraevymi usloviyami.  Differents. uravneniya, 2015, vol.~51, no.~6, pp.~706--713.
+ (in Russian)
+\bibitem{Gaseynov07} 
+Guseinov I.M. and Nabiev I.M. Obratnaya spektral'naya zadacha dlya puchkov differentsial'nykh operatorov.  Matematicheskii sbornik, 2007, vol.~198, no.~11, pp.~47--66.
+ (in Russian)
+\bibitem{Gnuni} 
+Gnuni V.Ts. and Oganisyan Z.B. Opredelenie granichnykh uslovii krugloi kol'tsevoi plastinki po zadannym chastotam sobstvennykh kolebanii. Izvestiya NAN RA, seriya «Mekhanika», 
+1991, vol.~44, no.~5, pp.~9--16.
+ (in Russian)
+\bibitem{Org} 
+Oganisyan Z.B. Ob odnoi zadache vosstanovleniya granichnykh uslovii na kontsakh sterzhnya pri zadannom spektre chastot sobstvennykh poperechnykh kolebanii. Voprosy optimal'nogo upravleniya, ustoichivosti i prochnosti mekhanicheskikh sistem (nauchnye trudy konferentsii), Erevan, 1997, pp.~159--162. 
+ (in Russian)
+\bibitem{Org91} 
+Oganisyan Z.B. Ob odnoi zadache vosstanovleniya granichnykh uslovii na krayakh plastinki pri zadannom spektre chastot sobstvennykh poperechnykh kolebanii.  Uchenye zapiski EGU. 
+ 1991,  no.~ 1, pp.~45--50.
+ (in Russian)
+\bibitem{Akhtyamov-mon-A-M-2009} 
+Akhtyamov A.M. Teoriya identifikatsii kraevykh uslovii i ee prilozheniya. Moscow, Fizmatlit Publ., 2009. 
+ (in Russian)
+\bibitem{Akhtyamov-00-FPM}
+Akhtyamov A.M. O edinstvennosti vosstanovleniya kraevykh uslovii spektral'noi zadachi po ee spektru. Fund. i prikl. matematika, 2000, vol.~6, no.~4, pp.~995--1006.
+ (in Russian)
+\bibitem{Akhtyamov-03-DU}
+Akhtyamov A.M. K edinstvennosti resheniya odnoi obratnoi spektral'noi zadachi. Differents. uravneniya, 2003, vol.~8, pp.~1011--1015.
+ (in Russian)
+\bibitem{Akhtyamov-15-AJ} 
+Akhtyamov A.M. and Utyashev I.M. Identifikatsiya kraevykh uslovii na oboikh kontsakh struny po sobstvennym chastotam kolebanii. Akusticheskii zhurnal, 2015, vol.~61, no.~6, pp.~647--655.
+(in Russian) 
+\end{thebibliography}
+}
+
+\endarticle
+

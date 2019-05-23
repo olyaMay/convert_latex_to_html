@@ -1,0 +1,408 @@
+\startarticle
+\shrtitle{Существенные спектры обыкновенных...}         % Часть названия статьи для колонтитулов.
+\shrauthor{В.А.~Еровенко}{В.А.~Еровенко}  % Автор или группа авторов для оглавления и колонтитулов.
+\udc{517.984}                               % Вставьте УДК.
+\selectlanguage{russian}                    % Основной язык статьи
+\date{18.12.2018}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% для русскоязычной статьи и реферирования в РИНЦ  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Существенные спектры обыкновенных дифференциальных операторов. I.~Возмущение операторов} 
+\author{В.А.~Еровенко}{д.ф.-м.н., профессор}{erovenko@bsu.by} 
+\affil{Белорусский государственный университет, Минск, Республика Беларусь} 
+\abstract{В настоящей работе проведено исследование различных существенных спектров минимальных, максимальных и промежуточных 
+обыкновенных дифференциальных операторов в лебеговых пространствах $L^{p}$, полученных относительно малыми возмущениями 
+дифференциальных операторов с постоянными коэффициентами. Эти результаты позволяют доказать аналоги классической теоремы Вейля.} 
+\keywords{теория возмущений операторов, существенные спектры, обыкновенные дифференциальные операторы}
+
+\titleEng{Essential Spectra of Ordinary Differential Operators. I.~Perturbation of Operators}     
+\authorEng{V.A.~Erovenko}{Dr.Sc. (Phys.-Math.), Professor}{erovenko@bsu.by} % Автор на английском.
+\affilEng{Belarusian State University, Minsk, Republic of Belarus}  
+\abstractEng{The article investigates various essential spectra of minimum, maximal and 
+intermediate ordinary differential operators in Lebesgue spaces of $L^{p}$ that are 
+received by rather small indignations of differential operators with constant coefficients. 
+These results allow to prove analogs of the classical theorem of Weyl.} 
+\keywordsEng{perturbation theory of operators, essential spectra, ordinary differential operators}
+
+\maketitle % Формирование оглавления.
+
+%%%%%%%%%%%%%%%%%%%%%% Т Е К С Т %%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Введение} % Звездочка для того, чтобы раздел не нумеровался
+В современной математической литературе под <<теоремой Вейля о существенном спектре>> понимают
+несколько утверждений (см., например обзор, \cite{gus1}). В классической теореме Вейля утверждается,
+что если $A$ и $B$ --- самосопряжённые и $A-B$ --- компактный, то $\sigma_{e}(A) = \sigma_{e}(B)$,
+где $\sigma_{e}$ --- существенный спектр оператора. Обобщению теоремы Вейля на различные
+существенные спектры для замкнутых операторов в банаховых пространствах и специальные классы
+возмущений посвящены работы [2-4].
+
+\section{Основная часть}
+Пусть $T$ --- замкнутый линейный оператор на комплексном банаховом пространстве $X$. Существенные
+спектры оператора $T$ можно определить как дополнения в комплексной плоскости ${\bf C}$ множеств,
+задаваемых различными фредгольмовыми свойствами семейства операторов $T-\lambda I$:
+$$\sigma_{ek}(T):={\bf C}\setminus \Delta_{k}(T),\quad k=1,2,3,4,5,$$
+$$\sigma^{+}_{e2}(T):={\bf C}\setminus \Phi^{+}(T), \quad и\quad
+\sigma^{-}_{e2}(T):={\bf C}\setminus \Phi^{-}(T),$$ 
+где
+\begin{align*}
+\Delta_{1}(T)&:=\{\lambda \in {\bf C}: \overline{R(T-\lambda I)}=R(T-\lambda I)\},\quad \\
+\Phi^{+}(T)&:=\{\lambda \in \Delta_{1}(T): nul(T- -\lambda I)<\infty\},\quad \\
+\Phi^{-}(T)&:=\{\lambda \in \Delta_{1}(T): def(T-\lambda I)<\infty\},\quad \\
+\Delta_{2}(T)&:=\Phi^{+}(T)\cup \Phi^{-}(T)=s-\Phi(T),\quad \\
+\Delta_{3}(T)&:=\Phi^{+}(T)\cap \Phi^{-}(T)=\Phi(T),\quad \\
+\Delta_{4}(T)&:=\{\lambda \in \Delta_{3}(T): ind(T-\lambda I)=0\}=\Phi_{0}(T),\quad \\
+\Delta_{5}(T)&:=\{\lambda \in \Delta_{4}(T):
+\mbox{проколотая окрестность точки } \lambda  \\
+\mbox{ лежит}& \mbox{ в резольвентном множестве оператора } T,\; \rho(T)\}.
+\end{align*}
+
+
+Каждое из множеств $\sigma_{ek}(T), k=\overline{1,5},$ и $\sigma^{\pm}_{e2}(T)$ называется {\it
+существенным спектром}, ясно, что $\sigma_{ek}(T)\subseteq\sigma_{el}(T)$ для $k\leq l$ и
+$\sigma_{e2}(T)\subseteq\sigma^{\pm}_{e2}(T)\subseteq\sigma_{e3}(T)$, причём включения могут быть,
+вообще говоря, собственными. Существенные спектры в смысле Голдберга $\sigma_{e1}(T)$, Като
+$\sigma_{e2}(T)$, Вольфа $\sigma^{+}_{e2}(T)$, Густафсона--Вейдмана $\sigma^{-}_{e2}(T)$,
+Фредгольма $\sigma_{e3}(T)$, Вейля или Шехтера $\sigma_{e4}(T)$ и Браудера $\sigma_{e5}(T)$ можно
+описать другими эквивалентными способами, которые от части являются мотивировками для изучения
+фредгольмовых свойств различных классов дифференциальных операторов [5-8].
+
+
+
+Рассмотрим формальное дифференциальное выражение
+\begin{equation}
+\tau\ :=\ \sum_{k=0}^{n}\ a_{k}(t)D^{k},\quad a\leq t<\infty,
+\end{equation}
+где $a_{k}(t)$ --- комплекснозначные функции такие, что $a_k(t) \in C^k[a,\infty)$, $a_{n}(t)\not=
+0$, $1/a_n, a_k \in L^{\infty}(a,\infty),\; 0\leq k\leq n$ и $D:=d/dt$. Обозначим через
+$T(\tau,p,[a,\infty)), -\infty <a<\infty$, {\it максимальный оператор}, отвечающий
+$(\tau,p,[a,\infty))$, который определён на $L^{p}(a,\infty)$ и задаётся следующим образом: $$
+D[T(\tau,p,[a,\infty))]:=\{f: f^{(n-1)}\in AC_{loc}[a,\infty); f,\tau f\in L^{p}(a,\infty)\},$$
+где $AC_{loc}[a,\infty)$ --- множество комплекснозначных функций $f$, абсолютно непрерывных на
+каждом компактном подынтервале из $[a,\infty)$, и
+$$T(\tau,p,[a,\infty))f\;:=\;\tau f\quad для \quad f\in
+D[T(\tau,p,[a,\infty))].$$ Обозначим через $T_{0}(\tau,p,[a,\infty)), -\infty<a<\infty$, {\it
+минимальный оператор}, определённый на $L^{p}(a,\infty)$ для $1\leq p<\infty$ как замыкание
+сужения максимального оператора $T(\tau,p,[a,\infty))$ на множество функций из ${\sl
+D}[T(\tau,p,[a,\infty))]$, имеющих компактный носитель в $(a,\infty)$, и для $1<p\leq \infty$,
+определённый через банаховый сопряжённый $T'(\tau^{\ast},p',[a,\infty))$, где $\tau^{\ast}$ ---
+формально сопряжённая дифференциальная операция
+$\tau^{\ast}g:=\sum_{k=0}^{n}(-1)^{k}D^{k}(a_{k}g)$, и $1/p+1/p'=1$, если $1<p<\infty$;
+$p'=\infty$, если $p=1$; $p'=1$, если $p=\infty$. Различные свойства существенных спектров
+минимальных и максимальных обыкновенных дифференциальных операторов исследованы в [9]. Точные
+формулы для вычисления всех указанных выше существенных спектров различных классов
+дифференциальных операторов получены в работе [10].
+
+Пусть $S(\tau,p,[a,\infty)),\ -\infty <a< \infty$ --- замкнутый линейный дифференциальный
+оператор в $L^p(a,\infty),\ 1\leq p \leq \infty,$ являющийся расширением минимального оператора
+$T_0(\tau,p,[a,\infty))$ и сужением максимального оператора $T(\tau,p,[a,\infty))$, порождённый
+дифференциальной операцией $\tau\ (1)$. 
+
+\begin{Theorem}  Для любого $b \in (a,\infty)$ и пяти версий существенных спектров дифференциальных
+операторов $S(\tau,p,[a,\infty))$ и $S(\tau,p,[b,\infty))$ справедливы равенства
+\begin{equation}\sigma_{ek}[S(\tau,p,[a,\infty))]\; = \; \sigma_{ek}[S(\tau,p,[b,\infty))], \quad
+k=1,2,2^{\pm},3.\end{equation} А для спектра Вейля $\sigma_{e4}$ минимального и максимального
+дифференциальных операторов выполняются следующие равенства:
+$$\sigma_{e4}[T_0(\tau,p,[a,\infty))]\ =\ \sigma_{e4}[T_0(\tau,p,[b,\infty))],$$
+\begin{equation}
+\sigma_{e4}[T(\tau,p,[a,\infty))]\ =\ \sigma_{e4}[T(\tau,p,[b,\infty))].
+\end{equation}
+\end{Theorem}
+
+\begin{proof}
+\begin{sloppypar}
+Рассмотрим ключевые моменты доказательства теоремы. Для проверки формул (2) достаточно рассмотреть
+только равенство для спектра Фредгольма $\sigma_{e3}$, так как спектры $\sigma_{ek},
+k=1,2,2^{\pm},3$ совпадают для минимального $T_0(\tau,p,[a,\infty))$ и максимального
+$T(\tau,p,[a,\infty))$ операторов [9]. Оператор $T_{0b}$, для которого $D[T_{0b}]:= \{f:\
+f^{(n-1)}\in AC_{loc}[a,\infty);\ f^{(j)}(a) =$\lb $=f^{(j)}(b) = 0$,\ $j=\overline{0,n-1};\ f,\tau f \in
+L^p(a,\infty)\}$ и $T_{0b}f := \tau f$, в прямой сумме банаховых пространств $L^p(a,\infty) =
+L^p(a,b)\oplus L^p(b,\infty)$ можно записать в виде разложения $T_{0b} = T_0(\tau,p,[a,b])\oplus
+T_0(\tau,p,[b,\infty))$. Из этого представления следует равенство для спектров Фредгольма
+\end{sloppypar}
+\begin{equation}
+\sigma_{e3}[T_{0b}]\ =\ \sigma_{e3}[T_0(\tau,p,[a,b])] \cup
+\sigma_{e3}[T_0(T_0(\tau,p,[b,\infty))].
+\end{equation}
+
+\begin{sloppypar}
+Так как $\sigma_{e3}[T_0(\tau,p,[a,b])] = \emptyset $ и минимальный оператор
+$T_0(\tau,p,[a,\infty))$ является конечномерным порядка $n$ расширением оператора $T_{0b}$ и,
+следовательно, их спектры Фредгольма совпадают, то из равенства (4) следует, что
+$\sigma_{e3}[T_0(\tau,p,[a,\infty))] = \sigma_{e3}[T_0(\tau,p,[b,\infty))]$. Соответствующее
+равенство (2) для спектра Фредгольма дифференциальных операторов $S(\tau,p,[a,\infty))$ и
+$S(\tau,p,[b,\infty))$ вытекает из предыдущего равенства, так как операторы $S$ являются
+конечномерными расширениями соответствующих минимальных операторов $T_0$.
+\end{sloppypar}
+
+Для доказательства равенств (3) введём вспомогательный оператор $T_r$, определённый на $L^p(a,b)$,
+для которого $D[T_r] := \{f: f^{(n-1)} \in AC_{loc}[a,b]$;\lb $f^{(j)}(b)=0, j=0,1,...,n-1\}$ и $T_{r}f
+:= \tau f$. Определим в прямой сумме банаховых пространств $L^p(a,\infty) = L^p(a,b)\oplus
+L^p(b,\infty)$ оператор $R$ по формуле $R := T_{r} \oplus T_0(\tau,p,[b,\infty))$. Спектр Вейля от
+прямой суммы операторов, вообще говоря, не равен объединению спектров Вейля от слагаемых. Но так
+как ограниченный обратный $T_{r}^{-1}$ компактен в $L^p(a,b)$ [9], то тождественный оператор $I$
+является $T_r$-компактным и, в силу того, что $\rho(T_r) \not= \emptyset $, имеем
+$\sigma_{e4}[T_r] = \emptyset $. Поэтому справедливо равенство
+\begin{equation}
+\sigma_{e4}[R]\ =\ \sigma_{e4}[T_0(\tau,p,[b,\infty))].
+\end{equation}
+
+Заметим, что оператор $R$ является конечномерным порядка $n$ расширением оператора $T_{0b}$,
+поскольку оператор $T_r$ является конечномерным порядка $n$ расширением оператора
+$T_0(\tau,p,[a,b])$. С другой стороны, минимальный оператор $T_0(\tau,p,[a,\infty))$ является
+конечномерным порядка $n$ расширением оператора $T_{0b}$ и, следовательно, $ind[R-\lambda I] =
+ind[T_0(\tau,p,[a,\infty))- \lambda I]$. Поэтому из соотношения (5) следует равенство (3) для
+спектра Вейля минимальных операторов. Равенство (3) для спектра Вейля максимальных операторов
+получается с помощью формул двойственности для банахова сопряжённого, т.е. $T'(\tau,p,[a,\infty))
+= T_0(\tau^{\ast},p',[a,\infty))$ для $1\leq p<\infty $ и $T(\tau,p,[a,\infty)) \?=
+T'_{0}(\tau^{\ast},p',[a,\infty))$ для $1<p\leq \infty $, из равенства для минимальных операторов.
+Теорема доказана.
+\end{proof}
+
+\begin{sloppypar}
+Обозначим через $B(\nu,p,[a,\infty))$ (соответственно $B_0(\nu,p,[a,\infty))$)\lb для
+$-\infty<a<\infty$ максимальный (минимальный) дифференциальный оператор, порождённый в
+$L^p(a,\infty), 1\leq p\leq\infty$ формальной дифференциальной операцией
+\end{sloppypar}
+\begin{equation}
+\nu\ :=\ \sum_{k=0}^{n-1}\ b_{k}(t)D^{k},
+\end{equation}
+где комплекснозначные функции $b_k\in C^k[a,\infty),\ 0\leq k\leq n-1,$ а через\lb
+$T(\tau+\nu,p,[a,\infty))$ (соответственно $T_{0}(\tau+\nu,p,[a,\infty))$) --- максимальный
+(минимальный) оператор, порождённый в $L^p(a,\infty),\ -\infty<a<\infty,\ 1\leq p\leq \infty$
+формальной дифференциальной операцией $\tau+\nu$, где $\tau$ и $\nu$ задаются формулами (1) и (6).
+Операторы $B(\nu,p,[a,\infty)),\;B_0(\nu,p,[a,\infty))\;$и$\;T(\tau+\nu,p,[a,\infty)),\;
+T_0(\tau+\nu,p,[a,\infty))$ определяются аналогично тому, как были определены максимальный и
+минимальный дифференциальные операторы, порождённые операцией $\tau$.
+
+Напомним, что линейный плотно определённый на банаховом пространстве $X$ оператор $B$ с областью
+определения $D(B) \supseteq D(T)$ называется\lb $T$-{\it ограниченным}, если $\parallel Bx \parallel
+\leq b\parallel Tx \parallel + a\parallel x
+\parallel$ для всех $x\in D(T)$, и оператор $B$ называется $T$-{\it
+компактным}, если для любой последовательности $(x_n) \subset D(T)$, ограниченной в норме графика,
+$\|x_n\|+\|Tx_n\| \leq {\it Const}$, последовательность $(Bx_n)$ содержит сходящуюся
+подпоследовательнность.  
+
+
+\begin{Theorem} Максимальный оператор $B(\nu,p,[a,\infty))$ (минимальный оператор
+$B_0(\nu,p,[a,\infty))$) является $T(\tau,p,[a,\infty))$--ограниченным (соответственно
+$T_0(\tau,p,[a,\infty))$--ограниченным), если $b_k\in L^p_{loc}(a,\infty)$ и
+\begin{equation}
+\sup_{m\leq s< \infty} \int_{\scriptstyle s}^{\scriptstyle s+1}\mid b_k(t)\mid^{p}dt\ \rightarrow\
+0\ \mbox{ \it при }\ m\to \infty,\quad 0\leq k\leq n-1.
+\end{equation}
+Кроме того, при достаточно больших $a\in (0,\infty)$ для рассматриваемых дифференциальных
+операторов справедливы равенства
+\begin{equation}
+T(\tau+\nu,p,[a,\infty))\ =\ T(\tau,p,[a,\infty))\ +\ B(\nu,p,[a,\infty)),
+\end{equation}
+\begin{equation}
+T_0(\tau+\nu,p,[a,\infty))\ =\ T_0(\tau,p,[a,\infty))\ +\ B_0(\nu,p,[a,\infty)),
+\end{equation}
+а относительная граница дифференциальных операторов $B(\nu,p,[a,\infty))$\lb и
+$B_0(\nu,p,[a,\infty))$ строго меньше единицы.
+\end{Theorem}
+
+\begin{proof} Обозначим для простоты $T(\tau+\nu):=T(\tau+\nu,p,[a,\infty))$, $T_0(\tau+\nu):=T_0(\tau+\nu,p,[a,\infty))$, 
+$T(\tau):=T(\tau,p,[a,\infty))$, $T_0(\tau):=T_0(\tau,p,[a,\infty))$, $B(\nu):=B(\nu,p,[a,\infty))$, $B_0(\nu):=B_0(\nu,p,[a,\infty)).$ 
+Для доказательства равенства (8) достаточно проверить
+справедливость равенства для областей определения $D(T(\tau+\nu)) = D(T(\tau))$. Из условия (7)
+теоремы следует, что $\forall \varepsilon >0$ найдётся такое число $a\in (0,\infty)$, что
+\begin{equation}
+\int_{s}^{s+1} \mid b_k(t)\mid^p dt\ <\ \varepsilon^p\quad \mbox{для}\quad
+[s,s+1]\subset [a,\infty),\ 0\leq k\leq n-1.
+\end{equation}
+Покажем, что из оценок (10) для коэффициентов возмущающей
+дифференциальной операции $\nu (6)$ следует относительная
+ограниченность операторов $B(\nu)$ (соответственно $B_0(\nu)$)
+относительно $T(\tau)$ (соответственно $T_0(\tau)$).
+
+Для функций $f\in W_{p}^{n}(a,\infty) :=\{f:\ f^{(n-1)}\in
+AC_{loc}[a,\infty),\ f^{(i)}\in L^p[a,\infty)$,\lb $0\leq i\leq n\}$,
+где $1\leq p<\infty $, и для $0\leq k\leq n-1$ справедливо
+неравенство вида
+\begin{equation}
+\parallel b_k f^{(k)}\parallel_{p}^{p}\ \leq\ C\Bigl(\parallel f^{(k+1)}\parallel_{p}^{p}
++ \parallel f^{(k)}\parallel_{p}^{p}\Bigr) \sup_{s\in [a,\infty)} \int_{s}^{s+1}
+\mid b_k(t)\mid^{p}dt,
+\end{equation}
+где $\parallel \cdot\parallel_{p}$ --- норма в $L^p(a,\infty)$.
+Действительно, пусть $0<\xi \leq 1$ и $\varphi$ --- произвольная
+фиксированная функция такая, что $\varphi \in C^1([0,\xi])$,
+$0\leq \varphi(t)\leq 1$ на $[0,\xi]$ и $\varphi(0)=1$,$\
+\varphi(\xi)=0$. Для $f\in W_{p}^{n}(a,\infty)$ из равенства
+$$f^{(k)}(t)\ =\ -\int_{0}^{\xi} {d\over
+ds}(\varphi(s)f^{(k)}(t+s))ds\ =\ $$ $$ = -\int_{0}^{\xi} \varphi(s)f^{(k+1)}(t+s)ds\ -\
+\int_{0}^{\xi} \varphi^{'}(s)f^{(k)}(t+s)ds$$ следует, что найдётся такая константа $C>0$, при
+которой справедливо неравенство для $1\leq p<\infty$ и $t\in [a,\infty)$ вида $$\mid
+f^{(k)}(t)\mid^{p}\quad \leq \quad C\Bigl( \int_{t}^{t+\xi}\mid f^{(k+1)}(s)\mid^{p}ds\; +\;
+\int_{t}^{t+\xi} \mid f^{(k)}(s)\mid^{p}ds\Bigr),$$ полученного в случае $1<p<\infty$ с помощью
+неравенства Гельдера,\lb где $C$ --- константа, зависящая от числа $\max\{|\varphi^{'}(s)|: 0\leq
+s\leq \xi\}$. Из этого неравенства и теоремы Фубини следует оценка по норме для слагаемого
+$b_kf^{(k)}$ в дифференциальной операции $\nu\ (6)$ 
+$$\int_{a}^{\infty}\mid
+b_k(t)f^{(k)}(t)\mid^{p}dt\; \leq\;$$ $$\leq\; \int_{a}^{\infty} C\Bigl( \mid f^{(k+1)}(s)\mid^{p}\ +\ \mid
+f^{(k)}(s)\mid^{p} \Bigr) \int_{\max(s-\xi,a)}^{s} \mid b_k(t)\mid^{p} dtds,$$ откуда и следует
+неравенство (11).
+
+При условиях на коэффициенты $a_k$ дифференциальной операции $\tau
+(1)$ найдётся константа $K$, зависящая от $p,n$, длины интервала
+$I$ и наибольшего из чисел $\parallel 1/a_n \parallel_{\infty,I}$
+и $\parallel a_k \parallel_{\infty,I}, 0\leq k\leq n-1,$ такая,
+что для $f \in D(T(\tau,p,I))$ выполняется неравенство из [11]
+\begin{equation}
+\parallel f^{(k)} \parallel_{p,I}^{p}\ \leq \ K \Bigl( \parallel
+\tau f \parallel_{p,I}^{p} + \parallel f
+\parallel_{p,I}^{p}\Bigr), \; 0\leq k \leq n,\ 1\leq p <\infty.
+\end{equation}
+В силу оценки (12)  из неравенств (10) и (11) непосредственно
+следует, что найдутся константа $M$ и $\varepsilon =
+\varepsilon(a)>0$ такие, что для $f\in D(T(\tau))$ справедливо
+неравенство
+\begin{equation}
+\parallel \nu f\parallel_{p}\; \leq\; \sum_{k=0}^{n-1}\parallel b_k f^{(k)}\parallel_{p}
+\; \leq \; \varepsilon M\bigl(\parallel \tau f\parallel_{p}\; +\;
+\parallel f\parallel_{p}\bigr).
+\end{equation}
+
+Если $f\in D(T(\tau))$, то по определению $\tau f\in L^p(a,\infty)$, поэтому
+из неравенства (9) следует $\nu f\in L^p(a,\infty)$ и, следовательно, $f\in D(T(\tau+\nu))$.
+Таким образом доказано включение $D(T(\tau))\subseteq D(T(\tau+\nu))$. Докажем
+обратное включение $D(T(\tau+\nu))\subseteq D(T(\tau))$. Пусть $f\in D(T(\tau+\nu))$,
+тогда $(\tau+\nu)f\in L^p(a,\infty)$ и $f^{(k)},\ 0\leq k\leq n-1,$ --- непрерывные
+функции на каждом компактном интервале $J\subset [a,\infty)$ длины не меньше 1,
+поэтому $\nu f\in L^p(J)$ и, следовательно,\lb $\tau f = (\tau+\nu)f-\nu f\in L^p(J)$.
+Из неравенства $\|\tau f\|_{p,J}\leq \|(\tau+\nu)f\|_{p,J} + \|\nu f\|_{p,J}$
+и неравенства (13), справедливого и для нормы $\|\cdot\|_{p,J}$ в пространстве
+$L^p(J)$, следует для $0<\varepsilon M<1$ оценка
+\begin{equation}
+\parallel \nu f\parallel_{p,J}\; \leq\; {\varepsilon M \over 1-\varepsilon M}
+\Bigl(\parallel (\tau+\nu)f\parallel_{p}\; +\; \parallel f\parallel_{p}\Bigr).
+\end{equation}
+Так как неравенство (14) выполняется для любого подынтервала
+$J\subset[a,\infty)$, то $\nu f\in L^p(a,\infty)$ и,
+следовательно, $\tau f = (\tau+\nu)f-\nu f\in L^p(a,\infty)$, т.е.
+$f\in D(T(\tau))$, поэтому $D(T(\tau+\nu))=D(T(\tau))$ и равенство
+(8) доказано.
+
+Для доказательства равенства (9) достаточно показать, что   $D(T_0(\tau+\nu)) \?= D(T_0(\tau))$,
+причём включение $D(T_0(\tau))\subseteq D(T_0(\tau+\nu))$ проверяется так же, как и для
+максимальных операторов, а для обратного включения используются неравенство (13) и непосредственно
+определение минимальных операторов. Теорема доказана.
+\end{proof}
+
+
+Заметим, что условие (7) является необходимым и достаточным условием для того, чтобы оператор $B$
+(соответственно $B_0$) являлся $T$-компактным (соответственно $T_0$-компактным) оператором в
+пространствах $L^p(a,\infty), 1<p<\infty$. Поэтому в определённом смысле это условие является
+точным и для относительной ограниченности в указанных лебеговых пространствах для $1\leq p\leq
+\infty $.
+
+
+
+\begin{thebibliography}{99}
+% электронный ресурс оформляется по общим правилам + URL и дата обращения
+
+
+\bibitem{gus1}
+Gustafson K. Weyl's theorem // Proc. Oberwolfach Conf. on Linear Operators and Approximation.
+Basel, 1972. Vol.~20. P.~80--93.
+
+\bibitem{gus2}
+Gustafson K., Weidmann J. On the essential spectrum // J. Math. Anal. Appl. 1969. Vol.~25, no.~1.
+P.~121--127.
+
+\bibitem{sch1}
+Schechter M. On the essntial spectrum of an arbitrary operator // J. Math. Anal. Appl. 1966. Vol.~13,
+no.~2. P.~205--215.
+
+\bibitem{wil}
+Williams V. Closed Fredholm and semi-Fredholm operators, essential spectrum and perturbations
+// J. Funct. Anal. 1975. Vol.~20, no.~1.~P. 1--25.
+
+\bibitem{sch2}
+Schechter M. Spectra of partial differential operators. Amsterdam~: North-Holland, 1971.
+
+\bibitem{edm}
+Edmunds D.E., Evans W.D. Spectral theory and differential operators. Oxford~: Clarendon Press,
+1987.
+
+\bibitem{kato}
+Като Т. Теория возмущений линейных операторов. М.~: Мир, 1972.
+
+\bibitem{gla}
+Глазман И.М. Прямые методы качественного спектрального анализа сингулярных дифференциальных
+операторов. М.~: Физматгиз, 1963.
+
+\bibitem{erov3}
+Еровенко В.А. О $L^p$ --- существенных спектрах некоторых классов несамосопряжённых обыкновенных
+дифференциальных операторов~I. Операторы с достаточно гладкими коэффициентами // Дифференц.
+уравнения. 1996. Т.~32, №~8. С.~1024--1034.
+
+\bibitem{erov4}
+Еровенко В.А. О $L^p$ --- существенных спектрах некоторых классов несамосопряжённых обыкновенных
+дифференциальных операторов~II. Операторы с постоянными коэффициентами и операторы Эйлера //
+Дифференц. уравнения. 1996. Т.~32, №~9. С.~1162--1170.
+
+\bibitem{gol}
+Golgberg S. Unbounded linear operators. Theory and application. N.Y.~: McGraw-Hill, 1966.
+
+
+\end{thebibliography}
+
+\maketitleEng  %  Команда завершения статьи
+{\protect\footnotesize \selectlanguage{english}\begin{thebibliography}{99}
+
+\bibitem{gus1}
+Gustafson K. Weyl's theorem. Proc. Oberwolfach Conf. on Linear Operators and Approximation,
+Basel, 1972, vol.~20, pp.~80--93.
+
+
+\bibitem{gus2}
+Gustafson K. and Weidmann J. On the essential spectrum. J. Math. Anal. Appl., 1969, vol.~25, no.~1, pp.~121--127.
+
+
+\bibitem{sch1}
+Schechter M. On the essntial spectrum of an arbitrary operator. J. Math. Anal. Appl., 1966, vol.~13, no.~2, pp.~205--215.
+
+
+\bibitem{wil}
+Williams V. Closed Fredholm and semi-Fredholm operators, essential spectrum and perturbations. J. Funct. Anal., 1975, vol.~20, no.~1, pp.~1--25.
+
+
+\bibitem{sch2}
+Schechter M. Spectra of partial differential operators. Amsterdam, North-Holland, 1971.
+
+
+\bibitem{edm}
+Edmunds D.E. and Evans W.D. Spectral theory and differential operators. Oxford, Clarendon Press,
+1987.
+
+
+\bibitem{kato}
+Kato T. Teoriya vozmushchenii lineinykh operatorov. Moscow, Mir Publ., 1972.
+\lb (in~Russian)
+ 
+\bibitem{gla}
+Glazman I.M. Pryamye metody kachestvennogo spektral'nogo analiza singulyarnykh differentsial'nykh
+operatorov. Moscow, Fizmatgiz Publ., 1963.
+ (in Russian)
+
+\bibitem{erov3}
+Erovenko V.A. O $L^p$ --- sushchestvennykh spektrakh nekotorykh klassov nesamosopryazhennykh obyknovennykh
+differentsial'nykh operatorov~I. Operatory s dostatochno gladkimi koeffitsientami. Differents.
+uravneniya, 1996, vol.~32, no.~8, pp.~1024--1034.
+ (in Russian)
+
+\bibitem{erov4}
+Erovenko V.A. O $L^p$ --- sushchestvennykh spektrakh nekotorykh klassov nesamosopryazhennykh obyknovennykh
+differentsial'nykh operatorov~II. Operatory s postoyannymi koeffitsientami i operatory Eilera.
+Differents. uravneniya, 1996, vol.~32, no.~9, pp.~1162--1170.
+ (in Russian)
+ 
+\bibitem{gol}
+Golgberg S. Unbounded linear operators. Theory and application. N.Y., McGraw-Hill, 1966.
+
+
+\end{thebibliography}
+}
+
+\endarticle

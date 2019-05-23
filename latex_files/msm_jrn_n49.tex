@@ -1,0 +1,715 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             Математические
+%                       СТРУКТУРЫ и МОДЕЛИРОВАНИЕ
+%                             2019. №1(49)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       LATEX - сборочная плата
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[12pt,a4paper,twoside]{msmb}
+%\evensidemargin 5mm \oddsidemargin 5mm \voffset -10mm \textheight 230mm \textwidth 150mm
+%\usepackage{pscyr}  % Если установлен. Устанавливается вручную, используется при подготовке макета
+%\yearpub{2019}      % Год издания. Заполняет редакция.
+%\num{1}             % Номер журнала. Заполняет редакция.  
+%\volume{49}         % Сквозная нумерация, том, выпуск
+%\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%    Шапка статьи
+%\startarticle   % Вставьте имя вашего файла. Это необходимо для отслеживания конечной страницы статьи.
+%\shrtitle{}     % Часть названия статьи для колонтитулов.
+%\shrauthor{}{}  % Автор или группа авторов для оглавления и колонтитулов.
+%\udc{}          % Вставьте УДК.
+%\date{}         % Дата отправки в редакцию
+%\selectlanguage{english} % Основной язык статьи
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% для русскоязычной статьи и реферирования в РИНЦ  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{} % Название статьи.
+%\author{}{}{} % Автор на русском.
+%\affil{}
+%\abstract{}
+%\keywords{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% для статьи на английском и рефрерирования %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\titleEng{}     % Название статьи.
+%\authorEng{}{}{}
+%\affilEng{}  % Организация
+%\abstractEng{} % это аннотация статьи на ангнлийском языке
+%\keywordsEng{}
+
+\documentclass[12pt,a4paper,twoside]{msmb}
+%\xdef\LastDeclaredEncoding{T2A}% Это если МиКТеХ последний, там бага такая есть...
+\usepackage{cmap}
+%\usepackage[T2A]{fontenc}
+%\usepackage[cp1251]{inputenc}
+%\usepackage[cp1251]{inputenc}
+%\usepackage[T2A,T3]{fontenc}
+%\usepackage{russianb}
+%\usepackage{etex}
+\usepackage[russian,english]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{amsfonts}
+\usepackage{mathtext}
+\usepackage{pb-diagram,lamsarrow,pb-lams}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{tabularx}
+\usepackage{alltt}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{paracol,blindtext}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{hhline}
+\usepackage{slashbox}
+\usepackage{setspace}
+\usepackage{srcltx}
+\usepackage{mathtext}
+\usepackage{pscyr} %Богаченко
+%\usepackage{eufrak}
+\usepackage[pdf]{pstricks}
+\usepackage{pdftricks}
+%\usepackage{pst-all}
+%\usepackage{pstricks-add}
+%\usepackage[eps,png,jpg]{autopdf}
+\usepackage{pst-barcode}
+%\usepackage{pst-pdf}
+\usepackage[on]{auto-pst-pdf}%on Богаченко
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{fancyvrb}
+\usepackage{pgf,tikz}
+\usepackage{graphics}
+%\usepackage{tkz-graph}
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{afterpage}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{floatflt}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{indentfirst}
+\usepackage{blindtext}
+\usepackage{rotating}
+% Для таблиц
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash}p{#1}}  
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash}p{#1}}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\def\insertdate{\@date}
+\makeatother
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+%\newcommand{\ar}{\renewcommand{\arraystretch}{1}} % 1.0 % 0.6
+
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\def\le{\leqslant}
+\def\ge{\geqslant}
+
+%Переносы в математических формулах (НЕ ЗАРАБОТАЛО)
+%\begingroup
+%\catcode`\+\active\gdef+{\mathchar8235\nobreak\discretionary{}%
+%  {\usefont{OT1}{cmr}{m}{n}\char43}{}}
+%\catcode`\-\active\gdef-{\mathchar8704\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char0}{}}
+%\catcode`\=\active\gdef={\mathchar12349\nobreak\discretionary{}%
+%  {\usefont{OT1}{cmr}{m}{n}\char61}{}}
+%\catcode`\<\active\gdef<{\mathchar"313C\nobreak\discretionary{}%
+%  {\usefont{OML}{cmm}{m}{n}\char60}{}}
+%\catcode`\>\active\gdef>{\mathchar"313E\nobreak\discretionary{}%
+%  {\usefont{OML}{cmm}{m}{n}\char62}{}}
+%\endgroup
+%\def\times{\mathchar8706\nobreak\discretionary{}{\usefont{OMS}{cmsy}{m}{n}\char
+%2}{}}
+%\def\subset{\mathchar"321A\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char26}{}}
+%%\supset,\subseteq,\notin
+%\def\neq{\not=\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char54\usefont{OT1}{cmr}{m}{n}\char61}{}}
+%\def\sim{\mathchar"3218\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char24}{}}
+%\def\in{\mathchar"3232\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char50}{}}
+%\def\to{\mathchar"3221\nobreak\discretionary{}%
+%  {\usefont{OMS}{cmsy}{m}{n}\char33}{}}
+
+%%%%%%%%%%%%%%%%%%%%% ДЛЯ УКАЗАНИЯ МЕСТА ПЕРЕНОСА ВРУЧНУЮ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\?#1{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+%Конец переносов математики
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Варламов %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ar}{\renewcommand{\arraystretch}{1}} % 1.0 % 0.6
+%\DeclareOption{reqno}
+\DeclareMathAlphabet{\bb}{U}{msb}{m}{n} \gdef\C{\bb C} \gdef\dZ{\bb
+Z} \gdef\A{\bb A} \gdef\dR{\bb R} \gdef\dS{\bb S} \gdef\R{\bb R}
+\gdef\K{\bb K} \gdef\BH{\bb H} \gdef\F{\bb F} \gdef\dO{\bb O}
+\gdef\boldC{{\bf\bb C}} \gdef\boldA{{\bf\bb A}}
+%\def\dZ{\hbox{\bb Z}}
+\DeclareMathOperator{\End}{End} \DeclareMathOperator{\spin}{{\bf
+Spin}} \DeclareMathOperator{\pin}{{\bf Pin}}
+\DeclareMathOperator{\fD}{\mathfrak{D}}
+\DeclareMathOperator{\Id}{Id} \DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Aut}{PT} \DeclareMathOperator{\sAut}{{\sf
+PT}} \DeclareMathOperator{\sExt}{{\sf CPT}}
+\DeclareMathOperator{\Ker}{Ker} \DeclareMathOperator{\IM}{Im}
+\DeclareMathOperator{\bA}{{\bf A}} \DeclareMathOperator{\sech}{{\rm
+sech}} \DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Sym}{Sym} \DeclareMathOperator{\arc}{arccos}
+\DeclareMathOperator{\diver}{div} \DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Ext}{CPT} \DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\sdet}{sdet} \DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr} \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\Sp}{Sp} \DeclareMathOperator{\GO}{O}
+\def\nein{\not\in}
+\newcommand{\s}{\!}
+\newcommand{\bcirc}{\raisebox{0.5mm}{$\scriptstyle\bigcirc$}}
+\newcommand{\iddots}{.\hspace{0.5mm}\raisebox{1mm}{.}\hspace{0.5mm}
+\raisebox{2mm}{.}}
+\newcommand{\circbul}{\bigcirc\hskip -7.45pt\bullet}
+\newcommand{\dis}{\displaystyle}
+\newcommand{\scr}{\scriptstyle}
+\newcommand{\sscr}{\scriptscriptstyle}
+\newcommand{\dspin}{\spin}
+\newcommand{\re}{\mbox{\rm Re}\,}
+\newcommand{\im}{\mbox{\rm Im}\,}
+%\newcommand{\C}{\mbox{\bf C}}
+\newcommand{\Om}{{\bf\Omega}}
+\newcommand{\bi}{{\bf i}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\bcE}{\boldsymbol{\mathcal{E}}}
+\newcommand{\bcK}{\boldsymbol{\mathcal{K}}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cg}{\mathcal{g}}
+\newcommand{\cp}{\mathcal{p}}
+\newcommand{\cs}{\mathcal{s}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\M}{{\bf\sf M}}
+\newcommand{\bsA}{{\bf\sf A}}
+\newcommand{\sA}{{\sf A}}
+\newcommand{\sB}{{\sf B}}
+\newcommand{\sI}{{\sf I}}
+\newcommand{\sJ}{{\sf J}}
+\newcommand{\sW}{{\sf W}}
+\newcommand{\sE}{{\sf E}}
+\newcommand{\sC}{{\sf C}}
+\newcommand{\sF}{{\sf F}}
+\newcommand{\sH}{{\sf H}}
+\newcommand{\sM}{{\sf M}}
+\newcommand{\sT}{{\sf T}}
+\newcommand{\sS}{{\sf S}}
+\newcommand{\sP}{{\sf P}}
+\newcommand{\sU}{{\sf U}}
+\newcommand{\sQ}{{\sf Q}}
+\newcommand{\sV}{{\sf V}}
+\newcommand{\sX}{{\sf X}}
+\newcommand{\sY}{{\sf Y}}
+\newcommand{\sK}{{\sf K}}
+\newcommand{\sa}{{\sf a}}
+\newcommand{\sfb}{{\sf b}}
+\newcommand{\sfc}{{\sf c}}
+\newcommand{\sz}{{\sf z}}
+%\newcommand{\bsA}{{\boldsymbol{\sf A}}}
+\newcommand{\bsH}{{\boldsymbol{\sf H}}}
+\newcommand{\bsJ}{{\boldsymbol{\sf J}}}
+\newcommand{\bsK}{{\boldsymbol{\sf K}}}
+\newcommand{\bsL}{{\boldsymbol{\sf L}}}
+\newcommand{\bsP}{{\boldsymbol{\sf P}}}
+\newcommand{\bsQ}{{\boldsymbol{\sf Q}}}
+\newcommand{\bsR}{{\boldsymbol{\sf R}}}
+\newcommand{\bsS}{{\boldsymbol{\sf S}}}
+\newcommand{\bsT}{{\boldsymbol{\sf T}}}
+\newcommand{\bsU}{{\boldsymbol{\sf U}}}
+\newcommand{\bsZ}{{\boldsymbol{\sf Z}}}
+\newcommand{\sL}{{\sf L}}
+%\newcommand{\bi}{{\bf i}}
+\newcommand{\bj}{{\bf j}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\bp}{{\bf p}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bz}{{\bf z}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bN}{{\bf N}}
+%\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fT}{\mathfrak{M}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fZ}{\mathfrak{Z}}
+\newcommand{\fa}{\mathfrak{a}}
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\fq}{\mathfrak{q}}
+\newcommand{\fz}{\mathfrak{z}}
+\newcommand{\hs}{\hspace{0.2cm}}
+\newcommand{\Lip}{\boldsymbol{\Gamma}}
+\newcommand{\bom}{\boldsymbol{\omega}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\cl}{C\kern -0.2em \ell}
+\newcommand{\Cl}{{\bf Cl}}
+\newcommand{\pt}{{w^+_2(\tau)}}
+\newcommand{\mt}{w^-_2(\tau)}
+\newcommand{\pmst}{w^+_1(\tau)\smile w^-_1(\tau)}
+\newcommand{\mmst}{w^-_1(\tau)\smile w^-_1(\tau)}
+\newcommand{\ppst}{w^+_1(\tau)\smile w^+_1(\tau)}
+\newcommand{\pn}{w^+_2(n)}
+\newcommand{\mn}{w^-_2(n)}
+\newcommand{\pmsn}{w^+_1(n)\smile w^-_1(n)}
+\newcommand{\mmsn}{w^-_1(n)\smile w^-_1(n)}
+\newcommand{\ppsn}{w^+_1(n)\smile w^+_1(n)}
+\newcommand{\p}{\prime}
+\newcommand{\e}{\mbox{\bf e}}
+\newcommand{\bO}{\mbox{\bf O}}
+\newcommand{\mw}{{\scriptstyle\bigwedge}}
+%\newcommand{\A}{\mbox{\bf A}}
+%\newcommand{\dZ}{\mbox{\bf Z}}
+%\newcommand{\BH}{{\rm\hskip 0.1pt %
+%                            I\hskip -2.15pt H}}
+%\newcommand{\R}{{\rm\hskip 0.1pt %
+%                           I\hskip -2.15pt R}}
+%\newcommand{\K}{{\rm\hskip 0.1pt %
+%                           I\hskip -2.15pt K}}
+%\newcommand{\C}{{\bf C}}
+%\newcommand{\A}{{\bf A}}
+\def\boldH{{\bf\BH}}
+\newcommand{\hypergeom}[5]{\mbox{$
+_#1 F_#2\left. \!\! \left( \!\!
+\begin{array}{c}
+\multicolumn{1}{c}{\begin{array}{c} #3
+\end{array}}\\[1mm]
+\multicolumn{1}{c}{\begin{array}{c} #4
+\end{array}}\end{array}
+\!\! \right|\displaystyle{#5}\right) $} }
+\newcommand{\ld}{\left[}
+\newcommand{\rd}{\right]}
+\newcommand{\lf}{\left\{}
+\newcommand{\rf}{\right\}}
+%\newcommand{\tg}{\tan}
+%\newcommand{\ch}{\cosh}
+%\newcommand{\sh}{\sinh}
+%\newcommand{\tnh}{\tanh}
+%\newcommand{\cth}{\coth}
+%\newcommand{\ctg}{\cot}
+\newcommand{\coupone}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\boldsymbol{\psi}(\boldsymbol{\alpha})
+\overline{\boldsymbol{\psi}}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}^\prime) }
+\newcommand{\couptwo}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\overline{\boldsymbol{\psi}}(\boldsymbol{\alpha})
+\boldsymbol{\psi}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupthree}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\boldsymbol{\psi}(\boldsymbol{\alpha})
+\boldsymbol{\psi}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupfour}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\overline{\boldsymbol{\psi}}(\boldsymbol{\alpha})
+\overline{\boldsymbol{\psi}}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupfife}{
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\boldsymbol{\psi}(\boldsymbol{\alpha})
+\overline{\boldsymbol{\psi}}}\!
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupsix}{
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\boldsymbol{\psi}(\boldsymbol{\alpha}^\prime)
+\overline{\boldsymbol{\psi}}}\!
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}) }
+\newcommand{\coupseven}{
+{}^{\raisebox{0.45mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\boldsymbol{\psi}(\boldsymbol{\alpha})
+\boldsymbol{\psi}}\!
+{}^{\raisebox{0.45mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupeight}{
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\overline{\boldsymbol{\psi}}(\boldsymbol{\alpha})
+\overline{\boldsymbol{\psi}}}\!
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupnine}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\overline{\boldsymbol{\psi}}(\boldsymbol{\alpha}^\prime)
+\boldsymbol{\psi}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}) }
+\newcommand{\coupten}{
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\overline{\boldsymbol{\psi}}(\boldsymbol{\alpha}^\prime)
+\boldsymbol{\psi}}\!
+{}^{\raisebox{0.88mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}) }
+\newcommand{\coupeleven}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\boldsymbol{\phi}(\boldsymbol{\alpha})
+\boldsymbol{\phi}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}^\prime) }
+\newcommand{\couptwelve}{
+{}^{\raisebox{0.45mm}{$\scriptscriptstyle\lceil$}}\!
+\overline{\boldsymbol{\phi}(\boldsymbol{\alpha})
+\boldsymbol{\phi}}\!
+{}^{\raisebox{0.45mm}{$\scriptscriptstyle\rceil$}}
+(\boldsymbol{\alpha}^\prime) }
+\newcommand{\coupthirteen}{
+{}_{\raisebox{-0.45mm}{$\scriptscriptstyle\lfloor$}}\!
+\underline{\boldsymbol{\phi}(\boldsymbol{\alpha}^\prime)
+\boldsymbol{\phi}}\!{}_{\raisebox{-0.44mm}
+{$\scriptscriptstyle\rfloor$}}(\boldsymbol{\alpha}) }
+
+\newtheorem{thm}{Theorem}
+%\newtheorem{cor}{Corollary}
+\newtheorem{defn}{Definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Конец Варламов %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Гринь %%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\font\symb=msbm10 scaled \magstep 1
+\newcommand{\E}{\mbox{\symb E}}
+\newcommand{\D}{\mbox{\symb D}}
+\renewcommand{\P}{\mbox{\symb P}}
+\newcommand{\x}{\{{\xi}_n\}}
+\newcommand{\cd}{\stackrel{d}{\rightarrow}}
+\newcommand{\cdl}{\stackrel{dl}{\rightarrow}}
+\newcommand{\ed}{\stackrel{d}{=}}
+\newcommand{\sd}{\stackrel{d}{\sim}}
+\newcommand{\sdl}{\stackrel{dl}{\sim}}
+\newcommand{\fracd}[2]{\mbox{$\displaystyle\frac{#1}{#2}$}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+%\newcommand{\s}{\limits}
+\newcommand{\lb}{\linebreak}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% Параметры страницы %%%%%%%%%%%%%%%%%%%
+\evensidemargin 5mm \oddsidemargin 5mm \voffset -10mm \textheight 230mm \textwidth 150mm
+\setlength{\itemsep}{0pt}
+
+\hyphenpenalty 100
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[mag=1000,a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm,noheadfoot]{geometry}
+%\usepackage[a4paper,left=3.5cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\evensidemargin 21mm
+%\oddsidemargin 40mm
+\evensidemargin 30mm
+\oddsidemargin 30mm
+\voffset -10mm
+\hoffset -25.6mm
+\textheight 230mm
+\textwidth 150mm
+
+\selectlanguage{russian}
+\yearpub{2019}                   % Год издания. Заполняет редакция.
+\num{1}                          % Номер журнала. Заполняет редакция.  
+\volume{49}       
+
+\def\issnnum{2222-8772}
+\def\issnOnline{2222-8799}
+\def\lb{\linebreak}
+\def\const{\mathrm const\,}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\diag}{diag}
+\pagestyle{myheadings}
+
+\begin{document}
+%%%%%%%%%%%%%%%% Обложка %%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{russian}
+\thispagestyle{empty}
+%\includegraphics[width=100mm]{OBLOZHKA_A3.pdf}
+{\includegraphics[viewport=258mm 257mm 210 297]{OBLOZHKA_A3.pdf}}
+%\includegraphics[viewport=0 0 210mm 297mm]{OBLOZHKA_A3.pdf}
+%\parbox[70mm][220mm][c]{135mm}{
+%{\huge \textbf{М}атематические \\
+%\textbf{С}труктуры \\
+%\vspace*{-3mm}
+%и \\
+%\vspace*{3mm}
+%\textbf{М}оделирование
+% }
+%
+%\vspace*{2cm}
+%\centering{\Large\bf Выпуск \nums} \\
+%\centering{\Large\bf \years}
+%\vfill
+%}
+%\parbox[]{200mm}{
+%
+%}
+%%%%%%%%%%%%%%%% Конец обложки %%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{russian}
+\newpage
+\sloppy
+\thispagestyle{empty}
+\setcounter{page}{1}
+{\input{title}}
+\thispagestyle{empty}
+\vspace*{-2.5cm}
+%\setcounter{page}{2}
+\thispagestyle{empty} \fboxsep=0.2cm
+
+
+\newpage
+\thispagestyle{empty}
+\setlength{\columnsep}{48pt}
+\setcolumnwidth{4.5cm, 8.2cm}[1,2] 
+\begin{paracol}{2}
+\vspace*{-1cm}
+    \framebox[4.9cm]{
+      \parbox[t]{4.5cm}{%
+         \begin{center}
+             \vspace*{-2mm}
+            \bf \small МАТЕМАТИЧЕСКИЕ  \\
+            \vspace*{1mm}
+            СТРУКТУРЫ  \\
+            \vspace*{-1mm}
+            и
+%           \vspace*{mm}
+            \\ МОДЕЛИРОВАНИЕ
+         \end{center}
+         \footnotesize %\scriptsize
+         \parindent=0.3cm
+\vspace*{0mm} 
+
+%В журнале публикуются статьи, в которых
+%изла\-га\-ют\-ся результаты исследований по фунда\-мен\-тальной и
+%прик\-лад\-ной математике, теоретической физике и размышления,
+%касающиеся окружающей нас природы и общества.
+%
+%Публикуются также статьи по информационным технологиям,
+%компьютер\-ным нау\-кам, за\-щи\-те инфор\-ма\-ции,
+%фи\-ло\-со\-фии и ис\-то\-рии ма\-те\-ма\-тики.
+%
+%Объекты исследования должны быть представлены в форме некоторых
+%ма\-те\-ма\-тических структур и моделей.
+%
+%Журнал является ре\-фе\-ри\-руемым. Рефераты ста\-тей публикуются
+%в <<Реферативном журнале>>
+% и в журналах <<Zentralblat f\"ur
+%Mathematik>> (Германия) и <<Mathe\-ma\-ti\-cal Reviews>>\ (США).
+
+{\footnotesize
+\begin{spacing}{0.9}
+Журнал основан в 1998 году.
+В журнале публикуются статьи, в которых излагаются результаты исследований
+по фундаментальной и прикладной математике, теоретической физике, компьютерным наукам, философии и истории математики и информатики, а также размышления, касающиеся окружающей нас природы и общества. Объекты исследования должны быть представлены в форме некоторых математических структур и моделей.
+
+Все статьи журнала проходят обязательное рецензирование.
+Рефераты статей журнала опубликованы в <<Реферативном журнале>> и <<Mathematical Reviews>> (США). 
+Журнал индексируется в РИНЦ (elibrary.ru) и <<Zentralblat f\"ur Mathematik>> (Германия).
+Журнал входит в Перечень рецензируемых 
+научных изданий ВАК РФ, 
+в которых должны быть опубликованы основные результаты 
+диссертаций на соискание учёных степеней
+(Приказ Минобрнауки 
+России от 25 июля 2014 г. №~793).
+
+Все статьи в журнале публикуются под лицензией Attribution 4.0 International (CC-BY).
+
+Электронная версия жур\-на\-ла представлена в сети:
+         \vspace*{-3mm}
+         \begin{center}
+           {\scriptsize \textbf{\texttt{http://msm.univer.omsk.su}}} \\
+           {\scriptsize \textbf{\texttt{http://msm.omsu.ru}}} \\
+         %   {\scriptsize \textbf{\texttt{http://msm.univer.omsk.ru\phantom{,} }}}
+         \end{center} \vspace*{-2mm}
+%Журнал издаётся на ком\-мер\-ческие
+%средства  факультета
+%компьютерных наук Омского государ\-ственного университета.
+
+Подписной индекс по каталогу <<Пресса России>>: 
+94082
+
+%Факультет готов  к сотрудничеству в издании \ жур\-нала.
+%         \vspace*{-1mm}
+Электронная почта главного редактора:
+         \vspace*{-3mm}
+         \begin{center}
+            {\scriptsize\textbf{\texttt{guts@omsu.ru}}}
+         \end{center}\vspace*{-2mm}
+
+Электронная почта выпускающего редактора:
+         \vspace*{-3mm}
+         \begin{center}
+            {\scriptsize\textbf{\texttt{lavrov@omsu.ru}}}
+         \end{center}
+         \vspace*{-1mm} 
+         \vspace*{-1mm}
+         \end{spacing}
+         }
+      }
+    }
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{-0.5cm}
+\fbox{\includegraphics[width=4.7cm,height=22.18cm]{bar2_color.pdf}}
+
+
+%\newpage
+%\vspace*{-0.5cm}
+%    \framebox[4.9cm]{
+%      \parbox[t]{4.5cm}{%
+%         \parindent=0.3cm
+%     }
+%   }
+
+
+
+\switchcolumn
+{\small \thispagestyle{empty} \tableofcontents\vspace*{-55mm}\thispagestyle{empty}}
+\end{paracol}
+
+\unitlength= 1pt
+\selectlanguage{russian}
+
+%\vspace*{3mm}
+
+\selectlanguage{russian}
+\addcontentsline{toc}{sect}{Фундаментальная математика и~физика}
+\addcontentsline{toc}{sectEng}{The Fundamental Mathematics and Physics}
+\Input{varl1802}
+\Input{Grin_L1}
+\Input{erovenko-tex-1-MCiM-19}
+\Input{Mikhailova}
+
+
+\selectlanguage{russian}
+\addcontentsline{toc}{sect}{Прикладная математика и~моделирование}
+\addcontentsline{toc}{sectEng}{Applied Mathematics and Modeling}
+\Input{Galimov-4}
+\Input{shovin_v3}
+\Input{tr18-84a}
+
+
+\selectlanguage{russian}
+\addcontentsline{toc}{sect}{Компьютерные науки}
+\addcontentsline{toc}{sectEng}{Computer Science}
+
+%\selectlanguage{russian}
+%\addcontentsline{toc}{sect}{\vspace*{0em}{\textit{\textmd{Продолжение на следующей странице}}}\protect\newpage}
+\Input{kov17msm}
+%\Input{senk}
+
+
+
+\selectlanguage{russian}
+\addcontentsline{toc}{sect}{Информационная безопасность}
+\addcontentsline{toc}{sectEng}{Information Security}
+
+\Input{BogFil}
+\Input{Selifanov}
+\selectlanguage{russian}
+\addcontentsline{tocRus}{sect}{\protect\newpage}  % Перенос в аннотации
+\addcontentsline{toc}{sect}{\vspace*{2em}{\textit{\textmd{Продолжение на следующей странице}}}\protect\newpage}
+
+\Input{GuMatush}
+\Input{tr18-85a}
+
+
+%\Input{}
+%\Input{}
+%\Input{}
+%\Input{}
+%\Input{}
+%\Input{}	
+
+%\selectlanguage{russian}
+%\addcontentsline{tocRus}{sect}{\protect\newpage}  % Перенос в аннотации
+%\addcontentsline{toc}{sect}{\vspace*{2em}{\textit{\textmd{Продолжение на следующей странице}}}\protect\newpage}
+
+%\selectlanguage{russian}
+%\addcontentsline{toc}{sect}{Письма}
+%\addcontentsline{toc}{sectEng}{Letters}
+
+%\Input{}
+%\Input{}
+%\Input{}
+
+
+%\newpage
+%\selectlanguage{russian}
+%\Input{necrolog}
+
+\selectlanguage{russian}
+\Input{authors}
+
+
+\selectlanguage{russian}
+\newpage
+\Input{title2}
+
+\newpage
+\thispagestyle{empty}{
+\vspace*{190mm}
+
+ \begin{center}
+ \begin{tabular}{m{30mm}m{15mm}}
+ \begin{pspicture}(2.862,1.2in)
+   \psbarcode[scalex=0.8,scaley=0.8]{2222-8772}{includetext}{issn}
+ \end{pspicture} &
+ \begin{pspicture}(2.862,1.2in)
+   \psbarcode[scalex=0.8,scaley=0.8]{19049}{includetext guardwhitespace}{ean5}
+ \end{pspicture} 
+ \end{tabular}
+ \end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%% Аннотации %%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\tableofcontentsRus
+%%%%%%%%%%%%%%%%%%%%%%% Abstracts %%%%%%%%%%%%%%%%%%%%%%%
+%\tableofcontentsEng
+%    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
